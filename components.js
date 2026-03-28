@@ -4,10 +4,10 @@
 const i18n = {
   es: {
     nav: {
-      inicio: 'Inicio', compra: 'Busco un Activo', venta: 'Venda su Activo',
-      financiacion: 'Financiación', arquitectura: 'Arquitectura & Interiorismo',
-      club: 'Club 1512', colaboradores: 'Red de Colaboradores',
-      equipo: 'El Equipo', talento: 'Trabaja con Nosotros',
+      inicio: 'Inicio', compra: 'Comprar', venta: 'Vender',
+      financiacion: 'Financiación', arquitectura: 'Arquitectura',
+      club: 'Club 1512', colaboradores: 'Colaboradores',
+      equipo: 'Equipo', talento: 'Empleo',
     },
     footer: {
       servicios: 'Servicios', lafirma: 'La Firma', legal: 'Legal',
