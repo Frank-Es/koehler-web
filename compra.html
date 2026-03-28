@@ -4,127 +4,176 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Busco un Activo — KOEHLER Assets Representation</title>
-  <meta name="description" content="Acceda a activos off-market. Regístrenos su perfil de comprador y le contactaremos con oportunidades que no encontrará en ningún portal." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
 <div id="nav-placeholder"></div>
-
 <div class="page-wrapper">
 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-img-placeholder">
-      <!-- Sustituye este bloque por: <img src="TU_IMAGEN.jpg" alt="" class="hero-img" /> -->
       <div class="img-placeholder-label">Imagen Hero — Busco un Activo</div>
     </div>
     <div class="hero-content">
-      <span class="hero-eyebrow">Acceso Off-Market · Red Privada</span>
-      <h1>Busco<br><em>un Activo</em></h1>
-      <p class="hero-sub">Lo que busca puede no estar publicado en ningún portal. Cuéntenos su perfil y acceda a oportunidades que solo existen dentro de nuestra red privada.</p>
-      <a href="#formulario" class="btn btn-dark">Registrar mi Perfil</a>
+      <span class="hero-eyebrow" data-i18n="compra.eyebrow">Acceso Off-Market · Red Privada</span>
+      <h1 data-i18n="compra.hero_title">Busco<br><em>un Activo</em></h1>
+      <p class="hero-sub" data-i18n="compra.hero_sub">Lo que busca puede no estar publicado en ningún portal. Cuéntenos su perfil y acceda a oportunidades que solo existen dentro de nuestra red privada.</p>
+      <a href="#formulario" class="btn btn-dark" data-i18n="compra.hero_cta">Registrar mi Perfil</a>
     </div>
   </section>
 
-  <!-- INTRO -->
+  <!-- ESPECIALIDADES -->
   <section>
+    <div class="section-inner">
+      <span class="section-label" data-i18n="compra.esp_label">Nuestras Especialidades</span>
+      <h2 class="section-title" data-i18n="compra.esp_title">Especializados en cada<br><em>tipología de activo</em></h2>
+      <div class="divider"></div>
+      <p class="section-text" data-i18n="compra.esp_intro">Operamos en los segmentos de mayor valor y complejidad del mercado inmobiliario. Sea cual sea la naturaleza del activo que busca, contamos con la red y el conocimiento específico para localizarlo.</p>
+
+      <div class="specialties">
+        <div class="specialty">
+          <div class="specialty-icon"></div>
+          <div class="specialty-title" data-i18n="compra.esp1_title">Residencial</div>
+          <p class="specialty-text" data-i18n="compra.esp1_text">Viviendas singulares, áticos, villas y propiedades residenciales de alto standing en ubicaciones prime.</p>
+        </div>
+        <div class="specialty">
+          <div class="specialty-icon"></div>
+          <div class="specialty-title" data-i18n="compra.esp2_title">Hotelero</div>
+          <p class="specialty-text" data-i18n="compra.esp2_text">Hoteles boutique, establecimientos de lujo y activos de uso hotelero con potencial de reposicionamiento.</p>
+        </div>
+        <div class="specialty">
+          <div class="specialty-icon"></div>
+          <div class="specialty-title" data-i18n="compra.esp3_title">Edificios Singulares</div>
+          <p class="specialty-text" data-i18n="compra.esp3_text">Edificios completos, inmuebles históricos y activos de uso mixto con valor patrimonial o de inversión.</p>
+        </div>
+        <div class="specialty">
+          <div class="specialty-icon"></div>
+          <div class="specialty-title" data-i18n="compra.esp4_title">Solares & Suelo</div>
+          <p class="specialty-text" data-i18n="compra.esp4_text">Solares urbanos, suelo finalista y parcelas para desarrollo residencial, hotelero o de uso terciario.</p>
+        </div>
+        <div class="specialty">
+          <div class="specialty-icon"></div>
+          <div class="specialty-title" data-i18n="compra.esp5_title">Locales & Oficinas</div>
+          <p class="specialty-text" data-i18n="compra.esp5_text">Locales comerciales en zonas prime, plantas de oficinas y activos de uso terciario de alto valor.</p>
+        </div>
+        <div class="specialty">
+          <div class="specialty-icon"></div>
+          <div class="specialty-title" data-i18n="compra.esp6_title">Fincas & Patrimonio</div>
+          <p class="specialty-text" data-i18n="compra.esp6_text">Fincas rústicas, cortijos, mansiones y activos patrimoniales singulares en localizaciones exclusivas.</p>
+        </div>
+        <div class="specialty">
+          <div class="specialty-icon"></div>
+          <div class="specialty-title" data-i18n="compra.esp7_title">Activos Industriales</div>
+          <p class="specialty-text" data-i18n="compra.esp7_text">Naves logísticas, parques industriales y activos de uso productivo con perfil de inversión institucional.</p>
+        </div>
+        <div class="specialty">
+          <div class="specialty-icon"></div>
+          <div class="specialty-title" data-i18n="compra.esp8_title">Activos Internacionales</div>
+          <p class="specialty-text" data-i18n="compra.esp8_text">Activos en la ruta atlántica: Canarias, Caribe y LATAM, a través de nuestra red transatlántica privada.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METODOLOGÍA -->
+  <section class="bg-grey">
     <div class="section-inner">
       <div class="two-col">
         <div>
-          <span class="section-label">Nuestra Metodología</span>
-          <h2 class="section-title">El activo que busca<br><em>no se anuncia</em></h2>
+          <span class="section-label" data-i18n="compra.met_label">Nuestra Metodología</span>
+          <h2 class="section-title" data-i18n="compra.met_title">El activo que busca<br><em>no se anuncia</em></h2>
           <div class="divider"></div>
-          <p class="section-text">En KOEHLER no publicamos los activos que gestionamos. Cada propiedad permanece fuera del mercado abierto, protegida bajo acuerdos de confidencialidad y accesible únicamente a perfiles cualificados previamente validados.</p>
+          <p class="section-text" data-i18n="compra.met_text1">En KOEHLER no publicamos los activos que gestionamos. Cada propiedad permanece fuera del mercado abierto, protegida bajo acuerdos de confidencialidad y accesible únicamente a perfiles cualificados previamente validados.</p>
           <br/>
-          <p class="section-text">Cuando nos facilita su perfil de búsqueda, nuestro equipo activa la red privada para localizar el activo que encaja con sus criterios, presentándoselo de forma exclusiva y discreta.</p>
+          <p class="section-text" data-i18n="compra.met_text2">Cuando nos facilita su perfil de búsqueda, nuestro equipo activa la red privada para localizar el activo que encaja con sus criterios, presentándoselo de forma exclusiva y discreta.</p>
         </div>
         <div class="img-block">
-          <!-- Sustituye por tu imagen: <img src="TU_IMAGEN.jpg" alt="" /> -->
           <div class="img-block-placeholder">
             <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-            <span>Añadir imagen aquí</span>
+            <span data-i18n="compra.img_placeholder">Añadir imagen aquí</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CÓMO FUNCIONA -->
-  <section class="bg-grey">
+  <!-- PROCESO -->
+  <section>
     <div class="section-inner">
-      <span class="section-label">Proceso</span>
-      <h2 class="section-title">Cómo <em>funciona</em></h2>
+      <span class="section-label" data-i18n="compra.proc_label">Proceso</span>
+      <h2 class="section-title" data-i18n="compra.proc_title">Cómo <em>funciona</em></h2>
       <div class="steps">
         <div class="step">
           <div class="step-num">01</div>
-          <div class="step-title">Registro de Perfil</div>
-          <p class="step-text">Nos facilita sus criterios: tipo de activo, ubicación, presupuesto y objetivos de inversión o uso.</p>
+          <div class="step-title" data-i18n="compra.s1_title">Registro de Perfil</div>
+          <p class="step-text" data-i18n="compra.s1_text">Nos facilita sus criterios: tipo de activo, ubicación, presupuesto y objetivos de inversión o uso.</p>
         </div>
         <div class="step">
           <div class="step-num">02</div>
-          <div class="step-title">Validación</div>
-          <p class="step-text">Nuestro equipo analiza su perfil y confirma si existe o puede existir un activo adecuado dentro de nuestra red.</p>
+          <div class="step-title" data-i18n="compra.s2_title">Validación</div>
+          <p class="step-text" data-i18n="compra.s2_text">Nuestro equipo analiza su perfil y confirma si existe un activo adecuado dentro de nuestra red privada.</p>
         </div>
         <div class="step">
           <div class="step-num">03</div>
-          <div class="step-title">Presentación Privada</div>
-          <p class="step-text">Le presentamos el activo bajo acuerdo de confidencialidad, con toda la documentación necesaria para su análisis.</p>
+          <div class="step-title" data-i18n="compra.s3_title">Presentación Privada</div>
+          <p class="step-text" data-i18n="compra.s3_text">Le presentamos el activo bajo acuerdo de confidencialidad, con toda la documentación para su análisis.</p>
         </div>
         <div class="step">
           <div class="step-num">04</div>
-          <div class="step-title">Cierre Estructurado</div>
-          <p class="step-text">Acompañamiento jurídico y notarial completo hasta la liquidación final de la operación.</p>
+          <div class="step-title" data-i18n="compra.s4_title">Cierre Estructurado</div>
+          <p class="step-text" data-i18n="compra.s4_text">Acompañamiento jurídico y notarial completo hasta la liquidación final de la operación.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FORMULARIO -->
-  <section id="formulario">
-    <div class="section-inner" style="max-width: 760px;">
-      <span class="section-label">Registro de Perfil de Comprador</span>
-      <h2 class="section-title">Cuéntenos<br><em>qué busca</em></h2>
+  <section id="formulario" class="bg-grey">
+    <div class="section-inner" style="max-width:760px;">
+      <span class="section-label" data-i18n="compra.form_label">Registro de Perfil de Comprador</span>
+      <h2 class="section-title" data-i18n="compra.form_title">Cuéntenos<br><em>qué busca</em></h2>
       <div class="divider"></div>
-      <p class="section-text" style="margin-bottom: 48px;">Toda la información que nos facilite queda protegida bajo estricto protocolo de confidencialidad. Nos pondremos en contacto con usted en el menor tiempo posible.</p>
+      <p class="section-text" style="margin-bottom:48px;" data-i18n="compra.form_intro">Toda la información que nos facilite queda protegida bajo estricto protocolo de confidencialidad. Nos pondremos en contacto con usted en el menor tiempo posible.</p>
 
-      <form action="https://formspree.io/f/YYYYYYYY" method="POST" class="form-wrap" style="max-width:100%">
-        <!-- Reemplaza YYYYYYYY con tu ID de Formspree en adquisiciones@koehlerassets.com -->
+      <form action="https://formspree.io/f/meepedny" method="POST" class="form-wrap" style="max-width:100%">
         <div class="form-grid">
           <div class="form-group">
-            <label for="nombre">Nombre completo *</label>
+            <label for="nombre" data-i18n="compra.f_nombre">Nombre completo *</label>
             <input type="text" id="nombre" name="nombre" required placeholder="Su nombre completo" />
           </div>
           <div class="form-group">
-            <label for="email">Email *</label>
+            <label for="email" data-i18n="compra.f_email">Email *</label>
             <input type="email" id="email" name="email" required placeholder="su@email.com" />
           </div>
           <div class="form-group">
-            <label for="telefono">Teléfono *</label>
+            <label for="telefono" data-i18n="compra.f_tel">Teléfono *</label>
             <input type="tel" id="telefono" name="telefono" required placeholder="+34 600 000 000" />
           </div>
           <div class="form-group">
-            <label for="tipo">Tipo de activo *</label>
+            <label for="tipo" data-i18n="compra.f_tipo">Tipo de activo *</label>
             <select id="tipo" name="tipo_activo" required>
-              <option value="">Seleccione...</option>
-              <option>Vivienda residencial</option>
-              <option>Edificio residencial</option>
-              <option>Local comercial</option>
-              <option>Oficinas</option>
-              <option>Hotel / Hostel</option>
-              <option>Finca / Terreno</option>
-              <option>Activo industrial</option>
-              <option>Otro</option>
+              <option value="" data-i18n="compra.f_sel">Seleccione...</option>
+              <option data-i18n="compra.t1">Vivienda residencial</option>
+              <option data-i18n="compra.t2">Edificio residencial</option>
+              <option data-i18n="compra.t3">Hotel / Hostel</option>
+              <option data-i18n="compra.t4">Edificio singular</option>
+              <option data-i18n="compra.t5">Solar / Suelo finalista</option>
+              <option data-i18n="compra.t6">Local comercial / Oficinas</option>
+              <option data-i18n="compra.t7">Finca / Patrimonio</option>
+              <option data-i18n="compra.t8">Activo industrial</option>
+              <option data-i18n="compra.t9">Internacional (Canarias / Caribe / LATAM)</option>
+              <option data-i18n="compra.t10">Otro</option>
             </select>
           </div>
           <div class="form-group full">
-            <label for="ubicacion">Ubicación o zona de interés *</label>
+            <label for="ubicacion" data-i18n="compra.f_ubic">Ubicación o zona de interés *</label>
             <input type="text" id="ubicacion" name="ubicacion" required placeholder="Ej: Madrid centro, Costa del Sol, Canarias..." />
           </div>
           <div class="form-group">
-            <label for="presupuesto">Presupuesto orientativo *</label>
+            <label for="presupuesto" data-i18n="compra.f_pres">Presupuesto orientativo *</label>
             <select id="presupuesto" name="presupuesto" required>
-              <option value="">Seleccione...</option>
+              <option value="" data-i18n="compra.f_sel">Seleccione...</option>
               <option>Hasta 500.000 €</option>
               <option>500.000 € – 1.000.000 €</option>
               <option>1.000.000 € – 3.000.000 €</option>
@@ -133,48 +182,156 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="objetivo">Objetivo de la adquisición</label>
+            <label for="objetivo" data-i18n="compra.f_obj">Objetivo</label>
             <select id="objetivo" name="objetivo">
-              <option value="">Seleccione...</option>
-              <option>Inversión / Rentabilidad</option>
-              <option>Uso propio / Residencia</option>
-              <option>Reforma y revalorización</option>
-              <option>Diversificación patrimonial</option>
+              <option value="" data-i18n="compra.f_sel">Seleccione...</option>
+              <option data-i18n="compra.o1">Inversión / Rentabilidad</option>
+              <option data-i18n="compra.o2">Uso propio / Residencia</option>
+              <option data-i18n="compra.o3">Reforma y revalorización</option>
+              <option data-i18n="compra.o4">Diversificación patrimonial</option>
             </select>
           </div>
           <div class="form-group full">
-            <label for="detalles">Detalles adicionales</label>
-            <textarea id="detalles" name="detalles" placeholder="Cuéntenos cualquier detalle relevante sobre el activo que busca: características, plazos, condiciones específicas..."></textarea>
+            <label for="detalles" data-i18n="compra.f_det">Detalles adicionales</label>
+            <textarea id="detalles" name="detalles" placeholder="Cuéntenos cualquier detalle relevante sobre el activo que busca..."></textarea>
           </div>
           <div class="form-group full">
             <div class="form-check">
               <input type="checkbox" id="privacidad" name="privacidad" required />
-              <label for="privacidad">Acepto que la información facilitada sea utilizada para contactar conmigo en relación a mi búsqueda de activo, conforme a la política de privacidad de KOEHLER Assets Representation. Entiendo que toda la información será tratada bajo estricto protocolo de confidencialidad.</label>
+              <label for="privacidad" data-i18n="compra.f_priv">Acepto que la información facilitada sea utilizada para contactar conmigo. Entiendo que toda la información será tratada bajo estricto protocolo de confidencialidad.</label>
             </div>
           </div>
         </div>
         <div class="form-submit">
-          <button type="submit" class="btn btn-dark">Enviar Perfil de Búsqueda</button>
+          <button type="submit" class="btn btn-dark" data-i18n="compra.f_submit">Enviar Perfil de Búsqueda</button>
         </div>
       </form>
     </div>
   </section>
 
-  <!-- BANNER -->
   <div class="banner">
     <div class="section-inner">
-      <span class="section-label" style="color: var(--gold);">Protocolo de Silencio</span>
-      <h2 class="section-title"><em>Sin exposición. Sin ruido.</em><br>Solo resultados.</h2>
+      <span class="section-label" style="color:var(--gold);" data-i18n="compra.banner_label">Protocolo de Silencio</span>
+      <h2 class="section-title" data-i18n="compra.banner_title"><em>Sin exposición. Sin ruido.</em><br>Solo resultados.</h2>
       <div class="divider"></div>
-      <p class="section-text">Toda operación gestionada por KOEHLER se desarrolla en un ecosistema cerrado, donde la información fluye únicamente hacia los actores validados por nuestra dirección estratégica.</p>
+      <p class="section-text" data-i18n="compra.banner_text">Toda operación gestionada por KOEHLER se desarrolla en un ecosistema cerrado, donde la información fluye únicamente hacia los actores validados por nuestra dirección estratégica.</p>
     </div>
   </div>
 
 </div>
-
 <div id="footer-placeholder"></div>
-
 <script src="components.js"></script>
-<script>initNav('compra');</script>
+<script>
+// i18n translations for this page
+Object.assign(i18n.en, { compra: {
+  eyebrow:'Off-Market Access · Private Network', hero_title:'Find<br><em>an Asset</em>',
+  hero_sub:'What you are looking for may not be listed on any portal. Share your profile and access opportunities that only exist within our private network.',
+  hero_cta:'Register my Profile', esp_label:'Our Specialties',
+  esp_title:'Specialists in every<br><em>asset type</em>',
+  esp_intro:'We operate in the highest-value and most complex segments of the real estate market. Whatever the nature of the asset you are looking for, we have the network and specific knowledge to find it.',
+  esp1_title:'Residential', esp1_text:'Singular homes, penthouses, villas and high-standing residential properties in prime locations.',
+  esp2_title:'Hospitality', esp2_text:'Boutique hotels, luxury establishments and hotel-use assets with repositioning potential.',
+  esp3_title:'Singular Buildings', esp3_text:'Full buildings, historic properties and mixed-use assets with heritage or investment value.',
+  esp4_title:'Land & Plots', esp4_text:'Urban plots, finalised land and parcels for residential, hotel or tertiary development.',
+  esp5_title:'Retail & Offices', esp5_text:'Prime commercial premises, office floors and high-value tertiary assets.',
+  esp6_title:'Estates & Heritage', esp6_text:'Rural estates, manor houses and singular heritage assets in exclusive locations.',
+  esp7_title:'Industrial Assets', esp7_text:'Logistics warehouses, industrial parks and productive assets with institutional investment profile.',
+  esp8_title:'International Assets', esp8_text:'Assets along the Atlantic route: Canary Islands, Caribbean and LATAM, through our private transatlantic network.',
+  met_label:'Our Methodology', met_title:'The asset you seek<br><em>is not advertised</em>',
+  met_text1:'At KOEHLER we do not publish the assets we manage. Each property remains off-market, protected by confidentiality agreements and accessible only to pre-validated qualified profiles.',
+  met_text2:'When you provide your search profile, our team activates the private network to find the asset that fits your criteria, presenting it to you exclusively and discreetly.',
+  img_placeholder:'Add image here',
+  proc_label:'Process', proc_title:'How it <em>works</em>',
+  s1_title:'Profile Registration', s1_text:'You provide your criteria: asset type, location, budget and investment or use objectives.',
+  s2_title:'Validation', s2_text:'Our team analyses your profile and confirms if a suitable asset exists within our private network.',
+  s3_title:'Private Presentation', s3_text:'We present the asset under confidentiality agreement, with full documentation for your analysis.',
+  s4_title:'Structured Closing', s4_text:'Full legal and notarial support through to the final completion of the transaction.',
+  form_label:'Buyer Profile Registration', form_title:'Tell us<br><em>what you seek</em>',
+  form_intro:'All information you provide is protected under strict confidentiality protocol. We will contact you as soon as possible.',
+  f_nombre:'Full name *', f_email:'Email *', f_tel:'Phone *', f_tipo:'Asset type *', f_sel:'Select...',
+  t1:'Residential property', t2:'Residential building', t3:'Hotel / Hostel', t4:'Singular building',
+  t5:'Plot / Finalised land', t6:'Retail / Offices', t7:'Estate / Heritage', t8:'Industrial asset',
+  t9:'International (Canary Islands / Caribbean / LATAM)', t10:'Other',
+  f_ubic:'Location or area of interest *', f_pres:'Indicative budget *', f_obj:'Objective',
+  o1:'Investment / Yield', o2:'Own use / Residence', o3:'Renovation and revaluation', o4:'Wealth diversification',
+  f_det:'Additional details', f_priv:'I accept that the information provided will be used to contact me. I understand all information will be treated under strict confidentiality protocol.',
+  f_submit:'Send Search Profile',
+  banner_label:'Protocol of Silence', banner_title:'<em>No exposure. No noise.</em><br>Only results.',
+  banner_text:'Every operation managed by KOEHLER takes place within a closed ecosystem, where information flows only to actors validated by our strategic direction.'
+}});
+Object.assign(i18n.de, { compra: {
+  eyebrow:'Off-Market-Zugang · Privates Netzwerk', hero_title:'Ich suche<br><em>ein Objekt</em>',
+  hero_sub:'Was Sie suchen, ist möglicherweise auf keinem Portal veröffentlicht. Teilen Sie uns Ihr Profil mit und erhalten Sie Zugang zu Möglichkeiten, die nur in unserem privaten Netzwerk existieren.',
+  hero_cta:'Profil registrieren', esp_label:'Unsere Spezialisierungen',
+  esp_title:'Spezialisiert auf jede<br><em>Objektart</em>',
+  esp_intro:'Wir sind in den wertvollsten und komplexesten Segmenten des Immobilienmarktes tätig. Unabhängig von der Art des gesuchten Objekts verfügen wir über das Netzwerk und das spezifische Know-how, um es zu finden.',
+  esp1_title:'Wohnimmobilien', esp1_text:'Exklusive Wohnungen, Penthouses, Villen und hochwertige Wohnimmobilien in Premiumlagen.',
+  esp2_title:'Hotel & Hospitality', esp2_text:'Boutiquehotels, Luxuseinrichtungen und Hotelimmobilien mit Repositionierungspotenzial.',
+  esp3_title:'Sonderimmobilien', esp3_text:'Gesamtgebäude, historische Immobilien und gemischt genutzte Objekte mit Denkmal- oder Investitionswert.',
+  esp4_title:'Grundstücke & Bauland', esp4_text:'Stadtgrundstücke, erschlossenes Bauland und Parzellen für Wohn-, Hotel- oder Gewerbenutzung.',
+  esp5_title:'Einzelhandel & Büros', esp5_text:'Geschäftsflächen in Premiumlagen, Büroetagen und hochwertige Gewerbeobjekte.',
+  esp6_title:'Güter & Kulturgut', esp6_text:'Landgüter, Herrenhäuser und einzigartige Kulturgüter an exklusiven Standorten.',
+  esp7_title:'Industrie & Logistik', esp7_text:'Logistikimmobilien, Industrieparks und Produktionsanlagen mit institutionellem Investitionsprofil.',
+  esp8_title:'Internationale Objekte', esp8_text:'Objekte entlang der Atlantikroute: Kanarische Inseln, Karibik und LATAM über unser privates transatlantisches Netzwerk.',
+  met_label:'Unsere Methodik', met_title:'Das gesuchte Objekt<br><em>wird nicht inseriert</em>',
+  met_text1:'Bei KOEHLER veröffentlichen wir die von uns verwalteten Objekte nicht. Jede Immobilie bleibt vom Markt ferngehalten, durch Vertraulichkeitsvereinbarungen geschützt und nur für vorab validierte qualifizierte Profile zugänglich.',
+  met_text2:'Wenn Sie uns Ihr Suchprofil mitteilen, aktiviert unser Team das private Netzwerk, um das Objekt zu finden, das Ihren Kriterien entspricht, und präsentiert es Ihnen exklusiv und diskret.',
+  img_placeholder:'Bild hier hinzufügen',
+  proc_label:'Ablauf', proc_title:'So <em>funktioniert es</em>',
+  s1_title:'Profilregistrierung', s1_text:'Sie übermitteln Ihre Kriterien: Objekttyp, Lage, Budget und Investitions- oder Nutzungsziele.',
+  s2_title:'Validierung', s2_text:'Unser Team analysiert Ihr Profil und bestätigt, ob ein geeignetes Objekt in unserem privaten Netzwerk vorhanden ist.',
+  s3_title:'Private Präsentation', s3_text:'Wir präsentieren das Objekt unter Vertraulichkeitsvereinbarung mit vollständiger Dokumentation.',
+  s4_title:'Strukturierter Abschluss', s4_text:'Vollständige rechtliche und notarielle Begleitung bis zum endgültigen Abschluss der Transaktion.',
+  form_label:'Käuferprofil-Registrierung', form_title:'Teilen Sie uns<br><em>mit, was Sie suchen</em>',
+  form_intro:'Alle von Ihnen bereitgestellten Informationen sind durch ein strenges Vertraulichkeitsprotokoll geschützt. Wir werden uns so bald wie möglich mit Ihnen in Verbindung setzen.',
+  f_nombre:'Vollständiger Name *', f_email:'E-Mail *', f_tel:'Telefon *', f_tipo:'Objekttyp *', f_sel:'Auswählen...',
+  t1:'Wohnimmobilie', t2:'Wohngebäude', t3:'Hotel / Hostel', t4:'Sonderimmobilie',
+  t5:'Grundstück / Bauland', t6:'Einzelhandel / Büros', t7:'Landgut / Kulturgut', t8:'Industrieimmobilie',
+  t9:'International (Kanarische Inseln / Karibik / LATAM)', t10:'Sonstiges',
+  f_ubic:'Lage oder Wunschgebiet *', f_pres:'Orientierendes Budget *', f_obj:'Zweck',
+  o1:'Investition / Rendite', o2:'Eigennutzung / Wohnsitz', o3:'Renovierung und Wertsteigerung', o4:'Vermögensdiversifikation',
+  f_det:'Weitere Details', f_priv:'Ich stimme zu, dass die bereitgestellten Informationen zur Kontaktaufnahme verwendet werden. Alle Informationen werden unter strengem Vertraulichkeitsprotokoll behandelt.',
+  f_submit:'Suchprofil senden',
+  banner_label:'Schweigeprotokoll', banner_title:'<em>Keine Exposition. Kein Lärm.</em><br>Nur Ergebnisse.',
+  banner_text:'Jede von KOEHLER verwaltete Transaktion findet in einem geschlossenen Ökosystem statt, in dem Informationen nur an von unserer strategischen Leitung validierte Akteure fließen.'
+}});
+i18n.es.compra = {
+  eyebrow:'Acceso Off-Market · Red Privada', hero_title:'Busco<br><em>un Activo</em>',
+  hero_sub:'Lo que busca puede no estar publicado en ningún portal. Cuéntenos su perfil y acceda a oportunidades que solo existen dentro de nuestra red privada.',
+  hero_cta:'Registrar mi Perfil', esp_label:'Nuestras Especialidades',
+  esp_title:'Especializados en cada<br><em>tipología de activo</em>',
+  esp_intro:'Operamos en los segmentos de mayor valor y complejidad del mercado inmobiliario. Sea cual sea la naturaleza del activo que busca, contamos con la red y el conocimiento específico para localizarlo.',
+  esp1_title:'Residencial', esp1_text:'Viviendas singulares, áticos, villas y propiedades residenciales de alto standing en ubicaciones prime.',
+  esp2_title:'Hotelero', esp2_text:'Hoteles boutique, establecimientos de lujo y activos de uso hotelero con potencial de reposicionamiento.',
+  esp3_title:'Edificios Singulares', esp3_text:'Edificios completos, inmuebles históricos y activos de uso mixto con valor patrimonial o de inversión.',
+  esp4_title:'Solares & Suelo', esp4_text:'Solares urbanos, suelo finalista y parcelas para desarrollo residencial, hotelero o de uso terciario.',
+  esp5_title:'Locales & Oficinas', esp5_text:'Locales comerciales en zonas prime, plantas de oficinas y activos de uso terciario de alto valor.',
+  esp6_title:'Fincas & Patrimonio', esp6_text:'Fincas rústicas, cortijos, mansiones y activos patrimoniales singulares en localizaciones exclusivas.',
+  esp7_title:'Activos Industriales', esp7_text:'Naves logísticas, parques industriales y activos de uso productivo con perfil de inversión institucional.',
+  esp8_title:'Activos Internacionales', esp8_text:'Activos en la ruta atlántica: Canarias, Caribe y LATAM, a través de nuestra red transatlántica privada.',
+  met_label:'Nuestra Metodología', met_title:'El activo que busca<br><em>no se anuncia</em>',
+  met_text1:'En KOEHLER no publicamos los activos que gestionamos. Cada propiedad permanece fuera del mercado abierto, protegida bajo acuerdos de confidencialidad y accesible únicamente a perfiles cualificados previamente validados.',
+  met_text2:'Cuando nos facilita su perfil de búsqueda, nuestro equipo activa la red privada para localizar el activo que encaja con sus criterios, presentándoselo de forma exclusiva y discreta.',
+  img_placeholder:'Añadir imagen aquí',
+  proc_label:'Proceso', proc_title:'Cómo <em>funciona</em>',
+  s1_title:'Registro de Perfil', s1_text:'Nos facilita sus criterios: tipo de activo, ubicación, presupuesto y objetivos de inversión o uso.',
+  s2_title:'Validación', s2_text:'Nuestro equipo analiza su perfil y confirma si existe un activo adecuado dentro de nuestra red privada.',
+  s3_title:'Presentación Privada', s3_text:'Le presentamos el activo bajo acuerdo de confidencialidad, con toda la documentación para su análisis.',
+  s4_title:'Cierre Estructurado', s4_text:'Acompañamiento jurídico y notarial completo hasta la liquidación final de la operación.',
+  form_label:'Registro de Perfil de Comprador', form_title:'Cuéntenos<br><em>qué busca</em>',
+  form_intro:'Toda la información que nos facilite queda protegida bajo estricto protocolo de confidencialidad. Nos pondremos en contacto con usted en el menor tiempo posible.',
+  f_nombre:'Nombre completo *', f_email:'Email *', f_tel:'Teléfono *', f_tipo:'Tipo de activo *', f_sel:'Seleccione...',
+  t1:'Vivienda residencial', t2:'Edificio residencial', t3:'Hotel / Hostel', t4:'Edificio singular',
+  t5:'Solar / Suelo finalista', t6:'Local comercial / Oficinas', t7:'Finca / Patrimonio', t8:'Activo industrial',
+  t9:'Internacional (Canarias / Caribe / LATAM)', t10:'Otro',
+  f_ubic:'Ubicación o zona de interés *', f_pres:'Presupuesto orientativo *', f_obj:'Objetivo',
+  o1:'Inversión / Rentabilidad', o2:'Uso propio / Residencia', o3:'Reforma y revalorización', o4:'Diversificación patrimonial',
+  f_det:'Detalles adicionales', f_priv:'Acepto que la información facilitada sea utilizada para contactar conmigo. Toda la información será tratada bajo estricto protocolo de confidencialidad.',
+  f_submit:'Enviar Perfil de Búsqueda',
+  banner_label:'Protocolo de Silencio', banner_title:'<em>Sin exposición. Sin ruido.</em><br>Solo resultados.',
+  banner_text:'Toda operación gestionada por KOEHLER se desarrolla en un ecosistema cerrado, donde la información fluye únicamente hacia los actores validados por nuestra dirección estratégica.'
+};
+initNav('compra');
+</script>
 </body>
 </html>

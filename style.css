@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
-  --gold: #B8973A;
-  --gold-light: #D4AF5A;
+  --gold: #c5a059;
+  --gold-light: #d4b47a;
   --black: #0D0D0D;
   --white: #FFFFFF;
   --off-white: #FAFAF8;
@@ -899,4 +899,206 @@ footer {
   .admission-step { border-right: none; border-bottom: 1px solid var(--grey-mid); }
   .admission-step:last-child { border-bottom: none; }
   .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+}
+
+/* ── LANGUAGE SELECTOR ── */
+.lang-selector {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 24px;
+  border-left: 1px solid var(--grey-mid);
+  padding-left: 24px;
+}
+
+.lang-btn {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grey-text);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 2px;
+  transition: color 0.2s;
+  line-height: 1;
+}
+
+.lang-btn:hover,
+.lang-btn.active {
+  color: var(--gold);
+}
+
+.lang-sep {
+  font-size: 8px;
+  color: var(--grey-mid);
+  line-height: 1;
+}
+
+/* ── FINANCING PAGE ── */
+.finance-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  opacity: 0.22;
+}
+
+.finance-type-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin-top: 56px;
+}
+
+.finance-type {
+  background: var(--grey-light);
+  padding: 64px 56px;
+  position: relative;
+  overflow: hidden;
+}
+
+.finance-type::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.finance-type:hover::before { transform: scaleX(1); }
+
+.finance-type-tag {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 8px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 5px 12px;
+  margin-bottom: 28px;
+}
+
+.finance-type-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: 30px;
+  color: var(--black);
+  margin-bottom: 8px;
+  line-height: 1.1;
+}
+
+.finance-type-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--grey-text);
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.finance-type-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 2;
+  color: var(--grey-text);
+  margin-bottom: 28px;
+}
+
+.finance-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.finance-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.finance-list li::before {
+  content: '—';
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+/* ── SPECIALTIES (compra) ── */
+.specialties {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  margin-top: 48px;
+}
+
+.specialty {
+  padding: 40px 28px;
+  background: var(--white);
+  border: 1px solid var(--grey-mid);
+  text-align: center;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.specialty:hover {
+  border-color: var(--gold);
+  background: var(--off-white);
+}
+
+.specialty-icon {
+  width: 36px;
+  height: 1px;
+  background: var(--gold);
+  margin: 0 auto 24px;
+}
+
+.specialty-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--black);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.specialty-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 1.9;
+  color: var(--grey-text);
+}
+
+/* ── CLUB 1512 LOGO HERO ── */
+.club-logo-hero {
+  max-width: 320px;
+  width: 80%;
+  margin: 0 auto 40px;
+  display: block;
+  filter: grayscale(1) brightness(0.85);
+}
+
+@media (max-width: 768px) {
+  .finance-type-grid { grid-template-columns: 1fr; }
+  .specialties { grid-template-columns: repeat(2, 1fr); }
+  .finance-type { padding: 48px 32px; }
+  .lang-selector { margin-left: 16px; padding-left: 16px; }
 }
