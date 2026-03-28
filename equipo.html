@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Equipo — KOEHLER Assets Representation</title>
+  <meta name="description" content="Julia Luise Koehler y Francisco Rojas Ángel. Los fundadores de KOEHLER Assets Representation. Arquitectura, estrategia y capital internacional." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .team-member-full {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 80px;
+      align-items: start;
+      padding: 80px 0;
+      border-bottom: 1px solid var(--grey-mid);
+    }
+    .team-member-full:last-child { border-bottom: none; }
+    .team-member-full.reverse { direction: rtl; }
+    .team-member-full.reverse > * { direction: ltr; }
+
+    .team-photo-full {
+      position: relative;
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      background: var(--grey-light);
+    }
+    .team-photo-full img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(15%);
+    }
+
+    .team-detail-role {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 9px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+      display: block;
+    }
+    .team-detail-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(32px, 4vw, 52px);
+      color: var(--black);
+      line-height: 1.05;
+      margin-bottom: 32px;
+    }
+    .team-detail-bio {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      font-size: 13px;
+      line-height: 2.1;
+      color: #555550;
+    }
+    .team-detail-bio strong {
+      font-weight: 500;
+      color: var(--black);
+    }
+    .team-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 32px;
+    }
+    .team-tag {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      padding: 6px 14px;
+    }
+
+    @media (max-width: 768px) {
+      .team-member-full { grid-template-columns: 1fr; gap: 40px; padding: 56px 0; }
+      .team-member-full.reverse { direction: ltr; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="page-wrapper">
+
+  <!-- HERO -->
+  <section class="hero" style="height: 52vh; min-height: 360px;">
+    <img src="https://koehlerassets.com/assets/images/image12.jpg?v=27e91c00" alt="" class="hero-img" />
+    <div class="hero-content">
+      <span class="hero-eyebrow">La Firma · Madrid</span>
+      <h1>El <em>Equipo</em></h1>
+      <p class="hero-sub">Más que gestores, somos arquitectos de confianza. Protegemos la reputación y el legado de quienes nos confían su patrimonio.</p>
+    </div>
+  </section>
+
+  <!-- INTRO FIRMA -->
+  <section class="bg-grey">
+    <div class="section-inner" style="text-align: center; max-width: 760px;">
+      <span class="section-label">La Firma</span>
+      <h2 class="section-title" style="margin: 0 auto 24px;">Arquitectos<br><em>de Confianza</em></h2>
+      <div class="divider divider-center"></div>
+      <p class="section-text" style="margin: 0 auto; text-align: center;">Koehler nació de una observación crítica en el mercado de activos de alto valor: la exposición mediática y la gestión masiva degradan el valor del activo. Fundamos esta firma con un propósito claro: devolver la soberanía de la privacidad al propietario.</p>
+      <br/>
+      <p class="section-text" style="margin: 0 auto; text-align: center;">Detectamos que los grandes inversores y propietarios de activos singulares carecían de una figura de representación que operara bajo un silencio estratégico real. Koehler no nació para estar en los portales; nació para estar en los despachos donde se toman las decisiones que definen el mercado.</p>
+    </div>
+  </section>
+
+  <!-- EQUIPO -->
+  <section>
+    <div class="section-inner">
+
+      <!-- JULIA -->
+      <div class="team-member-full">
+        <div class="team-photo-full">
+          <img src="https://koehlerassets.com/assets/images/image08.jpg?v=27e91c00" alt="Julia Luise Koehler" />
+        </div>
+        <div>
+          <span class="team-detail-role">Founder · Architecture & Strategy</span>
+          <div class="team-detail-name">Julia Luise<br>Koehler</div>
+          <div class="divider"></div>
+          <p class="team-detail-bio">
+            Fundadora e impulsora de Koehler, Julia creó la firma para devolver la privacidad al mercado de activos singulares. <strong>Formada en Arquitectura y Diseño de Interiores</strong>, fusiona el rigor y la disciplina de su origen alemán con una sólida trayectoria de años en el sector inmobiliario y ventas.
+          </p>
+          <br/>
+          <p class="team-detail-bio">
+            Su visión técnica de autor le permite <strong>auditar la viabilidad y el potencial de transformación</strong> de cada propiedad, defendiendo el patrimonio de sus clientes bajo un estándar de precisión y excelencia técnica que redefine la consultoría convencional.
+          </p>
+          <div class="team-tags">
+            <span class="team-tag">Arquitectura</span>
+            <span class="team-tag">Diseño de Interiores</span>
+            <span class="team-tag">Estrategia de Activos</span>
+            <span class="team-tag">Madrid</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- FRANCISCO -->
+      <div class="team-member-full reverse">
+        <div class="team-photo-full">
+          <img src="https://koehlerassets.com/assets/images/image05.jpg?v=27e91c00" alt="Francisco Rojas Ángel" />
+        </div>
+        <div>
+          <span class="team-detail-role">Co-Founder · Capital & Investment</span>
+          <div class="team-detail-name">Francisco<br>Rojas Ángel</div>
+          <div class="divider"></div>
+          <p class="team-detail-bio">
+            Socio estratégico con más de <strong>15 años en la arquitectura financiera internacional</strong>. Business Ambassador de PROEXCA, Francisco lidera la <strong>conexión de capital global</strong> desde nodos como Miami, Punta Cana y Madrid.
+          </p>
+          <br/>
+          <p class="team-detail-bio">
+            Su enfoque en la <strong>Inversión Consciente</strong> asegura operaciones rentables y responsables, garantizando que cada activo cuente con una estructura financiera sólida y eficiente, preparada para los inversores más exigentes del mundo.
+          </p>
+          <div class="team-tags">
+            <span class="team-tag">Capital Internacional</span>
+            <span class="team-tag">Inversión Consciente</span>
+            <span class="team-tag">PROEXCA</span>
+            <span class="team-tag">Miami · Madrid · Caribe</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONSEJO -->
+  <section class="bg-grey">
+    <div class="section-inner" style="max-width: 760px; text-align: center;">
+      <span class="section-label">Red de Partners</span>
+      <h2 class="section-title" style="margin: 0 auto 24px;">Más allá del<br><em>equipo fundador</em></h2>
+      <div class="divider divider-center"></div>
+      <p class="section-text" style="margin: 0 auto; text-align: center;">Koehler está integrada por un consejo de partners especializados en banca privada, derecho inmobiliario y análisis de activos singulares. No solo gestionamos transacciones; nuestra misión es proteger la reputación y el legado de quienes nos confían su patrimonio en Madrid y mercados internacionales.</p>
+      <br/>
+      <p class="section-text" style="margin: 0 auto; text-align: center; font-style: italic; color: var(--grey-text);">Operamos bajo un estricto criterio de selección de activos. No representamos propiedades, representamos oportunidades singulares que cumplen con nuestros estándares de valor, ubicación y potencial de trascendencia.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="text-align: center;">
+    <div class="section-inner">
+      <span class="section-label">¿Hablamos?</span>
+      <h2 class="section-title" style="max-width: 480px; margin: 0 auto 24px;">Iniciemos una<br><em>conversación</em></h2>
+      <div class="divider divider-center"></div>
+      <p class="section-text" style="margin: 0 auto 40px; text-align: center;">Si busca una firma de representación que trabaje con el mismo nivel de rigor y discreción con que usted gestiona su patrimonio, estamos a su disposición.</p>
+      <a href="index.html#contacto" class="btn btn-dark">Agendar Sesión de Diagnóstico</a>
+    </div>
+  </section>
+
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script src="components.js"></script>
+<script>initNav('equipo');</script>
+</body>
+</html>

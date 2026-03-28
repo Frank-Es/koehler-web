@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Club 1512 — KOEHLER Assets Representation</title>
+  <meta name="description" content="Club privado de inversión. Un círculo selecto que opera en la ruta atlántica Madrid–Canarias–Caribe. Acceso por invitación, previo proceso KYC." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .club-hero {
+      background: var(--black);
+    }
+    .club-hero .hero-eyebrow { color: var(--gold); }
+    .club-hero h1 { color: var(--white); }
+    .club-hero .hero-sub { color: rgba(255,255,255,0.5); }
+
+    .club-stat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 56px;
+    }
+    .club-stat {
+      background: var(--black);
+      color: var(--white);
+      padding: 48px 40px;
+      text-align: center;
+    }
+    .club-stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 56px;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .club-stat-label {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 9px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      margin-top: 56px;
+    }
+    .benefit-item {
+      padding: 48px 40px;
+      background: var(--grey-light);
+      border-left: 2px solid transparent;
+      transition: border-color 0.3s;
+    }
+    .benefit-item:hover { border-color: var(--gold); }
+    .benefit-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 24px;
+      color: var(--black);
+      margin-bottom: 12px;
+    }
+    .benefit-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 2;
+      color: var(--grey-text);
+    }
+
+    .kyc-note {
+      background: var(--black);
+      padding: 32px 40px;
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .kyc-note-label {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 9px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      white-space: nowrap;
+    }
+    .kyc-note-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      font-size: 11px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.6);
+    }
+
+    @media (max-width: 768px) {
+      .club-stat-grid { grid-template-columns: 1fr; }
+      .benefit-grid { grid-template-columns: 1fr; }
+      .kyc-note { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="page-wrapper">
+
+  <!-- HERO OSCURO -->
+  <section class="hero club-hero">
+    <div class="hero-content">
+      <span class="hero-eyebrow">Madrid · Canarias · Caribe · LATAM</span>
+      <h1>Club <em>1512</em></h1>
+      <p class="hero-sub">Un círculo privado de inversores que operan en la ruta atlántica. Fundado bajo el espíritu de las Leyes de Burgos de 1512. Acceso por invitación, previo proceso KYC.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="#admision" class="btn btn-gold">Solicitar Acceso</a>
+        <a href="https://www.club1512.com/" target="_blank" class="btn btn-outline" style="border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.7);">Ir a club1512.com →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section>
+    <div class="section-inner">
+      <div class="two-col">
+        <div>
+          <span class="section-label">El Club</span>
+          <h2 class="section-title">Un círculo<br><em>de confianza</em></h2>
+          <div class="divider"></div>
+          <p class="section-text">Club 1512 nació de la misma filosofía que inspira a KOEHLER: las mejores oportunidades de inversión no se publican, se comparten entre iguales bajo estrictos criterios de selección y confidencialidad.</p>
+          <br/>
+          <p class="section-text">Operamos en la ruta atlántica Madrid–Canarias–Caribe–LATAM, conectando capital cualificado con activos singulares que nunca llegan al mercado abierto. Cada miembro pasa por un proceso de verificación KYC que garantiza la integridad y el perfil patrimonial de todos los participantes.</p>
+          <div class="conf-badge">
+            <span>Acceso por Invitación · KYC Obligatorio</span>
+          </div>
+        </div>
+        <div class="img-block">
+          <div class="img-block-placeholder">
+            <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <span>Añadir imagen aquí</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section class="bg-grey">
+    <div class="section-inner">
+      <span class="section-label">Acceso Exclusivo</span>
+      <h2 class="section-title">Lo que ofrece<br><em>el Club</em></h2>
+      <div class="benefit-grid">
+        <div class="benefit-item">
+          <div class="benefit-title">Acceso Off-Market</div>
+          <p class="benefit-text">Oportunidades que no llegan al mercado abierto — visibles solo para miembros verificados tras proceso KYC. Los activos más singulares nunca se publican.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-title">Portal de Inversiones</div>
+          <p class="benefit-text">Dashboard privado con activos disponibles, retornos proyectados y seguimiento de operaciones en tiempo real. Toda la información en un solo lugar, protegida y accesible.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-title">Red Transatlántica</div>
+          <p class="benefit-text">Conexión directa con inversores en la ruta Madrid–Canarias–Caribe–LATAM. Una red construida sobre confianza, rigor y años de relaciones institucionales.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-title">Co-inversión entre Miembros</div>
+          <p class="benefit-text">Operaciones estructuradas conjuntamente entre miembros en activos seleccionados. La fuerza del capital colectivo al servicio de cada inversor individual.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO DE ADMISIÓN -->
+  <section id="admision">
+    <div class="section-inner">
+      <span class="section-label">Proceso de Admisión</span>
+      <h2 class="section-title">Cómo <em>unirse</em></h2>
+      <div class="admission-steps">
+        <div class="admission-step">
+          <div class="admission-num">1</div>
+          <div class="admission-title">Registro</div>
+          <p class="admission-text">Registro inicial en club1512.com con sus datos de contacto y perfil de inversor.</p>
+        </div>
+        <div class="admission-step">
+          <div class="admission-num">2</div>
+          <div class="admission-title">Entrevista Privada</div>
+          <p class="admission-text">Sesión privada con el equipo fundador para conocer sus objetivos de inversión y evaluar el encaje con el Club.</p>
+        </div>
+        <div class="admission-step">
+          <div class="admission-num">3</div>
+          <div class="admission-title">Verificación KYC</div>
+          <p class="admission-text">Proceso de verificación de identidad y perfil patrimonial conforme a los estándares internacionales de cumplimiento normativo.</p>
+        </div>
+        <div class="admission-step">
+          <div class="admission-num">4</div>
+          <div class="admission-title">Acceso al Portal</div>
+          <p class="admission-text">Acceso completo al portal privado: inversiones disponibles, retornos proyectados y seguimiento de operaciones en curso.</p>
+        </div>
+      </div>
+
+      <div class="kyc-note">
+        <span class="kyc-note-label">KYC</span>
+        <p class="kyc-note-text">El proceso KYC (Know Your Customer) es obligatorio para todos los miembros. Verificamos identidad y perfil patrimonial para garantizar la integridad del círculo y el cumplimiento normativo en todas las jurisdicciones donde operamos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUNDADORES -->
+  <section class="bg-grey">
+    <div class="section-inner">
+      <span class="section-label">Los Fundadores</span>
+      <h2 class="section-title">Quiénes están<br><em>detrás del Club</em></h2>
+      <div class="divider"></div>
+      <p class="section-text">Club 1512 fue fundado por un grupo de profesionales con décadas de experiencia en la arquitectura financiera internacional, el sector inmobiliario de alto valor y las redes de inversión transatlántica.</p>
+      <div class="founders-list">
+        <span class="founder-name">Francisco Rojas</span>
+        <span class="founder-sep">·</span>
+        <span class="founder-name">Julia Luise Koehler</span>
+        <span class="founder-sep">·</span>
+        <span class="founder-name">Gonzalo Pedrazo Gavilán</span>
+        <span class="founder-sep">·</span>
+        <span class="founder-name">Gonzalo de la Peña Gumuzio</span>
+        <span class="founder-sep">·</span>
+        <span class="founder-name">Juan Luis Rioja Calcedo</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="banner">
+    <div class="section-inner">
+      <span class="section-label" style="color: var(--gold);">Próximo Paso</span>
+      <h2 class="section-title" style="color: var(--white);">Acceso <em>por invitación</em></h2>
+      <div class="divider"></div>
+      <p class="section-text" style="margin: 0 auto 40px;">Si considera que su perfil encaja con el espíritu del Club, inicie el proceso de registro en club1512.com o contacte directamente con nuestro equipo fundador.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="https://www.club1512.com/" target="_blank" class="btn btn-gold">Registrarse en Club 1512</a>
+        <a href="index.html#contacto" class="btn btn-outline" style="border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.7);">Contactar al Equipo</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script src="components.js"></script>
+<script>initNav('club');</script>
+</body>
+</html>
