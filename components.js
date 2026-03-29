@@ -4,10 +4,10 @@ const CD = 'https://res.cloudinary.com/dbc8nfyer/image/upload/';
 
 const i18n = {
   es: {
-    nav: { inicio:'Inicio', compra:'Busco un Activo', venta:'Venda su Activo',
+    nav: { inicio:'Inicio', compra:'Comprar', venta:'Vender',
       financiacion:'Financiación', arquitectura:'Arquitectura & Interiorismo',
-      club:'Club 1512', colaboradores:'Red de Colaboradores',
-      equipo:'El Equipo', talento:'Trabaja con Nosotros' },
+      club:'Club 1512', colaboradores:'Colaboradores',
+      equipo:'Equipo', talento:'Empleo' },
     footer: { servicios:'Servicios', lafirma:'La Firma', legal:'Legal',
       tagline:'Gestión estratégica de activos singulares.<br>Discreción absoluta. Rigor jurídico.',
       aviso:'Aviso Legal', privacidad:'Privacidad', cookies:'Política de Cookies',
