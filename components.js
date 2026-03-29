@@ -7,16 +7,16 @@ const i18n = {
     nav: { inicio:'Inicio', compra:'Comprar', venta:'Vender',
       financiacion:'Financiación', arquitectura:'Arquitectura & Interiorismo',
       club:'Club 1512', colaboradores:'Colaboradores',
-      equipo:'Equipo', talento:'Empleo' },
+      equipo:'Equipo', talento:'Careers' },
     footer: { servicios:'Servicios', lafirma:'La Firma', legal:'Legal',
       tagline:'Gestión estratégica de activos singulares.<br>Discreción absoluta. Rigor jurídico.',
       aviso:'Aviso Legal', privacidad:'Privacidad', cookies:'Política de Cookies',
       copy:'©2026 Koehler Assets Representation · Madrid, España' }
   },
   en: {
-    nav: { inicio:'Home', compra:'Find an Asset', venta:'Sell your Asset',
+    nav: { inicio:'Home', compra:'Find an Asset', venta:'Sell',
       financiacion:'Financing', arquitectura:'Architecture & Interior Design',
-      club:'Club 1512', colaboradores:'Partner Network',
+      club:'Club 1512', colaboradores:'Partners',
       equipo:'The Team', talento:'Join Us' },
     footer: { servicios:'Services', lafirma:'The Firm', legal:'Legal',
       tagline:'Strategic management of singular assets.<br>Absolute discretion. Legal rigour.',
@@ -24,9 +24,9 @@ const i18n = {
       copy:'©2026 Koehler Assets Representation · Madrid, Spain' }
   },
   de: {
-    nav: { inicio:'Startseite', compra:'Objekt gesucht', venta:'Objekt verkaufen',
+    nav: { inicio:'Startseite', compra:'Gesucht', venta:'Verkaufen',
       financiacion:'Finanzierung', arquitectura:'Architektur & Innenarchitektur',
-      club:'Club 1512', colaboradores:'Partnernetzwerk',
+      club:'Club 1512', colaboradores:'Partners',
       equipo:'Das Team', talento:'Karriere' },
     footer: { servicios:'Leistungen', lafirma:'Die Firma', legal:'Rechtliches',
       tagline:'Strategisches Management von Premiumimmobilien.<br>Absolute Diskretion. Rechtliche Präzision.',
