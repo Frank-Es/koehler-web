@@ -1,77 +1,58 @@
-// KOEHLER Assets Representation — Shared components + i18n
-// Language: ES (default), EN, DE
+// KOEHLER Assets Representation — Shared components + i18n v3
+
+const CD = 'https://res.cloudinary.com/dbc8nfyer/image/upload/';
 
 const i18n = {
   es: {
-    nav: {
-      inicio: 'Inicio', compra: 'Comprar', venta: 'Vender',
-      financiacion: 'Financiación', arquitectura: 'Arquitectura',
-      club: 'Club 1512', colaboradores: 'Colaboradores',
-      equipo: 'Equipo', talento: 'Empleo',
-    },
-    footer: {
-      servicios: 'Servicios', lafirma: 'La Firma', legal: 'Legal',
-      tagline: 'Gestión estratégica de activos singulares.<br>Discreción absoluta. Rigor jurídico.',
-      aviso: 'Aviso Legal', privacidad: 'Privacidad', cookies: 'Cookies',
-      copy: '©2026 Koehler Assets Representation · Madrid, España',
-    }
+    nav: { inicio:'Inicio', compra:'Busco un Activo', venta:'Venda su Activo',
+      financiacion:'Financiación', arquitectura:'Arquitectura & Interiorismo',
+      club:'Club 1512', colaboradores:'Red de Colaboradores',
+      equipo:'El Equipo', talento:'Trabaja con Nosotros' },
+    footer: { servicios:'Servicios', lafirma:'La Firma', legal:'Legal',
+      tagline:'Gestión estratégica de activos singulares.<br>Discreción absoluta. Rigor jurídico.',
+      aviso:'Aviso Legal', privacidad:'Privacidad', cookies:'Política de Cookies',
+      copy:'©2026 Koehler Assets Representation · Madrid, España' }
   },
   en: {
-    nav: {
-      inicio: 'Home', compra: 'Find an Asset', venta: 'Sell your Asset',
-      financiacion: 'Financing', arquitectura: 'Architecture & Interior Design',
-      club: 'Club 1512', colaboradores: 'Partner Network',
-      equipo: 'The Team', talento: 'Join Us',
-    },
-    footer: {
-      servicios: 'Services', lafirma: 'The Firm', legal: 'Legal',
-      tagline: 'Strategic management of singular assets.<br>Absolute discretion. Legal rigour.',
-      aviso: 'Legal Notice', privacidad: 'Privacy Policy', cookies: 'Cookie Policy',
-      copy: '©2026 Koehler Assets Representation · Madrid, Spain',
-    }
+    nav: { inicio:'Home', compra:'Find an Asset', venta:'Sell your Asset',
+      financiacion:'Financing', arquitectura:'Architecture & Interior Design',
+      club:'Club 1512', colaboradores:'Partner Network',
+      equipo:'The Team', talento:'Join Us' },
+    footer: { servicios:'Services', lafirma:'The Firm', legal:'Legal',
+      tagline:'Strategic management of singular assets.<br>Absolute discretion. Legal rigour.',
+      aviso:'Legal Notice', privacidad:'Privacy Policy', cookies:'Cookie Policy',
+      copy:'©2026 Koehler Assets Representation · Madrid, Spain' }
   },
   de: {
-    nav: {
-      inicio: 'Startseite', compra: 'Objekt gesucht', venta: 'Objekt verkaufen',
-      financiacion: 'Finanzierung', arquitectura: 'Architektur & Innenarchitektur',
-      club: 'Club 1512', colaboradores: 'Partnernetzwerk',
-      equipo: 'Das Team', talento: 'Karriere',
-    },
-    footer: {
-      servicios: 'Leistungen', lafirma: 'Die Firma', legal: 'Rechtliches',
-      tagline: 'Strategisches Management von Premiumimmobilien.<br>Absolute Diskretion. Rechtliche Präzision.',
-      aviso: 'Impressum', privacidad: 'Datenschutz', cookies: 'Cookie-Richtlinie',
-      copy: '©2026 Koehler Assets Representation · Madrid, Spanien',
-    }
+    nav: { inicio:'Startseite', compra:'Objekt gesucht', venta:'Objekt verkaufen',
+      financiacion:'Finanzierung', arquitectura:'Architektur & Innenarchitektur',
+      club:'Club 1512', colaboradores:'Partnernetzwerk',
+      equipo:'Das Team', talento:'Karriere' },
+    footer: { servicios:'Leistungen', lafirma:'Die Firma', legal:'Rechtliches',
+      tagline:'Strategisches Management von Premiumimmobilien.<br>Absolute Diskretion. Rechtliche Präzision.',
+      aviso:'Impressum', privacidad:'Datenschutz', cookies:'Cookie-Richtlinie',
+      copy:'©2026 Koehler Assets Representation · Madrid, Spanien' }
   }
 };
 
-function getLang() { return localStorage.getItem('koehler_lang') || 'es'; }
+function getLang(){ return localStorage.getItem('koehler_lang')||'es'; }
+function setLang(lang){ localStorage.setItem('koehler_lang',lang); applyLang(lang); }
 
-function setLang(lang) {
-  localStorage.setItem('koehler_lang', lang);
-  applyLang(lang);
-}
-
-function applyLang(lang) {
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const keys = el.getAttribute('data-i18n').split('.');
-    let val = i18n[lang];
-    for (const k of keys) { val = val?.[k]; }
-    if (val !== undefined) {
-      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') el.placeholder = val;
-      else el.innerHTML = val;
+function applyLang(lang){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const keys=el.getAttribute('data-i18n').split('.');
+    let val=i18n[lang]; for(const k of keys){ val=val?.[k]; }
+    if(val!==undefined){
+      if(el.tagName==='INPUT'||el.tagName==='TEXTAREA') el.placeholder=val;
+      else el.innerHTML=val;
     }
   });
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.lang === lang);
-  });
-  document.documentElement.lang = lang;
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
+  document.documentElement.lang=lang;
 }
 
-function getNavHTML(activePage) {
-  return `
-  <nav>
+function getNavHTML(activePage){
+  return `<nav>
     <a href="index.html" class="nav-logo">
       <span class="nav-logo-name">KOEHLER</span>
       <div class="nav-logo-line"></div>
@@ -121,9 +102,8 @@ function getNavHTML(activePage) {
   </div>`;
 }
 
-function getFooterHTML() {
-  return `
-  <footer>
+function getFooterHTML(){
+  return `<footer>
     <div class="footer-inner">
       <div class="footer-top">
         <div class="footer-brand">
@@ -155,9 +135,9 @@ function getFooterHTML() {
         <div class="footer-col">
           <div class="footer-col-title" data-i18n="footer.legal">Legal</div>
           <ul>
-            <li><a href="index.html#legal" data-i18n="footer.aviso">Aviso Legal</a></li>
-            <li><a href="index.html#privacidad" data-i18n="footer.privacidad">Privacidad</a></li>
-            <li><a href="index.html#cookies" data-i18n="footer.cookies">Cookies</a></li>
+            <li><a href="legal.html#aviso-legal" data-i18n="footer.aviso">Aviso Legal</a></li>
+            <li><a href="legal.html#privacidad" data-i18n="footer.privacidad">Privacidad</a></li>
+            <li><a href="legal.html#cookies" data-i18n="footer.cookies">Política de Cookies</a></li>
             <li><a href="mailto:info@koehlerassets.com">info@koehlerassets.com</a></li>
           </ul>
         </div>
@@ -173,13 +153,10 @@ function getFooterHTML() {
   </footer>`;
 }
 
-function initNav(activePage) {
-  document.getElementById('nav-placeholder').innerHTML = getNavHTML(activePage);
-  document.getElementById('footer-placeholder').innerHTML = getFooterHTML();
-  const hamburger = document.getElementById('hamburger');
-  const navMobile = document.getElementById('navMobile');
-  if (hamburger && navMobile) {
-    hamburger.addEventListener('click', () => navMobile.classList.toggle('open'));
-  }
+function initNav(activePage){
+  document.getElementById('nav-placeholder').innerHTML=getNavHTML(activePage);
+  document.getElementById('footer-placeholder').innerHTML=getFooterHTML();
+  const h=document.getElementById('hamburger'), m=document.getElementById('navMobile');
+  if(h&&m) h.addEventListener('click',()=>m.classList.toggle('open'));
   applyLang(getLang());
 }

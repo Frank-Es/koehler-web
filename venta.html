@@ -1,275 +1,155 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Venda su Activo — KOEHLER Assets Representation</title>
-  <meta name="description" content="Gestión integral off-market de la venta de su activo. Proceso completo o asesoramiento documental y legal. Confidencialidad absoluta." />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
   <style>
-    .venta-options {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2px;
-      margin-top: 56px;
-    }
-    .venta-option {
-      background: var(--grey-light);
-      padding: 64px 56px;
-      position: relative;
-    }
-    .venta-option::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 56px; right: 56px;
-      height: 1px;
-      background: var(--grey-mid);
-    }
-    .venta-option-tag {
-      display: inline-block;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 500;
-      font-size: 8px;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--gold);
-      border: 1px solid var(--gold);
-      padding: 6px 14px;
-      margin-bottom: 28px;
-    }
-    .venta-option-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 400;
-      font-size: 32px;
-      color: var(--black);
-      margin-bottom: 20px;
-      line-height: 1.1;
-    }
-    .venta-option-text {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 300;
-      font-size: 12px;
-      line-height: 2;
-      color: var(--grey-text);
-      margin-bottom: 32px;
-    }
-    .venta-includes {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-bottom: 40px;
-    }
-    .venta-includes li {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 300;
-      font-size: 12px;
-      line-height: 1.6;
-      color: var(--text);
-    }
-    .venta-includes li::before {
-      content: '—';
-      color: var(--gold);
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-    @media (max-width: 768px) {
-      .venta-options { grid-template-columns: 1fr; }
-      .venta-option { padding: 48px 32px; }
-    }
+    .venta-options{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:56px;}
+    .venta-option{background:var(--grey-light);padding:64px 56px;position:relative;}
+    .venta-option-tag{display:inline-block;font-family:'Montserrat',sans-serif;font-weight:500;font-size:8px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:6px 14px;margin-bottom:28px;}
+    .venta-option-title{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:32px;color:var(--black);margin-bottom:20px;line-height:1.1;}
+    .venta-option-text{font-family:'Montserrat',sans-serif;font-weight:300;font-size:12px;line-height:2;color:var(--grey-text);margin-bottom:32px;}
+    .venta-includes{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:40px;}
+    .venta-includes li{display:flex;align-items:flex-start;gap:12px;font-family:'Montserrat',sans-serif;font-weight:300;font-size:12px;line-height:1.6;color:var(--text);}
+    .venta-includes li::before{content:'—';color:var(--gold);flex-shrink:0;margin-top:1px;}
+    @media(max-width:768px){.venta-options{grid-template-columns:1fr;}.venta-option{padding:48px 32px;}}
   </style>
 </head>
 <body>
-
 <div id="nav-placeholder"></div>
-
 <div class="page-wrapper">
 
-  <!-- HERO -->
   <section class="hero">
-    <div class="hero-img-placeholder">
-      <!-- Sustituye por: <img src="TU_IMAGEN.jpg" alt="" class="hero-img" /> -->
-      <div class="img-placeholder-label">Imagen Hero — Venda su Activo</div>
-    </div>
+    <img src="https://res.cloudinary.com/dbc8nfyer/image/upload/v1774805363/IMG_9351_azjnqk.heic" alt="" class="hero-img" style="opacity:0.2;"/>
     <div class="hero-content">
-      <span class="hero-eyebrow">Representación Exclusiva · Off-Market</span>
-      <h1>Venda su Activo<br><em>con Rigor</em></h1>
-      <p class="hero-sub">Gestionamos la venta de su activo de forma discreta, estructurada y bajo protocolo de confidencialidad. Sin exposición pública. Sin intermediarios innecesarios.</p>
-      <a href="#opciones" class="btn btn-dark">Ver Opciones de Servicio</a>
+      <span class="hero-eyebrow" data-i18n="ven.eyebrow">Representación Exclusiva · Off-Market</span>
+      <h1 data-i18n="ven.h1">Venda su Activo<br><em>con Rigor</em></h1>
+      <p class="hero-sub" data-i18n="ven.sub">Gestionamos la venta de su activo de forma discreta, estructurada y bajo protocolo de confidencialidad. Sin exposición pública. Sin intermediarios innecesarios.</p>
+      <a href="#opciones" class="btn btn-dark" data-i18n="ven.cta">Ver Opciones de Servicio</a>
     </div>
   </section>
 
-  <!-- INTRO -->
   <section>
     <div class="section-inner">
       <div class="two-col">
         <div>
-          <span class="section-label">Nuestra Propuesta</span>
-          <h2 class="section-title">Su activo merece<br><em>representación estratégica</em></h2>
+          <span class="section-label" data-i18n="ven.s1_label">Nuestra Propuesta</span>
+          <h2 class="section-title" data-i18n="ven.s1_title">Su activo merece<br><em>representación estratégica</em></h2>
           <div class="divider"></div>
-          <p class="section-text">En KOEHLER no publicamos activos. Cada operación se desarrolla dentro de un ecosistema cerrado, donde solo intervienen los actores validados por nuestra dirección estratégica.</p>
+          <p class="section-text" data-i18n="ven.s1_t1">En KOEHLER no publicamos activos. Cada operación se desarrolla dentro de un ecosistema cerrado, donde solo intervienen los actores validados por nuestra dirección estratégica.</p>
           <br/>
-          <p class="section-text">Tanto si necesita gestión integral de la venta desde el primer análisis hasta el cierre notarial, como si ya tiene un comprador y solo requiere el soporte documental y legal, tenemos una solución a su medida.</p>
+          <p class="section-text" data-i18n="ven.s1_t2">Tanto si necesita gestión integral de la venta desde el primer análisis hasta el cierre notarial, como si ya tiene un comprador y solo requiere el soporte documental y legal, tenemos una solución a su medida.</p>
         </div>
         <div class="img-block">
-          <div class="img-block-placeholder">
-            <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-            <span>Añadir imagen aquí</span>
-          </div>
+          <img src="https://res.cloudinary.com/dbc8nfyer/image/upload/v1774805354/IMG_6707_zieasw.heic" alt="Venda su Activo"/>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- OPCIONES -->
   <section id="opciones" class="bg-grey">
     <div class="section-inner">
-      <span class="section-label">Modalidades de Servicio</span>
-      <h2 class="section-title">Dos formas de<br><em>trabajar con nosotros</em></h2>
-
+      <span class="section-label" data-i18n="ven.opt_label">Modalidades de Servicio</span>
+      <h2 class="section-title" data-i18n="ven.opt_title">Dos formas de<br><em>trabajar con nosotros</em></h2>
       <div class="venta-options">
-
-        <!-- OPCIÓN 1 -->
         <div class="venta-option">
-          <span class="venta-option-tag">Servicio Completo</span>
-          <div class="venta-option-title">Gestión Integral<br>de la Venta</div>
-          <p class="venta-option-text">Nos hacemos cargo de todo el proceso desde el primer momento. Usted solo necesita confiar en nosotros; nosotros nos encargamos del resto, protegiendo su activo y su privacidad en cada fase.</p>
+          <span class="venta-option-tag" data-i18n="ven.o1_tag">Servicio Completo</span>
+          <div class="venta-option-title" data-i18n="ven.o1_title">Gestión Integral<br>de la Venta</div>
+          <p class="venta-option-text" data-i18n="ven.o1_text">Nos hacemos cargo de todo el proceso desde el primer momento. Usted solo necesita confiar en nosotros; nosotros nos encargamos del resto, protegiendo su activo y su privacidad en cada fase.</p>
           <ul class="venta-includes">
-            <li>Diagnóstico y análisis de valor del activo</li>
-            <li>Estrategia de posicionamiento off-market</li>
-            <li>Contrato de representación exclusiva</li>
-            <li>Acceso a red de compradores e inversores cualificados</li>
-            <li>Gestión de visitas bajo protocolo de confidencialidad</li>
-            <li>Negociación y estructuración de la oferta</li>
-            <li>Coordinación jurídica, notarial y registral</li>
-            <li>Cierre y liquidación de la operación</li>
+            <li data-i18n="ven.i1">Diagnóstico y análisis de valor del activo</li>
+            <li data-i18n="ven.i2">Estrategia de posicionamiento off-market</li>
+            <li data-i18n="ven.i3">Contrato de representación exclusiva</li>
+            <li data-i18n="ven.i4">Acceso a red de compradores e inversores cualificados</li>
+            <li data-i18n="ven.i5">Gestión de visitas bajo protocolo de confidencialidad</li>
+            <li data-i18n="ven.i6">Negociación y estructuración de la oferta</li>
+            <li data-i18n="ven.i7">Coordinación jurídica, notarial y registral</li>
+            <li data-i18n="ven.i8">Cierre y liquidación de la operación</li>
           </ul>
-          <a href="#contacto-venta" class="btn btn-dark">Solicitar Análisis de Valor</a>
+          <a href="#contacto-venta" class="btn btn-dark" data-i18n="ven.o1_btn">Solicitar Análisis de Valor</a>
         </div>
-
-        <!-- OPCIÓN 2 -->
         <div class="venta-option">
-          <span class="venta-option-tag">Asesoramiento Documental</span>
-          <div class="venta-option-title">Ya tengo<br>Comprador</div>
-          <p class="venta-option-text">Si ya dispone de un comprador pero no sabe cómo proseguir, o necesita la parte documental, legal y notarial para cerrar la operación con garantías, le acompañamos en todo ese proceso.</p>
+          <span class="venta-option-tag" data-i18n="ven.o2_tag">Asesoramiento Documental</span>
+          <div class="venta-option-title" data-i18n="ven.o2_title">Ya tengo<br>Comprador</div>
+          <p class="venta-option-text" data-i18n="ven.o2_text">Si ya dispone de un comprador pero no sabe cómo proseguir, o necesita la parte documental, legal y notarial para cerrar la operación con garantías, le acompañamos en todo ese proceso.</p>
           <ul class="venta-includes">
-            <li>Revisión y análisis de la situación jurídica del activo</li>
-            <li>Redacción y validación de contratos de arras o compraventa</li>
-            <li>Due diligence documental completa</li>
-            <li>Coordinación con notaría y registro de la propiedad</li>
-            <li>Gestión de cargas, hipotecas y cancelaciones registrales</li>
-            <li>Asesoramiento fiscal en la transmisión</li>
-            <li>Acompañamiento hasta firma y entrega de llaves</li>
+            <li data-i18n="ven.j1">Revisión y análisis de la situación jurídica del activo</li>
+            <li data-i18n="ven.j2">Redacción y validación de contratos de arras o compraventa</li>
+            <li data-i18n="ven.j3">Due diligence documental completa</li>
+            <li data-i18n="ven.j4">Coordinación con notaría y registro de la propiedad</li>
+            <li data-i18n="ven.j5">Gestión de cargas, hipotecas y cancelaciones registrales</li>
+            <li data-i18n="ven.j6">Asesoramiento fiscal en la transmisión</li>
+            <li data-i18n="ven.j7">Acompañamiento hasta firma y entrega de llaves</li>
           </ul>
-          <div style="margin-bottom: 24px;">
-            <span style="font-family:'Montserrat',sans-serif; font-size:10px; letter-spacing:0.15em; color:var(--grey-text);">Tarifa según envergadura del caso · <strong style="color:var(--black);">A consultar</strong></span>
-          </div>
-          <a href="#contacto-venta" class="btn btn-outline">Consultar Tarifa</a>
+          <div style="margin-bottom:24px;"><span style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.15em;color:var(--grey-text);" data-i18n="ven.tarifa">Tarifa según envergadura del caso · <strong style="color:var(--black);">A consultar</strong></span></div>
+          <a href="#contacto-venta" class="btn btn-outline" data-i18n="ven.o2_btn">Consultar Tarifa</a>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- GARANTÍAS -->
   <section>
     <div class="section-inner">
-      <span class="section-label">Nuestras Garantías</span>
-      <h2 class="section-title">Lo que nos <em>diferencia</em></h2>
-      <div class="cards" style="margin-top: 56px;">
-        <div class="card">
-          <div class="card-icon"></div>
-          <div class="card-title">Confidencialidad Total</div>
-          <p class="card-text">Su activo nunca aparecerá en ningún portal ni plataforma pública. Operamos exclusivamente en redes privadas y bajo acuerdos de confidencialidad firmados con cada interlocutor.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon"></div>
-          <div class="card-title">Un Solo Interlocutor</div>
-          <p class="card-text">Actuamos como único representante del propietario, eliminando la multiplicación de intermediarios que devalúa el activo y genera confusión en el mercado.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon"></div>
-          <div class="card-title">Capital Cualificado</div>
-          <p class="card-text">Accedemos únicamente a perfiles de comprador previamente validados: inversores institucionales, family offices y redes privadas de alto patrimonio.</p>
-        </div>
+      <span class="section-label" data-i18n="ven.gar_label">Nuestras Garantías</span>
+      <h2 class="section-title" data-i18n="ven.gar_title">Lo que nos <em>diferencia</em></h2>
+      <div class="cards" style="margin-top:56px;">
+        <div class="card"><div class="card-icon"></div><div class="card-title" data-i18n="ven.g1t">Confidencialidad Total</div><p class="card-text" data-i18n="ven.g1d">Su activo nunca aparecerá en ningún portal ni plataforma pública. Operamos exclusivamente en redes privadas y bajo acuerdos de confidencialidad firmados con cada interlocutor.</p></div>
+        <div class="card"><div class="card-icon"></div><div class="card-title" data-i18n="ven.g2t">Un Solo Interlocutor</div><p class="card-text" data-i18n="ven.g2d">Actuamos como único representante del propietario, eliminando la multiplicación de intermediarios que devalúa el activo y genera confusión en el mercado.</p></div>
+        <div class="card"><div class="card-icon"></div><div class="card-title" data-i18n="ven.g3t">Capital Cualificado</div><p class="card-text" data-i18n="ven.g3d">Accedemos únicamente a perfiles de comprador previamente validados: inversores institucionales, family offices y redes privadas de alto patrimonio.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- IMAGEN -->
-  <section style="padding: 0;">
-    <div style="position:relative; height: 380px; overflow:hidden; background: var(--grey-light);">
-      <img src="https://koehlerassets.com/assets/images/image03.jpg?v=27e91c00" alt="" style="width:100%; height:100%; object-fit:cover; opacity:0.45;" />
-      <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; text-align:center; padding: 0 24px;">
-        <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(18px,2.5vw,30px); color:var(--black); max-width: 680px; line-height:1.4;">
-          "No vendemos propiedades. Gestionamos oportunidades bajo un estricto protocolo de discreción."
-        </p>
+  <section style="padding:0;">
+    <div style="position:relative;height:380px;overflow:hidden;">
+      <img src="https://res.cloudinary.com/dbc8nfyer/image/upload/v1774805331/B3ED907E-923E-48D3-A611-D097BFD10A53_p1s1jq.jpg" alt="" style="width:100%;height:100%;object-fit:cover;opacity:0.4;"/>
+      <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 24px;">
+        <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(18px,2.5vw,30px);color:var(--black);max-width:680px;line-height:1.4;" data-i18n="ven.quote">"No vendemos propiedades. Gestionamos oportunidades bajo un estricto protocolo de discreción."</p>
       </div>
     </div>
   </section>
 
-  <!-- CONTACTO -->
   <section id="contacto-venta" class="bg-grey">
-    <div class="section-inner" style="max-width: 720px;">
-      <span class="section-label">Iniciar el Proceso</span>
-      <h2 class="section-title">Hablemos de<br><em>su activo</em></h2>
+    <div class="section-inner" style="max-width:720px;">
+      <span class="section-label" data-i18n="ven.form_label">Iniciar el Proceso</span>
+      <h2 class="section-title" data-i18n="ven.form_title">Hablemos de<br><em>su activo</em></h2>
       <div class="divider"></div>
-      <p class="section-text" style="margin-bottom: 48px;">Cuéntenos brevemente su situación y nos pondremos en contacto con usted para una primera sesión de diagnóstico privada y sin compromiso.</p>
-
+      <p class="section-text" style="margin-bottom:48px;" data-i18n="ven.form_intro">Cuéntenos brevemente su situación y nos pondremos en contacto con usted para una primera sesión de diagnóstico privada y sin compromiso.</p>
       <form action="https://formspree.io/f/mvzvzyyg" method="POST" class="form-wrap" style="max-width:100%">
-        <!-- Reemplaza ZZZZZZZZ con tu ID de Formspree en info@koehlerassets.com -->
         <div class="form-grid">
-          <div class="form-group">
-            <label for="nombre">Nombre completo *</label>
-            <input type="text" id="nombre" name="nombre" required placeholder="Su nombre completo" />
-          </div>
-          <div class="form-group">
-            <label for="email">Email *</label>
-            <input type="email" id="email" name="email" required placeholder="su@email.com" />
-          </div>
-          <div class="form-group">
-            <label for="telefono">Teléfono *</label>
-            <input type="tel" id="telefono" name="telefono" required placeholder="+34 600 000 000" />
-          </div>
-          <div class="form-group">
-            <label for="servicio">Servicio que necesita *</label>
-            <select id="servicio" name="servicio" required>
-              <option value="">Seleccione...</option>
-              <option>Gestión Integral de la Venta</option>
-              <option>Ya tengo comprador — Asesoramiento Documental</option>
-              <option>No estoy seguro, quiero información</option>
+          <div class="form-group"><label for="vn" data-i18n="ven.f_nombre">Nombre completo *</label><input type="text" id="vn" name="nombre" required placeholder="Su nombre completo"/></div>
+          <div class="form-group"><label for="ve" data-i18n="ven.f_email">Email *</label><input type="email" id="ve" name="email" required placeholder="su@email.com"/></div>
+          <div class="form-group"><label for="vt" data-i18n="ven.f_tel">Teléfono *</label><input type="tel" id="vt" name="telefono" required placeholder="+34 600 000 000"/></div>
+          <div class="form-group"><label for="vs" data-i18n="ven.f_serv">Servicio que necesita *</label>
+            <select id="vs" name="servicio" required>
+              <option value="" data-i18n="ven.f_sel">Seleccione...</option>
+              <option data-i18n="ven.fs1">Gestión Integral de la Venta</option>
+              <option data-i18n="ven.fs2">Ya tengo comprador — Asesoramiento Documental</option>
+              <option data-i18n="ven.fs3">No estoy seguro, quiero información</option>
             </select>
           </div>
-          <div class="form-group full">
-            <label for="activo">Descripción del activo</label>
-            <input type="text" id="activo" name="activo" placeholder="Tipo de activo, ubicación aproximada, valor estimado..." />
-          </div>
-          <div class="form-group full">
-            <label for="mensaje">Mensaje adicional</label>
-            <textarea id="mensaje" name="mensaje" placeholder="Cualquier detalle que considere relevante..."></textarea>
-          </div>
+          <div class="form-group full"><label for="va" data-i18n="ven.f_activo">Descripción del activo</label><input type="text" id="va" name="activo" placeholder="Tipo de activo, ubicación aproximada, valor estimado..."/></div>
+          <div class="form-group full"><label for="vm" data-i18n="ven.f_msg">Mensaje adicional</label><textarea id="vm" name="mensaje" placeholder="Cualquier detalle que considere relevante..."></textarea></div>
           <div class="form-group full">
             <div class="form-check">
-              <input type="checkbox" id="privacidad" name="privacidad" required />
-              <label for="privacidad">Acepto que la información facilitada sea utilizada para contactar conmigo, conforme a la política de privacidad de KOEHLER Assets Representation. Toda la información será tratada bajo estricto protocolo de confidencialidad.</label>
+              <input type="checkbox" id="vp" name="privacidad" required/>
+              <label for="vp" data-i18n="ven.f_priv">Acepto que la información facilitada sea utilizada para contactar conmigo, conforme a la <a href="legal.html#privacidad" style="color:var(--gold);">política de privacidad</a> de KOEHLER Assets Representation.</label>
             </div>
           </div>
         </div>
-        <div class="form-submit">
-          <button type="submit" class="btn btn-dark">Solicitar Sesión de Diagnóstico</button>
-        </div>
+        <div class="form-submit"><button type="submit" class="btn btn-dark" data-i18n="ven.f_btn">Solicitar Sesión de Diagnóstico</button></div>
       </form>
     </div>
   </section>
-
 </div>
-
 <div id="footer-placeholder"></div>
-
 <script src="components.js"></script>
-<script>initNav('venta');</script>
+<script>
+i18n.es.ven={eyebrow:'Representación Exclusiva · Off-Market',h1:'Venda su Activo<br><em>con Rigor</em>',sub:'Gestionamos la venta de su activo de forma discreta, estructurada y bajo protocolo de confidencialidad. Sin exposición pública. Sin intermediarios innecesarios.',cta:'Ver Opciones de Servicio',s1_label:'Nuestra Propuesta',s1_title:'Su activo merece<br><em>representación estratégica</em>',s1_t1:'En KOEHLER no publicamos activos. Cada operación se desarrolla dentro de un ecosistema cerrado, donde solo intervienen los actores validados por nuestra dirección estratégica.',s1_t2:'Tanto si necesita gestión integral de la venta como si ya tiene un comprador y solo requiere soporte documental y legal, tenemos una solución a su medida.',opt_label:'Modalidades de Servicio',opt_title:'Dos formas de<br><em>trabajar con nosotros</em>',o1_tag:'Servicio Completo',o1_title:'Gestión Integral<br>de la Venta',o1_text:'Nos hacemos cargo de todo el proceso desde el primer momento. Usted solo necesita confiar en nosotros; nosotros nos encargamos del resto.',i1:'Diagnóstico y análisis de valor del activo',i2:'Estrategia de posicionamiento off-market',i3:'Contrato de representación exclusiva',i4:'Acceso a red de compradores e inversores cualificados',i5:'Gestión de visitas bajo protocolo de confidencialidad',i6:'Negociación y estructuración de la oferta',i7:'Coordinación jurídica, notarial y registral',i8:'Cierre y liquidación de la operación',o1_btn:'Solicitar Análisis de Valor',o2_tag:'Asesoramiento Documental',o2_title:'Ya tengo<br>Comprador',o2_text:'Si ya dispone de un comprador pero no sabe cómo proseguir, le acompañamos en todo el proceso documental, legal y notarial.',j1:'Revisión y análisis de la situación jurídica del activo',j2:'Redacción y validación de contratos de arras o compraventa',j3:'Due diligence documental completa',j4:'Coordinación con notaría y registro de la propiedad',j5:'Gestión de cargas, hipotecas y cancelaciones registrales',j6:'Asesoramiento fiscal en la transmisión',j7:'Acompañamiento hasta firma y entrega de llaves',tarifa:'Tarifa según envergadura del caso · <strong style="color:var(--black);">A consultar</strong>',o2_btn:'Consultar Tarifa',gar_label:'Nuestras Garantías',gar_title:'Lo que nos <em>diferencia</em>',g1t:'Confidencialidad Total',g1d:'Su activo nunca aparecerá en ningún portal ni plataforma pública. Operamos exclusivamente en redes privadas bajo acuerdos de confidencialidad.',g2t:'Un Solo Interlocutor',g2d:'Actuamos como único representante del propietario, eliminando la multiplicación de intermediarios que devalúa el activo.',g3t:'Capital Cualificado',g3d:'Accedemos únicamente a perfiles de comprador previamente validados: inversores institucionales, family offices y redes privadas de alto patrimonio.',quote:'"No vendemos propiedades. Gestionamos oportunidades bajo un estricto protocolo de discreción."',form_label:'Iniciar el Proceso',form_title:'Hablemos de<br><em>su activo</em>',form_intro:'Cuéntenos brevemente su situación y nos pondremos en contacto para una primera sesión de diagnóstico privada y sin compromiso.',f_nombre:'Nombre completo *',f_email:'Email *',f_tel:'Teléfono *',f_serv:'Servicio que necesita *',f_sel:'Seleccione...',fs1:'Gestión Integral de la Venta',fs2:'Ya tengo comprador — Asesoramiento Documental',fs3:'No estoy seguro, quiero información',f_activo:'Descripción del activo',f_msg:'Mensaje adicional',f_priv:'Acepto que la información facilitada sea utilizada para contactar conmigo, conforme a la <a href="legal.html#privacidad" style="color:var(--gold);">política de privacidad</a> de KOEHLER Assets Representation.',f_btn:'Solicitar Sesión de Diagnóstico'};
+i18n.en.ven={eyebrow:'Exclusive Representation · Off-Market',h1:'Sell your Asset<br><em>with Rigour</em>',sub:'We manage the sale of your asset discreetly, in a structured manner and under confidentiality protocol. No public exposure. No unnecessary intermediaries.',cta:'View Service Options',s1_label:'Our Proposal',s1_title:'Your asset deserves<br><em>strategic representation</em>',s1_t1:'At KOEHLER we do not publish assets. Every operation takes place within a closed ecosystem, where only actors validated by our strategic management participate.',s1_t2:'Whether you need full sale management from first analysis to notarial closing, or already have a buyer and only need documentary and legal support, we have a solution for you.',opt_label:'Service Modalities',opt_title:'Two ways to<br><em>work with us</em>',o1_tag:'Full Service',o1_title:'Full Sale<br>Management',o1_text:'We take care of the entire process from the very first moment. You just need to trust us; we handle the rest, protecting your asset and your privacy at every stage.',i1:'Asset diagnosis and value analysis',i2:'Off-market positioning strategy',i3:'Exclusive representation contract',i4:'Access to network of qualified buyers and investors',i5:'Visit management under confidentiality protocol',i6:'Offer negotiation and structuring',i7:'Legal, notarial and registry coordination',i8:'Closing and liquidation of the transaction',o1_btn:'Request Value Analysis',o2_tag:'Documentary Advisory',o2_title:'I already have<br>a Buyer',o2_text:'If you already have a buyer but are unsure how to proceed, or need the documentary, legal and notarial support to close the transaction with guarantees, we accompany you throughout.',j1:'Review and analysis of the asset\'s legal situation',j2:'Drafting and validation of deposit or sale contracts',j3:'Full documentary due diligence',j4:'Coordination with notary and land registry',j5:'Management of charges, mortgages and registry cancellations',j6:'Tax advisory on the transfer',j7:'Accompaniment through to signing and key handover',tarifa:'Fee according to the scope of the case · <strong style="color:var(--black);">Upon request</strong>',o2_btn:'Enquire about Fees',gar_label:'Our Guarantees',gar_title:'What sets us <em>apart</em>',g1t:'Total Confidentiality',g1d:'Your asset will never appear on any portal or public platform. We operate exclusively in private networks under confidentiality agreements signed with every party.',g2t:'Single Interlocutor',g2d:'We act as the sole representative of the owner, eliminating the multiplication of intermediaries that devalues the asset and creates confusion in the market.',g3t:'Qualified Capital',g3d:'We access only pre-validated buyer profiles: institutional investors, family offices and high-net-worth private networks.',quote:'"We do not sell properties. We manage opportunities under a strict protocol of discretion."',form_label:'Start the Process',form_title:'Let us talk about<br><em>your asset</em>',form_intro:'Tell us briefly about your situation and we will contact you for a first private, no-obligation diagnostic session.',f_nombre:'Full name *',f_email:'Email *',f_tel:'Phone *',f_serv:'Service required *',f_sel:'Select...',fs1:'Full Sale Management',fs2:'I already have a buyer — Documentary Advisory',fs3:'I\'m not sure, I would like information',f_activo:'Asset description',f_msg:'Additional message',f_priv:'I accept that the information provided will be used to contact me, in accordance with the <a href="legal.html#privacidad" style="color:var(--gold);">privacy policy</a> of KOEHLER Assets Representation.',f_btn:'Request Diagnostic Session'};
+i18n.de.ven={eyebrow:'Exklusive Vertretung · Off-Market',h1:'Verkaufen Sie Ihr Objekt<br><em>mit Präzision</em>',sub:'Wir verwalten den Verkauf Ihres Objekts diskret, strukturiert und unter Vertraulichkeitsprotokoll. Keine öffentliche Exposition. Keine unnötigen Vermittler.',cta:'Servicemöglichkeiten ansehen',s1_label:'Unser Angebot',s1_title:'Ihr Objekt verdient<br><em>strategische Vertretung</em>',s1_t1:'Bei KOEHLER veröffentlichen wir keine Objekte. Jede Transaktion findet in einem geschlossenen Ökosystem statt, an dem nur von unserem strategischen Management validierte Akteure teilnehmen.',s1_t2:'Ob Sie vollständiges Verkaufsmanagement von der ersten Analyse bis zum notariellen Abschluss benötigen oder bereits einen Käufer haben und nur dokumentarische und rechtliche Unterstützung benötigen.',opt_label:'Servicemodalitäten',opt_title:'Zwei Wege zur<br><em>Zusammenarbeit mit uns</em>',o1_tag:'Vollservice',o1_title:'Vollständiges<br>Verkaufsmanagement',o1_text:'Wir übernehmen den gesamten Prozess von Anfang an. Sie müssen uns nur vertrauen; wir kümmern uns um den Rest und schützen Ihr Objekt und Ihre Privatsphäre in jeder Phase.',i1:'Objektdiagnose und Wertanalyse',i2:'Off-Market-Positionierungsstrategie',i3:'Exklusiver Vertretungsvertrag',i4:'Zugang zum Netzwerk qualifizierter Käufer und Investoren',i5:'Besichtigungsmanagement unter Vertraulichkeitsprotokoll',i6:'Angebotsverhandlung und -strukturierung',i7:'Rechtliche, notarielle und registeramtliche Koordination',i8:'Abschluss und Liquidierung der Transaktion',o1_btn:'Wertanalyse anfordern',o2_tag:'Dokumentarische Beratung',o2_title:'Ich habe bereits<br>einen Käufer',o2_text:'Wenn Sie bereits einen Käufer haben, aber nicht wissen, wie Sie vorgehen sollen, begleiten wir Sie durch den gesamten dokumentarischen, rechtlichen und notariellen Prozess.',j1:'Überprüfung und Analyse der rechtlichen Situation des Objekts',j2:'Entwurf und Validierung von Anzahlungs- oder Kaufverträgen',j3:'Vollständige dokumentarische Due Diligence',j4:'Koordination mit Notar und Grundbuchamt',j5:'Verwaltung von Belastungen, Hypotheken und Registerlöschungen',j6:'Steuerliche Beratung bei der Übertragung',j7:'Begleitung bis zur Unterzeichnung und Schlüsselübergabe',tarifa:'Honorar je nach Fallumfang · <strong style="color:var(--black);">Auf Anfrage</strong>',o2_btn:'Honorar anfragen',gar_label:'Unsere Garantien',gar_title:'Was uns <em>unterscheidet</em>',g1t:'Totale Vertraulichkeit',g1d:'Ihr Objekt wird niemals auf einem Portal oder einer öffentlichen Plattform erscheinen. Wir operieren ausschließlich in privaten Netzwerken unter unterzeichneten Vertraulichkeitsvereinbarungen.',g2t:'Einziger Ansprechpartner',g2d:'Wir fungieren als alleiniger Vertreter des Eigentümers und eliminieren die Vervielfachung von Vermittlern, die das Objekt entwertet.',g3t:'Qualifiziertes Kapital',g3d:'Wir haben nur Zugang zu vorab validierten Käuferprofilen: institutionelle Investoren, Family Offices und private High-Net-Worth-Netzwerke.',quote:'"Wir verkaufen keine Immobilien. Wir verwalten Möglichkeiten unter einem strengen Diskretionsprotokoll."',form_label:'Prozess starten',form_title:'Sprechen wir über<br><em>Ihr Objekt</em>',form_intro:'Schildern Sie uns kurz Ihre Situation und wir werden Sie für eine erste private, unverbindliche Diagnosesitzung kontaktieren.',f_nombre:'Vollständiger Name *',f_email:'E-Mail *',f_tel:'Telefon *',f_serv:'Benötigter Service *',f_sel:'Auswählen...',fs1:'Vollständiges Verkaufsmanagement',fs2:'Ich habe bereits einen Käufer — Dokumentarische Beratung',fs3:'Ich bin unsicher, ich möchte Informationen',f_activo:'Objektbeschreibung',f_msg:'Zusätzliche Nachricht',f_priv:'Ich akzeptiere, dass die bereitgestellten Informationen zur Kontaktaufnahme verwendet werden, gemäß der <a href="legal.html#privacidad" style="color:var(--gold);">Datenschutzrichtlinie</a> von KOEHLER Assets Representation.',f_btn:'Diagnosesitzung anfordern'};
+initNav('venta');
+</script>
 </body>
 </html>
