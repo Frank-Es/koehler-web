@@ -5,7 +5,7 @@ const CD = 'https://res.cloudinary.com/dbc8nfyer/image/upload/';
 const i18n = {
   es: {
     nav: { inicio:'Inicio', compra:'Comprar', venta:'Vender',
-      financiacion:'Financiación', arquitectura:'Arquitectura & Interiorismo',
+      financiacion:'Financiación', arquitectura:'Interiorismo',
       club:'Club 1512', colaboradores:'Colaboradores',
       equipo:'Equipo', talento:'Careers' },
     footer: { servicios:'Servicios', lafirma:'La Firma', legal:'Legal',
@@ -15,7 +15,7 @@ const i18n = {
   },
   en: {
     nav: { inicio:'Home', compra:'Find an Asset', venta:'Sell',
-      financiacion:'Financing', arquitectura:'Architecture & Interior Design',
+      financiacion:'Financing', arquitectura:'Interior Design',
       club:'Club 1512', colaboradores:'Partners',
       equipo:'The Team', talento:'Join Us' },
     footer: { servicios:'Services', lafirma:'The Firm', legal:'Legal',
@@ -24,8 +24,8 @@ const i18n = {
       copy:'©2026 Koehler Assets Representation · Madrid, Spain' }
   },
   de: {
-    nav: { inicio:'Startseite', compra:'Gesucht', venta:'Verkaufen',
-      financiacion:'Finanzierung', arquitectura:'Architektur & Innenarchitektur',
+    nav: { inicio:'Startseite', compra:'Kaufen', venta:'Verkaufen',
+      financiacion:'Finanzierung', arquitectura:'Innenarchitektur',
       club:'Club 1512', colaboradores:'Partners',
       equipo:'Das Team', talento:'Karriere' },
     footer: { servicios:'Leistungen', lafirma:'Die Firma', legal:'Rechtliches',
