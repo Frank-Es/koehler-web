@@ -1,5 +1,72 @@
 // KOEHLER Assets Representation — Shared components + i18n v3
+// ── GOOGLE ANALYTICS 4 ──
+(function(){
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZGXD97663V';
+  document.head.appendChild(s);
+})();
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZGXD97663V');
 
+// ── TRACKING DE EVENTOS ──
+document.addEventListener('DOMContentLoaded', function(){
+
+  // Botones CTA por texto/href
+  var eventos = [
+    { selector: 'a[href="#formulario"]',     evento: 'cta_registrar_perfil' },
+    { selector: 'a[href="compra.html"]',     evento: 'cta_busco_activo' },
+    { selector: 'a[href="venta.html"]',      evento: 'cta_vendo_activo' },
+    { selector: 'a[href="arquitectura.html"]',evento: 'cta_arquitectura' },
+    { selector: 'a[href="club1512.html"]',   evento: 'cta_club1512' },
+    { selector: 'a[href="servicios.html"]',  evento: 'cta_servicios' },
+    { selector: 'a[href="#admision"]',       evento: 'cta_solicitar_acceso' },
+    { selector: 'a[href="#contacto"]',       evento: 'cta_contacto' },
+    { selector: 'a[target="_blank"]',        evento: 'cta_externo' },
+  ];
+
+  eventos.forEach(function(e){
+    document.querySelectorAll(e.selector).forEach(function(el){
+      el.addEventListener('click', function(){
+        gtag('event', e.evento, {
+          event_category: 'CTA',
+          event_label: el.innerText.trim(),
+          page: window.location.pathname
+        });
+      });
+    });
+  });
+
+  // Envíos de formulario
+  document.querySelectorAll('form').forEach(function(form){
+    form.addEventListener('submit', function(){
+      gtag('event', 'form_submit', {
+        event_category: 'Formulario',
+        event_label: document.title,
+        page: window.location.pathname
+      });
+    });
+  });
+
+  // Scroll hasta sección formulario
+  var formSection = document.querySelector('#formulario, #admision, #contacto');
+  if(formSection){
+    var observed = false;
+    var observer = new IntersectionObserver(function(entries){
+      if(entries[0].isIntersecting && !observed){
+        observed = true;
+        gtag('event', 'scroll_formulario', {
+          event_category: 'Engagement',
+          page: window.location.pathname
+        });
+      }
+    }, { threshold: 0.3 });
+    observer.observe(formSection);
+  }
+
+});
 const CD = 'https://res.cloudinary.com/dbc8nfyer/image/upload/';
 
 const i18n = {
