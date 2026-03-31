@@ -130,53 +130,73 @@
     <h2 class="section-title" data-i18n="idx.form_title">Hablemos de <em>su activo</em></h2>
     <div class="divider"></div>
     
-    <div id="form-success" style="display:none; text-align: center; padding: 40px 0;">
-      <h3 style="color: var(--gold); margin-bottom: 16px;">¡Muchas gracias por contactar con nosotros!</h3>
-      <p class="section-text">Hemos recibido su información correctamente. Le contactaremos a la mayor brevedad posible para agendar su sesión de diagnóstico.</p>
+    <div id="form-success" style="display:none; text-align: center; padding: 40px 0; border: 1px solid var(--gold); background: rgba(212, 175, 55, 0.05); border-radius: 4px;">
+      <h3 style="color: var(--gold); margin-bottom: 16px;">¡Solicitud recibida!</h3>
+      <p class="section-text">Gracias por confiar en KOEHLER Assets Representation. Le contactaremos a la mayor brevedad posible para agendar su sesión de diagnóstico.</p>
     </div>
 
     <div id="form-container">
       <p class="section-text" style="margin-bottom:48px;" data-i18n="idx.form_intro">Si busca una gestión estructurada, selectiva y alejada de los canales convencionales, iniciemos una conversación.</p>
       
-      <form id="contact-form" action="https://hook.eu1.make.com/e6uancdwwc9a17mkav974tblo1x6a1jd" method="POST" style="max-width:100%">
+      <form id="main-contact-form" action="https://hook.eu1.make.com/e6uancdwwc9a17mkav974tblo1x6a1jd" method="POST" style="max-width:100%">
         <div class="form-grid">
-          <div class="form-group"><label for="idx_nombre" data-i18n="idx.f_nombre">Nombre completo</label><input type="text" id="idx_nombre" name="nombre" required placeholder="Su nombre"/></div>
-          <div class="form-group"><label for="idx_email" data-i18n="idx.f_email">Email</label><input type="email" id="idx_email" name="email" required placeholder="su@email.com"/></div>
-          <div class="form-group"><label for="idx_tel" data-i18n="idx.f_tel">Teléfono</label><input type="tel" id="idx_tel" name="teléfono" placeholder="+34 600 000 000"/></div>
-          <div class="form-group"><label for="idx_asunto" data-i18n="idx.f_asunto">Asunto</label>
-            <select id="idx_asunto" name="asunto">
+          <div class="form-group">
+            <label for="idx_nombre" data-i18n="idx.f_nombre">Nombre completo</label>
+            <input type="text" id="idx_nombre" name="nombre" required placeholder="Su nombre"/>
+          </div>
+          
+          <div class="form-group">
+            <label for="idx_email" data-i18n="idx.f_email">Email</label>
+            <input type="email" id="idx_email" name="email" required placeholder="su@email.com"/>
+          </div>
+          
+          <div class="form-group">
+            <label for="idx_tel" data-i18n="idx.f_tel">Teléfono</label>
+            <input type="tel" id="idx_tel" name="teléfono" placeholder="+34 600 000 000"/>
+          </div>
+          
+          <div class="form-group">
+            <label for="idx_asunto" data-i18n="idx.f_asunto">Asunto</label>
+            <select id="idx_asunto" name="asunto" required>
               <option value="" data-i18n="idx.f_sel">Seleccione...</option>
-              <option data-i18n="idx.o1">Busco un Activo</option>
-              <option data-i18n="idx.o2">Venda mi Activo</option>
-              <option data-i18n="idx.o3">Arquitectura & Interiorismo</option>
-              <option data-i18n="idx.o4">Club 1512</option>
-              <option data-i18n="idx.o5">Consulta General</option>
+              <option value="Busco un Activo" data-i18n="idx.o1">Busco un Activo</option>
+              <option value="Venda mi Activo" data-i18n="idx.o2">Venda mi Activo</option>
+              <option value="Arquitectura & Interiorismo" data-i18n="idx.o3">Arquitectura & Interiorismo</option>
+              <option value="Club 1512" data-i18n="idx.o4">Club 1512</option>
+              <option value="Consulta General" data-i18n="idx.o5">Consulta General</option>
             </select>
           </div>
-          <div class="form-group full"><label for="idx_msg" data-i18n="idx.f_msg">Mensaje</label><textarea id="idx_msg" name="mensaje" placeholder="Cuéntenos brevemente su consulta..."></textarea></div>
+          
+          <div class="form-group full">
+            <label for="idx_msg" data-i18n="idx.f_msg">Mensaje</label>
+            <textarea id="idx_msg" name="mensaje" placeholder="Cuéntenos brevemente su consulta..."></textarea>
+          </div>
+          
           <div class="form-group full">
             <div class="form-check">
               <input type="checkbox" id="idx_priv" name="privacidad" required/>
-              <label for="idx_priv" data-i18n="idx.f_priv">Acepto que la información facilitada sea utilizada para contactar conmigo, conforme a la <a href="legal.html#privacidad" style="color:var(--gold);">política de privacidad</a> de KOEHLER Assets Representation.</label>
+              <label for="idx_priv" data-i18n="idx.f_priv">Acepto que la información facilitada sea utilizada para contactar conmigo, conforme a la <a href="legal.html#privacidad" style="color:var(--gold);">política de privacidad</a>.</label>
             </div>
           </div>
         </div>
-        <div class="form-submit"><button type="submit" id="submit-btn" class="btn btn-dark" data-i18n="idx.f_btn">Agendar Sesión de Diagnóstico</button></div>
+
+        <div class="form-submit">
+          <button type="submit" id="submit-btn" class="btn btn-dark" data-i18n="idx.f_btn">Agendar Sesión de Diagnóstico</button>
+        </div>
       </form>
     </div>
   </div>
 
   <script>
-    const form = document.getElementById('contact-form');
-    const formContainer = document.getElementById('form-container');
-    const successMessage = document.getElementById('form-success');
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
+    document.getElementById('main-contact-form').addEventListener('submit', async function(e) {
+      e.preventDefault(); // Evita la redirección a Make.com
       
-      // Cambiar el texto del botón mientras envía
+      const form = e.target;
       const btn = document.getElementById('submit-btn');
-      const originalBtnText = btn.innerText;
+      const container = document.getElementById('form-container');
+      const successMsg = document.getElementById('form-success');
+      
+      // Estado de carga
       btn.innerText = "Enviando...";
       btn.disabled = true;
 
@@ -189,17 +209,16 @@
         });
 
         if (response.ok) {
-          // Ocultar formulario y mostrar mensaje de agradecimiento
-          formContainer.style.display = 'none';
-          successMessage.style.display = 'block';
-          // Scroll suave hacia el mensaje
-          successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          // Éxito: Ocultamos formulario y mostramos gracias
+          container.style.display = 'none';
+          successMsg.style.display = 'block';
+          successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
         } else {
-          throw new Error('Error en el envío');
+          throw new Error('Error en la respuesta del servidor');
         }
       } catch (error) {
-        alert('Hubo un error al enviar el formulario. Por favor, inténtelo de nuevo o contacte directamente por email.');
-        btn.innerText = originalBtnText;
+        alert('Hubo un problema al enviar. Por favor, inténtelo de nuevo o escríbanos directamente por email.');
+        btn.innerText = "Agendar Sesión de Diagnóstico";
         btn.disabled = false;
       }
     });
