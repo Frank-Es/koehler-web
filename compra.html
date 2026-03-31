@@ -122,15 +122,23 @@
     </div>
   </section>
 
-  <!-- FORMULARIO -->
-  <section id="formulario" class="bg-grey">
-    <div class="section-inner" style="max-width:760px;">
-      <span class="section-label" data-i18n="compra.form_label">Registro de Perfil de Comprador</span>
-      <h2 class="section-title" data-i18n="compra.form_title">Cuéntenos<br><em>qué busca</em></h2>
-      <div class="divider"></div>
+<section id="formulario" class="bg-grey">
+  <div class="section-inner" style="max-width:760px;">
+    <span class="section-label" data-i18n="compra.form_label">Registro de Perfil de Comprador</span>
+    <h2 class="section-title" data-i18n="compra.form_title">Cuéntenos<br><em>qué busca</em></h2>
+    <div class="divider"></div>
+    
+    <div id="compra-success" style="display:none; text-align: center; padding: 40px 0; border: 1px solid var(--gold); background: rgba(212, 175, 55, 0.05); border-radius: 4px; margin-bottom: 20px;">
+      <h3 style="color: var(--gold); margin-bottom: 16px;">Perfil Recibido</h3>
+      <p class="section-text">Gracias por facilitarnos su perfil de búsqueda. Nuestro equipo analizará los activos disponibles y le contactaremos a la mayor brevedad bajo estricta confidencialidad.</p>
+    </div>
+
+    <div id="compra-form-container">
       <p class="section-text" style="margin-bottom:48px;" data-i18n="compra.form_intro">Toda la información que nos facilite queda protegida bajo estricto protocolo de confidencialidad. Nos pondremos en contacto con usted en el menor tiempo posible.</p>
 
-      <form action="https://formspree.io/f/meepedny" method="POST" class="form-wrap" style="max-width:100%">
+      <form id="form-compras" action="https://hook.eu1.make.com/e6uancdwwc9a17mkav974tblo1x6a1jd" method="POST" class="form-wrap" style="max-width:100%">
+        <input type="hidden" name="origen" value="Perfil de Comprador">
+        
         <div class="form-grid">
           <div class="form-group">
             <label for="nombre" data-i18n="compra.f_nombre">Nombre completo *</label>
@@ -148,16 +156,16 @@
             <label for="tipo" data-i18n="compra.f_tipo">Tipo de activo *</label>
             <select id="tipo" name="tipo_activo" required>
               <option value="" data-i18n="compra.f_sel">Seleccione...</option>
-              <option data-i18n="compra.t1">Vivienda residencial</option>
-              <option data-i18n="compra.t2">Edificio residencial</option>
-              <option data-i18n="compra.t3">Hotel / Hostel</option>
-              <option data-i18n="compra.t4">Edificio singular</option>
-              <option data-i18n="compra.t5">Solar / Suelo finalista</option>
-              <option data-i18n="compra.t6">Local comercial / Oficinas</option>
-              <option data-i18n="compra.t7">Finca / Patrimonio</option>
-              <option data-i18n="compra.t8">Activo industrial</option>
-              <option data-i18n="compra.t9">Internacional (Canarias / Caribe / LATAM)</option>
-              <option data-i18n="compra.t10">Otro</option>
+              <option value="Vivienda residencial">Vivienda residencial</option>
+              <option value="Edificio residencial">Edificio residencial</option>
+              <option value="Hotel / Hostel">Hotel / Hostel</option>
+              <option value="Edificio singular">Edificio singular</option>
+              <option value="Solar / Suelo finalista">Solar / Suelo finalista</option>
+              <option value="Local comercial / Oficinas">Local comercial / Oficinas</option>
+              <option value="Finca / Patrimonio">Finca / Patrimonio</option>
+              <option value="Activo industrial">Activo industrial</option>
+              <option value="Internacional">Internacional (Canarias / Caribe / LATAM)</option>
+              <option value="Otro">Otro</option>
             </select>
           </div>
           <div class="form-group full">
@@ -168,40 +176,73 @@
             <label for="presupuesto" data-i18n="compra.f_pres">Presupuesto orientativo *</label>
             <select id="presupuesto" name="presupuesto" required>
               <option value="" data-i18n="compra.f_sel">Seleccione...</option>
-              <option>Hasta 500.000 €</option>
-              <option>500.000 € – 1.000.000 €</option>
-              <option>1.000.000 € – 3.000.000 €</option>
-              <option>3.000.000 € – 10.000.000 €</option>
-              <option>Más de 10.000.000 €</option>
+              <option value="Hasta 500k">Hasta 500.000 €</option>
+              <option value="500k - 1M">500.000 € – 1.000.000 €</option>
+              <option value="1M - 3M">1.000.000 € – 3.000.000 €</option>
+              <option value="3M - 10M">3.000.000 € – 10.000.000 €</option>
+              <option value="Mas de 10M">Más de 10.000.000 €</option>
             </select>
           </div>
           <div class="form-group">
             <label for="objetivo" data-i18n="compra.f_obj">Objetivo</label>
             <select id="objetivo" name="objetivo">
               <option value="" data-i18n="compra.f_sel">Seleccione...</option>
-              <option data-i18n="compra.o1">Inversión / Rentabilidad</option>
-              <option data-i18n="compra.o2">Uso propio / Residencia</option>
-              <option data-i18n="compra.o3">Reforma y revalorización</option>
-              <option data-i18n="compra.o4">Diversificación patrimonial</option>
+              <option value="Inversion">Inversión / Rentabilidad</option>
+              <option value="Residencia">Uso propio / Residencia</option>
+              <option value="Reforma">Reforma y revalorización</option>
+              <option value="Patrimonio">Diversificación patrimonial</option>
             </select>
           </div>
           <div class="form-group full">
             <label for="detalles" data-i18n="compra.f_det">Detalles adicionales</label>
-            <textarea id="detalles" name="detalles" placeholder="Cuéntenos cualquier detalle relevante sobre el activo que busca..."></textarea>
+            <textarea id="detalles" name="mensaje" placeholder="Cuéntenos cualquier detalle relevante sobre el activo que busca..."></textarea>
           </div>
           <div class="form-group full">
             <div class="form-check">
               <input type="checkbox" id="privacidad" name="privacidad" required />
-              <label for="privacidad" data-i18n="compra.f_priv">Acepto que la información facilitada sea utilizada para contactar conmigo. Entiendo que toda la información será tratada bajo estricto protocolo de confidencialidad.</label>
+              <label for="privacidad" data-i18n="compra.f_priv">Acepto el tratamiento de mis datos conforme a la política de confidencialidad.</label>
             </div>
           </div>
         </div>
         <div class="form-submit">
-          <button type="submit" class="btn btn-dark" data-i18n="compra.f_submit">Enviar Perfil de Búsqueda</button>
+          <button type="submit" id="btn-compras" class="btn btn-dark" data-i18n="compra.f_submit">Enviar Perfil de Búsqueda</button>
         </div>
       </form>
     </div>
-  </section>
+  </div>
+
+  <script>
+    document.getElementById('form-compras').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const btn = document.getElementById('btn-compras');
+      const container = document.getElementById('compra-form-container');
+      const success = document.getElementById('compra-success');
+
+      btn.innerText = "Enviando perfil...";
+      btn.disabled = true;
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form)
+        });
+
+        if (response.ok) {
+          container.style.display = 'none';
+          success.style.display = 'block';
+          success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          throw new Error();
+        }
+      } catch (err) {
+        alert('Hubo un error al enviar su perfil. Por favor, inténtelo de nuevo.');
+        btn.innerText = "Enviar Perfil de Búsqueda";
+        btn.disabled = false;
+      }
+    });
+  </script>
+</section>
 
   <div class="banner">
     <div class="section-inner">
