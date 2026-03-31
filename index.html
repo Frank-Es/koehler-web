@@ -124,17 +124,25 @@
     </div>
   </section>
 
-  <section id="contacto" class="bg-grey">
-    <div class="section-inner" style="max-width:720px;">
-      <span class="section-label" data-i18n="idx.form_label">Contacto</span>
-      <h2 class="section-title" data-i18n="idx.form_title">Hablemos de <em>su activo</em></h2>
-      <div class="divider"></div>
+<section id="contacto" class="bg-grey">
+  <div class="section-inner" style="max-width:720px;">
+    <span class="section-label" data-i18n="idx.form_label">Contacto</span>
+    <h2 class="section-title" data-i18n="idx.form_title">Hablemos de <em>su activo</em></h2>
+    <div class="divider"></div>
+    
+    <div id="form-success" style="display:none; text-align: center; padding: 40px 0;">
+      <h3 style="color: var(--gold); margin-bottom: 16px;">¡Muchas gracias por contactar con nosotros!</h3>
+      <p class="section-text">Hemos recibido su información correctamente. Le contactaremos a la mayor brevedad posible para agendar su sesión de diagnóstico.</p>
+    </div>
+
+    <div id="form-container">
       <p class="section-text" style="margin-bottom:48px;" data-i18n="idx.form_intro">Si busca una gestión estructurada, selectiva y alejada de los canales convencionales, iniciemos una conversación.</p>
-      <form action="https://hook.eu1.make.com/e6uancdwwc9a17mkav974tblo1x6a1jd" method="POST" style="max-width:100%">
+      
+      <form id="contact-form" action="https://hook.eu1.make.com/e6uancdwwc9a17mkav974tblo1x6a1jd" method="POST" style="max-width:100%">
         <div class="form-grid">
           <div class="form-group"><label for="idx_nombre" data-i18n="idx.f_nombre">Nombre completo</label><input type="text" id="idx_nombre" name="nombre" required placeholder="Su nombre"/></div>
           <div class="form-group"><label for="idx_email" data-i18n="idx.f_email">Email</label><input type="email" id="idx_email" name="email" required placeholder="su@email.com"/></div>
-          <div class="form-group"><label for="idx_tel" data-i18n="idx.f_tel">Teléfono</label><input type="tel" id="idx_tel" name="telefono" placeholder="+34 600 000 000"/></div>
+          <div class="form-group"><label for="idx_tel" data-i18n="idx.f_tel">Teléfono</label><input type="tel" id="idx_tel" name="teléfono" placeholder="+34 600 000 000"/></div>
           <div class="form-group"><label for="idx_asunto" data-i18n="idx.f_asunto">Asunto</label>
             <select id="idx_asunto" name="asunto">
               <option value="" data-i18n="idx.f_sel">Seleccione...</option>
@@ -153,10 +161,50 @@
             </div>
           </div>
         </div>
-        <div class="form-submit"><button type="submit" class="btn btn-dark" data-i18n="idx.f_btn">Agendar Sesión de Diagnóstico</button></div>
+        <div class="form-submit"><button type="submit" id="submit-btn" class="btn btn-dark" data-i18n="idx.f_btn">Agendar Sesión de Diagnóstico</button></div>
       </form>
     </div>
-  </section>
+  </div>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    const formContainer = document.getElementById('form-container');
+    const successMessage = document.getElementById('form-success');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      // Cambiar el texto del botón mientras envía
+      const btn = document.getElementById('submit-btn');
+      const originalBtnText = btn.innerText;
+      btn.innerText = "Enviando...";
+      btn.disabled = true;
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData
+        });
+
+        if (response.ok) {
+          // Ocultar formulario y mostrar mensaje de agradecimiento
+          formContainer.style.display = 'none';
+          successMessage.style.display = 'block';
+          // Scroll suave hacia el mensaje
+          successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          throw new Error('Error en el envío');
+        }
+      } catch (error) {
+        alert('Hubo un error al enviar el formulario. Por favor, inténtelo de nuevo o contacte directamente por email.');
+        btn.innerText = originalBtnText;
+        btn.disabled = false;
+      }
+    });
+  </script>
+</section>
 
 </div>
 <div id="footer-placeholder"></div>
