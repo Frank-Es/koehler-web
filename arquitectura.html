@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title> Interiorismo — KOEHLER Assets Representation</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arquitectura & Interiorismo — KOEHLER Assets Representation</title>
+  
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/dbc8nfyer/image/upload/v1774867988/KOEHLER_lxfl7u.png" />
+  <link rel="apple-touch-icon" href="https://res.cloudinary.com/dbc8nfyer/image/upload/v1774867988/KOEHLER_lxfl7u.png" />
+  <meta name="theme-color" content="#0D0D0D" />
+  
   <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* Ajustes específicos para Arquitectura */
+    .img-block img { width: 100%; height: auto; object-fit: cover; border-radius: 2px; }
+    .service-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; margin-top: 48px; }
+    .service-card { background: var(--white); padding: 40px; border: 1px solid var(--grey-mid); transition: transform 0.3s ease; }
+    .service-card:hover { transform: translateY(-5px); border-color: var(--gold); }
+    .service-card-num { font-family: 'Montserrat', sans-serif; font-size: 10px; color: var(--gold); margin-bottom: 20px; letter-spacing: 0.2em; }
+    .service-card-title { font-family: 'Cormorant Garamond', serif; font-size: 24px; color: var(--black); margin-bottom: 16px; }
+    .service-card-text { font-family: 'Montserrat', sans-serif; font-size: 13px; line-height: 1.8; color: var(--grey-text); font-weight: 300; }
+    
+    @media(max-width: 768px) {
+      .service-cards { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
+
 <div id="nav-placeholder"></div>
+
 <div class="page-wrapper">
 
   <section class="hero">
-    <img src="https://res.cloudinary.com/dbc8nfyer/image/upload/v1774805348/IMG_20191004_135659_Original_q0zanu.jpg" alt="KOEHLER Assets" class="hero-img" style="opacity:0.22;object-position:center center;"/>
+    <img src="https://res.cloudinary.com/dbc8nfyer/image/upload/v1774805348/IMG_20191004_135659_Original_q0zanu.jpg" alt="Arquitectura KOEHLER" class="hero-img" style="opacity:0.22; object-position: center;"/>
     <div class="hero-content">
       <span class="hero-eyebrow" data-i18n="arq.eyebrow">Reforma · Diseño · Home Staging</span>
-    <h1 data-i18n="arq.h1">Interiorismo</em></h1>
+      <h1 data-i18n="arq.h1">Arquitectura<br><em>& Interiorismo</em></h1>
       <p class="hero-sub" data-i18n="arq.sub">Transformamos el potencial latente de cada activo. Desde reformas integrales hasta la puesta en escena final, maximizamos el valor antes de su salida al mercado.</p>
       <a href="#servicios" class="btn btn-dark" data-i18n="arq.cta">Descubrir el Servicio</a>
     </div>
@@ -28,10 +50,10 @@
           <div class="divider"></div>
           <p class="section-text" data-i18n="arq.s1_t1">En KOEHLER entendemos que la arquitectura y el diseño de interiores no son un gasto estético, son una inversión estratégica. Un activo bien intervenido puede incrementar significativamente su valor percibido y acelerar el proceso de venta.</p>
           <br/>
-          <p class="section-text" data-i18n="arq.s1_t2">Nuestro equipo, liderado por Julia Luise Koehler, arquitecta y diseñadora de interiores, aborda cada proyecto desde una perspectiva técnica y de mercado: qué reforma es rentable, qué intervención es prescindible y cómo presentar el activo para maximizar su impacto.</p>
+          <p class="section-text" data-i18n="arq.s1_t2">Nuestro equipo, liderado por Julia Luise Koehler, arquitecta y diseñadora de interiores, aborda cada proyecto desde una perspectiva técnica y de mercado: qué reforma es rentable y cómo presentar el activo para maximizar su impacto.</p>
         </div>
         <div class="img-block">
-          <img src="https://res.cloudinary.com/dbc8nfyer/image/upload/v1774880356/JK_Render_pgcftb.png" alt="Arquitectura e Interiorismo"/>
+          <img src="https://res.cloudinary.com/dbc8nfyer/image/upload/v1774880356/JK_Render_pgcftb.png" alt="Diseño por Julia Koehler"/>
         </div>
       </div>
     </div>
@@ -42,76 +64,195 @@
       <span class="section-label" data-i18n="arq.srv_label">Servicios</span>
       <h2 class="section-title" data-i18n="arq.srv_title">Qué <em>ofrecemos</em></h2>
       <div class="service-cards">
-        <div class="service-card"><div class="service-card-num">01</div><div class="service-card-title" data-i18n="arq.s1t">Reforma Integral</div><p class="service-card-text" data-i18n="arq.s1d">Gestión completa del proyecto de reforma: desde el análisis técnico inicial, la dirección de obra y la coordinación de industriales, hasta la entrega final. Calidad, plazos y presupuesto garantizados.</p></div>
-        <div class="service-card"><div class="service-card-num">02</div><div class="service-card-title" data-i18n="arq.s2t">Diseño de Interiores</div><p class="service-card-text" data-i18n="arq.s2d">Proyectos de interiorismo a medida que combinan funcionalidad, estética y valor de mercado. Selección de materiales, mobiliario, iluminación y acabados que elevan la percepción del activo.</p></div>
-        <div class="service-card"><div class="service-card-num">03</div><div class="service-card-title" data-i18n="arq.s3t">Home Staging</div><p class="service-card-text" data-i18n="arq.s3d">Puesta en escena profesional del activo para su presentación al mercado. Optimizamos cada espacio visualmente sin necesidad de reforma, creando una experiencia de visita que acelera la decisión de compra.</p></div>
-        <div class="service-card"><div class="service-card-num">04</div><div class="service-card-title" data-i18n="arq.s4t">Consultoría de Valor</div><p class="service-card-text" data-i18n="arq.s4d">Análisis técnico de qué intervenciones son rentables para el activo. Le indicamos exactamente dónde invertir para obtener el mayor retorno en la venta, evitando gastos innecesarios.</p></div>
+        <div class="service-card">
+          <div class="service-card-num">01</div>
+          <div class="service-card-title" data-i18n="arq.s1t">Reforma Integral</div>
+          <p class="service-card-text" data-i18n="arq.s1d">Gestión completa del proyecto: desde el análisis técnico inicial y la dirección de obra hasta la entrega final.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card-num">02</div>
+          <div class="service-card-title" data-i18n="arq.s2t">Diseño de Interiores</div>
+          <p class="service-card-text" data-i18n="arq.s2d">Proyectos a medida que combinan funcionalidad y estética de mercado para elevar la percepción del activo.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card-num">03</div>
+          <div class="service-card-title" data-i18n="arq.s3t">Home Staging</div>
+          <p class="service-card-text" data-i18n="arq.s3d">Puesta en escena profesional para acelerar la decisión de compra sin necesidad de reformas estructurales.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card-num">04</div>
+          <div class="service-card-title" data-i18n="arq.s4t">Consultoría de Valor</div>
+          <p class="service-card-text" data-i18n="arq.s4d">Análisis técnico de rentabilidad para invertir exactamente donde obtendrá el mayor retorno en la venta.</p>
+        </div>
       </div>
     </div>
   </section>
 
-<section style="padding:0;">
-  <div style="display:grid;grid-template-columns:1fr 1fr;height:480px;">
-    <img src="https://res.cloudinary.com/dbc8nfyer/image/upload/v1774817401/dormitorio_2_im6kqy.jpg" alt="Interiorismo KOEHLER" style="width:100%;height:100%;object-fit:cover;"/>
-    <img src="https://res.cloudinary.com/dbc8nfyer/image/upload/v1774816101/Sal%C3%B3n_dtzyfy.jpg" alt="Arquitectura KOEHLER" style="width:100%;height:100%;object-fit:cover;"/>
-  </div>
-</section>
+  <section style="padding:0;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;height:480px;">
+      <img src="https://res.cloudinary.com/dbc8nfyer/image/upload/v1774817401/dormitorio_2_im6kqy.jpg" alt="Interiorismo" style="width:100%;height:100%;object-fit:cover;"/>
+      <img src="https://res.cloudinary.com/dbc8nfyer/image/upload/v1774816101/Sal%C3%B3n_dtzyfy.jpg" alt="Arquitectura" style="width:100%;height:100%;object-fit:cover;"/>
+    </div>
+  </section>
 
   <section>
     <div class="section-inner">
       <span class="section-label" data-i18n="arq.proc_label">Metodología</span>
       <h2 class="section-title" data-i18n="arq.proc_title">Nuestro <em>proceso</em></h2>
       <div class="steps">
-        <div class="step"><div class="step-num">01</div><div class="step-title" data-i18n="arq.p1t">Visita y Análisis</div><p class="step-text" data-i18n="arq.p1d">Evaluación técnica del activo y definición de los objetivos de la intervención en función del plan de salida al mercado.</p></div>
-        <div class="step"><div class="step-num">02</div><div class="step-title" data-i18n="arq.p2t">Propuesta y Presupuesto</div><p class="step-text" data-i18n="arq.p2d">Proyecto detallado con planimetría, selección de materiales, presupuesto cerrado y calendario de ejecución.</p></div>
-        <div class="step"><div class="step-num">03</div><div class="step-title" data-i18n="arq.p3t">Ejecución</div><p class="step-text" data-i18n="arq.p3d">Dirección y coordinación de obra o staging con control de calidad en cada fase, garantizando plazos y acabados.</p></div>
-        <div class="step"><div class="step-num">04</div><div class="step-title" data-i18n="arq.p4t">Entrega</div><p class="step-text" data-i18n="arq.p4d">Presentación final del activo preparado para su salida al mercado, listo para fotografía profesional y primeras visitas.</p></div>
+        <div class="step"><div class="step-num">01</div><div class="step-title" data-i18n="arq.p1t">Análisis</div><p class="step-text" data-i18n="arq.p1d">Evaluación técnica del activo y objetivos de mercado.</p></div>
+        <div class="step"><div class="step-num">02</div><div class="step-title" data-i18n="arq.p2t">Propuesta</div><p class="step-text" data-i18n="arq.p2d">Proyecto detallado con presupuesto cerrado y calendario.</p></div>
+        <div class="step"><div class="step-num">03</div><div class="step-title" data-i18n="arq.p3t">Ejecución</div><p class="step-text" data-i18n="arq.p3d">Dirección de obra con control de calidad estricto.</p></div>
+        <div class="step"><div class="step-num">04</div><div class="step-title" data-i18n="arq.p4t">Entrega</div><p class="step-text" data-i18n="arq.p4d">Activo listo para fotografía profesional y comercialización.</p></div>
       </div>
     </div>
   </section>
 
-  <section class="bg-grey">
-    <div class="section-inner" style="max-width:720px;">
+  <section id="contacto-arquitectura" class="bg-grey">
+    <div class="section-inner" style="max-width:760px;">
       <span class="section-label" data-i18n="arq.form_label">Contacto</span>
       <h2 class="section-title" data-i18n="arq.form_title">Hablemos de<br><em>su proyecto</em></h2>
       <div class="divider"></div>
-      <p class="section-text" style="margin-bottom:48px;" data-i18n="arq.form_intro">Cuéntenos su activo y sus objetivos. Le responderemos con una propuesta inicial sin compromiso.</p>
-      <form action="https://formspree.io/f/maqlqkkp" method="POST" class="form-wrap" style="max-width:100%">
-        <div class="form-grid">
-          <div class="form-group"><label for="an" data-i18n="arq.f_nombre">Nombre completo *</label><input type="text" id="an" name="nombre" required placeholder="Su nombre completo"/></div>
-          <div class="form-group"><label for="ae" data-i18n="arq.f_email">Email *</label><input type="email" id="ae" name="email" required placeholder="su@email.com"/></div>
-          <div class="form-group"><label for="at" data-i18n="arq.f_tel">Teléfono *</label><input type="tel" id="at" name="telefono" required placeholder="+34 600 000 000"/></div>
-          <div class="form-group"><label for="as" data-i18n="arq.f_serv">Servicio de interés *</label>
-            <select id="as" name="servicio" required>
-              <option value="" data-i18n="arq.f_sel">Seleccione...</option>
-              <option data-i18n="arq.fs1">Reforma Integral</option>
-              <option data-i18n="arq.fs2">Diseño de Interiores</option>
-              <option data-i18n="arq.fs3">Home Staging</option>
-              <option data-i18n="arq.fs4">Consultoría de Valor</option>
-              <option data-i18n="arq.fs5">Varios servicios</option>
-            </select>
-          </div>
-          <div class="form-group full"><label for="aa" data-i18n="arq.f_activo">Descripción del activo o proyecto</label><input type="text" id="aa" name="activo" placeholder="Tipo de inmueble, m², ubicación, estado actual..."/></div>
-          <div class="form-group full"><label for="am" data-i18n="arq.f_msg">Mensaje</label><textarea id="am" name="mensaje" placeholder="Cuéntenos sus objetivos..."></textarea></div>
-          <div class="form-group full">
-            <div class="form-check">
-              <input type="checkbox" id="ap" name="privacidad" required/>
-              <label for="ap" data-i18n="arq.f_priv">Acepto que la información facilitada sea utilizada para contactar conmigo, conforme a la <a href="legal.html#privacidad" style="color:var(--gold);">política de privacidad</a> de KOEHLER Assets Representation.</label>
+      
+      <div id="arq-success" style="display:none; text-align: center; padding: 40px; border: 1px solid var(--gold); background: rgba(212, 175, 55, 0.05); margin-bottom: 20px;">
+        <h3 style="color: var(--gold); margin-bottom: 16px;">Solicitud Enviada</h3>
+        <p class="section-text">Julia Koehler y su equipo revisarán su propuesta. Nos pondremos en contacto a la mayor brevedad.</p>
+      </div>
+
+      <div id="arq-form-container">
+        <p class="section-text" style="margin-bottom:48px;" data-i18n="arq.form_intro">Cuéntenos su activo y sus objetivos. Le responderemos con una propuesta inicial sin compromiso.</p>
+
+        <form id="form-arquitectura" action="https://hook.eu1.make.com/e6uancdwwc9a17mkav974tblo1x6a1jd" method="POST" class="form-wrap">
+          <input type="hidden" name="origen" value="Arquitectura">
+          <div class="form-grid">
+            <div class="form-group">
+              <label data-i18n="arq.f_nombre">Nombre completo *</label>
+              <input type="text" name="nombre" required placeholder="Su nombre">
+            </div>
+            <div class="form-group">
+              <label data-i18n="arq.f_email">Email *</label>
+              <input type="email" name="email" required placeholder="su@email.com">
+            </div>
+            <div class="form-group">
+              <label data-i18n="arq.f_tel">Teléfono *</label>
+              <input type="tel" name="telefono" required placeholder="+34...">
+            </div>
+            <div class="form-group">
+              <label data-i18n="arq.f_serv">Servicio de interés *</label>
+              <select name="asunto" required>
+                <option value="" data-i18n="arq.f_sel">Seleccione...</option>
+                <option value="Reforma Integral" data-i18n="arq.fs1">Reforma Integral</option>
+                <option value="Diseño Interiores" data-i18n="arq.fs2">Diseño de Interiores</option>
+                <option value="Home Staging" data-i18n="arq.fs3">Home Staging</option>
+                <option value="Consultoría Valor" data-i18n="arq.fs4">Consultoría de Valor</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label data-i18n="arq.f_activo">Descripción del activo</label>
+              <input type="text" name="activo" placeholder="Tipo de inmueble, ubicación, m2...">
+            </div>
+            <div class="form-group full">
+              <label data-i18n="arq.f_msg">Mensaje</label>
+              <textarea name="mensaje" placeholder="Cuéntenos sus objetivos..."></textarea>
             </div>
           </div>
-        </div>
-        <div class="form-submit"><button type="submit" class="btn btn-dark" data-i18n="arq.f_btn">Solicitar Propuesta</button></div>
-      </form>
+          <div class="form-submit">
+            <button type="submit" id="btn-arq" class="btn btn-dark" data-i18n="arq.f_btn">Solicitar Propuesta</button>
+          </div>
+        </form>
+      </div>
     </div>
   </section>
+
 </div>
+
 <div id="footer-placeholder"></div>
+
 <script src="components.js"></script>
 <script>
-i18n.es.arq={eyebrow:'Reforma · Diseño · Home Staging',h1:'Arquitectura<br><em>& Interiorismo</em>',sub:'Transformamos el potencial latente de cada activo. Desde reformas integrales hasta la puesta en escena final, maximizamos el valor antes de su salida al mercado.',cta:'Descubrir el Servicio',s1_label:'Nuestra Visión',s1_title:'El diseño como<br><em>estrategia de valor</em>',s1_t1:'En KOEHLER entendemos que la arquitectura y el diseño de interiores son una inversión estratégica. Un activo bien intervenido puede incrementar significativamente su valor y acelerar el proceso de venta.',s1_t2:'Nuestro equipo, liderado por Julia Luise Koehler, aborda cada proyecto desde una perspectiva técnica y de mercado.',srv_label:'Servicios',srv_title:'Qué <em>ofrecemos</em>',s1t:'Reforma Integral',s1d:'Gestión completa del proyecto de reforma: análisis técnico, dirección de obra y coordinación de industriales hasta la entrega final.',s2t:'Diseño de Interiores',s2d:'Proyectos de interiorismo a medida que combinan funcionalidad, estética y valor de mercado.',s3t:'Home Staging',s3d:'Puesta en escena profesional del activo para su presentación al mercado sin necesidad de reforma.',s4t:'Consultoría de Valor',s4d:'Análisis técnico de qué intervenciones son rentables para maximizar el retorno en la venta.',proc_label:'Metodología',proc_title:'Nuestro <em>proceso</em>',p1t:'Visita y Análisis',p1d:'Evaluación técnica del activo y definición de objetivos según el plan de salida al mercado.',p2t:'Propuesta y Presupuesto',p2d:'Proyecto detallado con planimetría, materiales, presupuesto cerrado y calendario.',p3t:'Ejecución',p3d:'Dirección y coordinación con control de calidad en cada fase.',p4t:'Entrega',p4d:'Presentación final del activo listo para fotografía y primeras visitas.',form_label:'Contacto',form_title:'Hablemos de<br><em>su proyecto</em>',form_intro:'Cuéntenos su activo y sus objetivos. Le responderemos con una propuesta inicial sin compromiso.',f_nombre:'Nombre completo *',f_email:'Email *',f_tel:'Teléfono *',f_serv:'Servicio de interés *',f_sel:'Seleccione...',fs1:'Reforma Integral',fs2:'Diseño de Interiores',fs3:'Home Staging',fs4:'Consultoría de Valor',fs5:'Varios servicios',f_activo:'Descripción del activo o proyecto',f_msg:'Mensaje',f_priv:'Acepto que la información facilitada sea utilizada para contactar conmigo, conforme a la <a href="legal.html#privacidad" style="color:var(--gold);">política de privacidad</a> de KOEHLER Assets Representation.',f_btn:'Solicitar Propuesta'};
-i18n.en.arq={eyebrow:'Renovation · Design · Home Staging',h1:'Architecture<br><em>&amp; Interior Design</em>',sub:'We transform the latent potential of every asset. From full renovations to final staging, we maximise value before market exit.',cta:'Discover the Service',s1_label:'Our Vision',s1_title:'Design as<br><em>a value strategy</em>',s1_t1:'At KOEHLER we understand that architecture and interior design are a strategic investment. A well-transformed asset can significantly increase its perceived value and accelerate the sale process.',s1_t2:'Our team, led by Julia Luise Koehler, architect and interior designer, approaches every project from a technical and market perspective.',srv_label:'Services',srv_title:'What we <em>offer</em>',s1t:'Full Renovation',s1d:'Complete project management: from initial technical analysis, site management and contractor coordination, through to final handover.',s2t:'Interior Design',s2d:'Bespoke interior design projects combining functionality, aesthetics and market value.',s3t:'Home Staging',s3d:'Professional staging of the asset for market presentation, without the need for renovation.',s4t:'Value Consultancy',s4d:'Technical analysis of which interventions yield returns to maximise the sale price.',proc_label:'Methodology',proc_title:'Our <em>process</em>',p1t:'Visit & Analysis',p1d:'Technical evaluation of the asset and definition of objectives based on the market exit plan.',p2t:'Proposal & Budget',p2d:'Detailed project with floor plans, material selection, fixed budget and execution schedule.',p3t:'Execution',p3d:'Site management and coordination with quality control at every phase.',p4t:'Handover',p4d:'Final presentation of the asset ready for professional photography and first viewings.',form_label:'Contact',form_title:'Let us talk about<br><em>your project</em>',form_intro:'Tell us about your asset and your objectives. We will respond with an initial proposal, no commitment required.',f_nombre:'Full name *',f_email:'Email *',f_tel:'Phone *',f_serv:'Service of interest *',f_sel:'Select...',fs1:'Full Renovation',fs2:'Interior Design',fs3:'Home Staging',fs4:'Value Consultancy',fs5:'Multiple services',f_activo:'Asset or project description',f_msg:'Message',f_priv:'I accept that the information provided will be used to contact me, in accordance with the <a href="legal.html#privacidad" style="color:var(--gold);">privacy policy</a> of KOEHLER Assets Representation.',f_btn:'Request Proposal'};
-i18n.de.arq={eyebrow:'Renovierung · Design · Home Staging',h1:'Architektur<br><em>&amp; Innenarchitektur</em>',sub:'Wir transformieren das latente Potenzial jedes Objekts. Von Generalrenovierungen bis zum finalen Staging maximieren wir den Wert vor dem Markteintritt.',cta:'Leistung entdecken',s1_label:'Unsere Vision',s1_title:'Design als<br><em>Wertstrategie</em>',s1_t1:'Bei KOEHLER verstehen wir Architektur und Innenarchitektur als strategische Investition. Ein gut transformiertes Objekt kann seinen wahrgenommenen Wert erheblich steigern.',s1_t2:'Unser Team unter der Leitung von Julia Luise Koehler, Architektin und Innenarchitektin, nähert sich jedem Projekt aus einer technischen und marktorientierten Perspektive.',srv_label:'Leistungen',srv_title:'Was wir <em>anbieten</em>',s1t:'Generalrenovierung',s1d:'Vollständiges Projektmanagement: technische Analyse, Bauleitung und Koordination bis zur Übergabe.',s2t:'Innenarchitektur',s2d:'Maßgeschneiderte Innenarchitekturprojekte, die Funktionalität, Ästhetik und Marktwert kombinieren.',s3t:'Home Staging',s3d:'Professionelles Staging des Objekts für die Marktpräsentation ohne Renovierungsbedarf.',s4t:'Wertberatung',s4d:'Technische Analyse, welche Eingriffe rentabel sind, um den Verkaufspreis zu maximieren.',proc_label:'Methodik',proc_title:'Unser <em>Prozess</em>',p1t:'Besichtigung & Analyse',p1d:'Technische Bewertung des Objekts und Zieldefinition basierend auf dem Marktausstiegsplan.',p2t:'Vorschlag & Budget',p2d:'Detailliertes Projekt mit Grundrissen, Materialauswahl, Festbudget und Ausführungskalender.',p3t:'Ausführung',p3d:'Bauleitung und Koordination mit Qualitätskontrolle in jeder Phase.',p4t:'Übergabe',p4d:'Finale Präsentation des Objekts bereit für professionelle Fotografie und erste Besichtigungen.',form_label:'Kontakt',form_title:'Sprechen wir über<br><em>Ihr Projekt</em>',form_intro:'Erzählen Sie uns von Ihrem Objekt und Ihren Zielen. Wir antworten mit einem unverbindlichen Erstvorschlag.',f_nombre:'Vollständiger Name *',f_email:'E-Mail *',f_tel:'Telefon *',f_serv:'Gewünschte Leistung *',f_sel:'Auswählen...',fs1:'Generalrenovierung',fs2:'Innenarchitektur',fs3:'Home Staging',fs4:'Wertberatung',fs5:'Mehrere Leistungen',f_activo:'Objekt- oder Projektbeschreibung',f_msg:'Nachricht',f_priv:'Ich akzeptiere, dass die bereitgestellten Informationen zur Kontaktaufnahme verwendet werden, gemäß der <a href="legal.html#privacidad" style="color:var(--gold);">Datenschutzrichtlinie</a> von KOEHLER Assets Representation.',f_btn:'Angebot anfordern'};
-initNav('arquitectura');
+  // TRADUCCIONES COMPLETAS
+  window.i18n = window.i18n || { es: {}, en: {}, de: {} };
+
+  i18n.es.arq = {
+    eyebrow:'Reforma · Diseño · Home Staging',
+    h1:'Arquitectura<br><em>& Interiorismo</em>',
+    sub:'Transformamos el potencial latente de cada activo. Maximizamos el valor antes de su salida al mercado.',
+    cta:'Descubrir el Servicio',
+    s1_label:'Nuestra Visión',
+    s1_title:'El diseño como<br><em>estrategia de valor</em>',
+    s1_t1:'En KOEHLER entendemos que el diseño de interiores es una inversión estratégica. Un activo bien intervenido puede incrementar significativamente su valor.',
+    s1_t2:'Nuestro equipo, liderado por Julia Luise Koehler, aborda cada proyecto desde una perspectiva técnica y de mercado.',
+    srv_label:'Servicios', srv_title:'Qué <em>ofrecemos</em>',
+    s1t:'Reforma Integral', s1d:'Gestión completa: análisis, dirección de obra y coordinación hasta la entrega final.',
+    s2t:'Diseño de Interiores', s2d:'Proyectos a medida que combinan funcionalidad y estética de mercado.',
+    s3t:'Home Staging', s3d:'Puesta en escena profesional del activo para su presentación al mercado.',
+    s4t:'Consultoría de Valor', s4d:'Análisis técnico de qué intervenciones son rentables para maximizar el retorno.',
+    proc_label:'Metodología', proc_title:'Nuestro <em>proceso</em>',
+    p1t:'Visita y Análisis', p1d:'Evaluación técnica del activo y objetivos comerciales.',
+    p2t:'Propuesta', p2d:'Proyecto detallado con presupuesto cerrado.',
+    p3t:'Ejecución', p3d:'Dirección y coordinación con control de calidad.',
+    p4t:'Entrega', p4d:'Activo preparado para su salida al mercado.',
+    form_label:'Contacto', form_title:'Hablemos de<br><em>su proyecto</em>',
+    form_intro:'Cuéntenos su activo y sus objetivos. Le responderemos con una propuesta inicial sin compromiso.',
+    f_nombre:'Nombre completo *', f_email:'Email *', f_tel:'Teléfono *', f_serv:'Servicio de interés *',
+    f_sel:'Seleccione...', fs1:'Reforma Integral', fs2:'Diseño de Interiores', fs3:'Home Staging', fs4:'Consultoría de Valor',
+    f_activo:'Descripción del activo o proyecto', f_msg:'Mensaje', f_btn:'Solicitar Propuesta'
+  };
+
+  i18n.en.arq = {
+    eyebrow:'Renovation · Design · Home Staging',
+    h1:'Architecture<br><em>& Interior Design</em>',
+    sub:'We transform the latent potential of every asset. We maximize value before market exit.',
+    cta:'Discover Service',
+    s1_label:'Our Vision',
+    s1_title:'Design as<br><em>a value strategy</em>',
+    f_btn:'Request Proposal'
+  };
+
+  i18n.de.arq = {
+    eyebrow:'Renovierung · Design · Home Staging',
+    h1:'Architektur<br><em>& Innenarchitektur</em>',
+    sub:'Wir transformieren das latente Potenzial jedes Objekts. Wir maximieren den Wert vor dem Markteintritt.',
+    cta:'Leistung entdecken',
+    s1_label:'Unsere Vision',
+    s1_title:'Design als<br><em>Wertstrategie</em>',
+    f_btn:'Angebot anfordern'
+  };
+
+  initNav('arquitectura');
+
+  // Lógica de Envío
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('form-arquitectura');
+    if (form) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = document.getElementById('btn-arq');
+        btn.innerText = "Enviando...";
+        btn.disabled = true;
+
+        const data = Object.fromEntries(new FormData(form).entries());
+
+        try {
+          const response = await fetch(form.action, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+
+          if (response.ok) {
+            document.getElementById('arq-form-container').style.display = 'none';
+            document.getElementById('arq-success').style.display = 'block';
+            document.getElementById('arq-success').scrollIntoView({ behavior: 'smooth', block: 'center' });
+          } else { throw new Error(); }
+        } catch (err) {
+          alert('Error al enviar solicitud. Por favor, inténtelo de nuevo.');
+          btn.innerText = "Solicitar Propuesta";
+          btn.disabled = false;
+        }
+      });
+    }
+  });
 </script>
 </body>
 </html>
