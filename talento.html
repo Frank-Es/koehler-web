@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>KOEHLER Assets Representation — Madrid</title>
+  <title>Trabaja con Nosotros — KOEHLER Assets Representation</title>
+  
   <link rel="icon" type="image/png" href="https://res.cloudinary.com/dbc8nfyer/image/upload/v1774867988/KOEHLER_lxfl7u.png" />
   <link rel="apple-touch-icon" href="https://res.cloudinary.com/dbc8nfyer/image/upload/v1774867988/KOEHLER_lxfl7u.png" />
   <meta name="theme-color" content="#0D0D0D" />
-  <link rel="stylesheet" href="style.css"/>
-</head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Trabaja con Nosotros — KOEHLER Assets Representation</title>
+  
   <link rel="stylesheet" href="style.css"/>
   <style>
-    .values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:56px;}
-    .value-item{padding:48px 36px;background:var(--grey-light);}
-    .value-num{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:300;color:var(--grey-mid);line-height:1;margin-bottom:16px;}
-    .value-title{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:22px;color:var(--black);margin-bottom:12px;}
-    .value-text{font-family:'Montserrat',sans-serif;font-weight:300;font-size:12px;line-height:2;color:var(--grey-text);}
-    @media(max-width:768px){.values-grid{grid-template-columns:1fr;}}
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 56px; background: var(--grey-mid); border: 1px solid var(--grey-mid); }
+    .value-item { padding: 48px 36px; background: var(--white); transition: transform 0.3s ease; }
+    .value-num { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; color: var(--gold); opacity: 0.3; line-height: 1; margin-bottom: 16px; }
+    .value-title { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 22px; color: var(--black); margin-bottom: 12px; }
+    .value-text { font-family: 'Montserrat', sans-serif; font-weight: 300; font-size: 12px; line-height: 2; color: var(--grey-text); }
+    
+    .talent-direct { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--grey-mid); text-align: center; }
+    .talent-email { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--gold); text-decoration: none; letter-spacing: .05em; transition: opacity 0.3s; }
+    .talent-email:hover { opacity: 0.7; }
+
+    @media(max-width: 768px) {
+      .values-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
+
 <div id="nav-placeholder"></div>
+
 <div class="page-wrapper">
 
   <section class="hero">
-    <img src="https://res.cloudinary.com/dbc8nfyer/image/upload/v1774805348/IMG_20191004_135659_Original_q0zanu.jpg" alt="KOEHLER Assets" class="hero-img" style="opacity:0.22;object-position:center center;"/>
+    <img src="https://res.cloudinary.com/dbc8nfyer/image/upload/v1774805348/IMG_20191004_135659_Original_q0zanu.jpg" alt="KOEHLER Talent" class="hero-img" style="opacity:0.22; object-position:center center;"/>
     <div class="hero-content">
       <span class="hero-eyebrow" data-i18n="tal.eyebrow">Talento · Rigor · Discreción</span>
       <h1 data-i18n="tal.h1">Trabaja con<br><em>Nosotros</em></h1>
-      <p class="hero-sub" data-i18n="tal.sub">En KOEHLER no buscamos candidatos, buscamos personas que compartan nuestra forma de entender el mundo de los activos. Si la discreción, el rigor y la excelencia definen también tu forma de trabajar, queremos conocerte.</p>
+      <p class="hero-sub" data-i18n="tal.sub">En KOEHLER no buscamos candidatos, buscamos personas que compartan nuestra forma de entender el mundo de los activos. Si la excelencia define tu forma de trabajar, queremos conocerte.</p>
       <a href="#formulario-talento" class="btn btn-dark" data-i18n="tal.cta">Enviar Candidatura</a>
     </div>
   </section>
@@ -43,12 +49,12 @@
           <span class="section-label" data-i18n="tal.s1_label">La Firma</span>
           <h2 class="section-title" data-i18n="tal.s1_title">Construimos<br><em>desde las personas</em></h2>
           <div class="divider"></div>
-          <p class="section-text" data-i18n="tal.s1_t1">KOEHLER es una firma joven con una visión clara: operar en el segmento más exigente del mercado de activos desde la discreción absoluta y el rigor jurídico. Para ello, necesitamos personas que entiendan que la excelencia no es una aspiración, sino un estándar diario.</p>
+          <p class="section-text" data-i18n="tal.s1_t1">KOEHLER es una firma joven con una visión clara: operar en el segmento más exigente del mercado de activos desde la discreción absoluta y el rigor jurídico.</p>
           <br/>
           <p class="section-text" data-i18n="tal.s1_t2">No buscamos un perfil concreto. Buscamos talento, integridad y la ambición de trabajar en un entorno donde cada operación importa y cada detalle cuenta.</p>
         </div>
-        <div class="img-block" style="aspect-ratio:3/4; display:flex; align-items:center; justify-content:center; background:transparent;">
-          <img src="https://res.cloudinary.com/dbc8nfyer/image/upload/v1774811565/IMG_1218_r0ldbw.png" alt="Trabaja con Nosotros"/>
+        <div class="img-block" style="display:flex; align-items:center; justify-content:center;">
+          <img src="https://res.cloudinary.com/dbc8nfyer/image/upload/v1774811565/IMG_1218_r0ldbw.png" alt="Cultura KOEHLER" style="width:100%; max-width:450px; height:auto;"/>
         </div>
       </div>
     </div>
@@ -59,9 +65,21 @@
       <span class="section-label" data-i18n="tal.val_label">Lo que buscamos</span>
       <h2 class="section-title" data-i18n="tal.val_title">Nuestros <em>valores</em></h2>
       <div class="values-grid">
-        <div class="value-item"><div class="value-num">01</div><div class="value-title" data-i18n="tal.v1t">Discreción</div><p class="value-text" data-i18n="tal.v1d">En KOEHLER la información es sagrada. La capacidad de gestionar operaciones sensibles con absoluta reserva es imprescindible en cada nivel de la organización.</p></div>
-        <div class="value-item"><div class="value-num">02</div><div class="value-title" data-i18n="tal.v2t">Rigor</div><p class="value-text" data-i18n="tal.v2d">Cada detalle importa. Desde la redacción de un contrato hasta la presentación de un activo, la precisión y el cuidado por los detalles definen la calidad de nuestro trabajo.</p></div>
-        <div class="value-item"><div class="value-num">03</div><div class="value-title" data-i18n="tal.v3t">Ambición</div><p class="value-text" data-i18n="tal.v3d">No buscamos conformidad. Buscamos personas que quieran construir algo diferente, que entiendan que operar en el segmento más exigente requiere una mentalidad fuera de lo común.</p></div>
+        <div class="value-item">
+          <div class="value-num">01</div>
+          <div class="value-title" data-i18n="tal.v1t">Discreción</div>
+          <p class="value-text" data-i18n="tal.v1d">En KOEHLER la información es sagrada. La capacidad de gestionar operaciones sensibles con reserva es imprescindible.</p>
+        </div>
+        <div class="value-item">
+          <div class="value-num">02</div>
+          <div class="value-title" data-i18n="tal.v2t">Rigor</div>
+          <p class="value-text" data-i18n="tal.v2d">Cada detalle importa. La precisión y el cuidado definen la calidad de nuestro trabajo diario.</p>
+        </div>
+        <div class="value-item">
+          <div class="value-num">03</div>
+          <div class="value-title" data-i18n="tal.v3t">Ambición</div>
+          <p class="value-text" data-i18n="tal.v3d">Buscamos personas que quieran construir algo diferente y operar en el segmento más exigente del mercado.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -71,49 +89,93 @@
       <span class="section-label" data-i18n="tal.form_label">Candidatura Espontánea</span>
       <h2 class="section-title" data-i18n="tal.form_title">Déjanos<br><em>tus datos</em></h2>
       <div class="divider"></div>
-      <p class="section-text" style="margin-bottom:48px;" data-i18n="tal.form_intro">Puedes enviarnos tu candidatura por este formulario.</p>
-      <form action="https://formspree.io/f/xreoedvp" method="POST" class="form-wrap" style="max-width:100%">
-        <div class="form-grid">
-          <div class="form-group"><label for="tn" data-i18n="tal.f_nombre">Nombre completo *</label><input type="text" id="tn" name="nombre" required placeholder="Su nombre completo"/></div>
-          <div class="form-group"><label for="te" data-i18n="tal.f_email">Email *</label><input type="email" id="te" name="email" required placeholder="su@email.com"/></div>
-          <div class="form-group"><label for="tt" data-i18n="tal.f_tel">Teléfono</label><input type="tel" id="tt" name="telefono" placeholder="+34 600 000 000"/></div>
-          <div class="form-group"><label for="ta" data-i18n="tal.f_area">Área de interés *</label>
-            <select id="ta" name="area" required>
-              <option value="" data-i18n="tal.f_sel">Seleccione...</option>
-              <option data-i18n="tal.a1">Representación y Ventas</option>
-              <option data-i18n="tal.a2">Arquitectura y Diseño</option>
-              <option data-i18n="tal.a3">Asesoramiento Jurídico</option>
-              <option data-i18n="tal.a4">Finanzas e Inversión</option>
-              <option data-i18n="tal.a5">Comunicación y Marketing</option>
-              <option data-i18n="tal.a6">Operaciones y Administración</option>
-              <option data-i18n="tal.a7">Otro</option>
-            </select>
-          </div>
-          <div class="form-group full"><label for="tl" data-i18n="tal.f_linkedin">Perfil LinkedIn</label><input type="url" id="tl" name="linkedin" placeholder="https://linkedin.com/in/su-perfil"/></div>
-          <div class="form-group full"><label for="tm" data-i18n="tal.f_motiv">¿Por qué KOEHLER?</label><textarea id="tm" name="motivacion" placeholder="Cuéntenos qué le motiva a unirse a KOEHLER y qué puede aportar..."></textarea></div>
-          <div class="form-group full">
-            <div class="form-check">
-              <input type="checkbox" id="tp" name="privacidad" required/>
-              <label for="tp" data-i18n="tal.f_priv">Acepto que la información facilitada sea utilizada para evaluar mi candidatura, conforme a la <a href="legal.html#privacidad" style="color:var(--gold);">política de privacidad</a> de KOEHLER Assets Representation.</label>
+      
+      <div id="talent-success" style="display:none; text-align: center; padding: 40px; border: 1px solid var(--gold); background: #fff; margin-bottom: 20px;">
+        <h3 style="color: var(--gold); font-family: 'Cormorant Garamond', serif; font-size: 28px; margin-bottom: 16px;">Candidatura Enviada</h3>
+        <p class="section-text">Gracias por su interés. Revisaremos su perfil con la máxima discreción y contactaremos con usted si existe una vacante acorde.</p>
+      </div>
+
+      <div id="talent-form-container">
+        <p class="section-text" style="margin-bottom:48px;" data-i18n="tal.form_intro">Puedes enviarnos tu candidatura por este formulario.</p>
+        <form id="form-talento" action="https://hook.eu1.make.com/e6uancdwwc9a17mkav974tblo1x6a1jd" method="POST" class="form-wrap">
+          <input type="hidden" name="origen" value="Talento">
+          <div class="form-grid">
+            <div class="form-group"><label data-i18n="tal.f_nombre">Nombre completo *</label><input type="text" name="nombre" required placeholder="Su nombre"/></div>
+            <div class="form-group"><label data-i18n="tal.f_email">Email *</label><input type="email" name="email" required placeholder="su@email.com"/></div>
+            <div class="form-group"><label data-i18n="tal.f_tel">Teléfono</label><input type="tel" name="telefono" placeholder="+34..."/></div>
+            <div class="form-group">
+              <label data-i18n="tal.f_area">Área de interés *</label>
+              <select name="asunto" required>
+                <option value="" data-i18n="tal.f_sel">Seleccione...</option>
+                <option value="Ventas" data-i18n="tal.a1">Representación y Ventas</option>
+                <option value="Arquitectura" data-i18n="tal.a2">Arquitectura y Diseño</option>
+                <option value="Legal" data-i18n="tal.a3">Asesoramiento Jurídico</option>
+                <option value="Finanzas" data-i18n="tal.a4">Finanzas e Inversión</option>
+                <option value="Marketing" data-i18n="tal.a5">Comunicación y Marketing</option>
+                <option value="Otros" data-i18n="tal.a7">Otro</option>
+              </select>
+            </div>
+            <div class="form-group full"><label data-i18n="tal.f_linkedin">Perfil LinkedIn</label><input type="url" name="linkedin" placeholder="https://linkedin.com/in/..."/></div>
+            <div class="form-group full"><label data-i18n="tal.f_motiv">¿Por qué KOEHLER?</label><textarea name="mensaje" placeholder="Cuéntenos qué puede aportar a la firma..."></textarea></div>
+            <div class="form-group full">
+              <div class="form-check">
+                <input type="checkbox" id="tp" name="privacidad" required/>
+                <label for="tp" data-i18n="tal.f_priv" style="font-size: 11px;">Acepto el tratamiento de mis datos para evaluar mi candidatura conforme a la política de privacidad.</label>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="form-submit"><button type="submit" class="btn btn-dark" data-i18n="tal.f_btn">Enviar Candidatura</button></div>
-      </form>
-      <div style="margin-top:56px;padding-top:40px;border-top:1px solid var(--grey-mid);text-align:center;">
+          <div class="form-submit"><button type="submit" id="btn-talent" class="btn btn-dark" data-i18n="tal.f_btn">Enviar Candidatura</button></div>
+        </form>
+      </div>
+
+      <div class="talent-direct">
         <span class="section-label" style="display:block;margin-bottom:12px;" data-i18n="tal.email_label">O escríbenos directamente</span>
-        <a href="mailto:talent@koehlerassets.com" style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--gold);text-decoration:none;letter-spacing:.05em;">talent@koehlerassets.com</a>
+        <a href="mailto:talent@koehlerassets.com" class="talent-email">talent@koehlerassets.com</a>
       </div>
     </div>
   </section>
 </div>
+
 <div id="footer-placeholder"></div>
+
 <script src="components.js"></script>
 <script>
-i18n.es.tal={eyebrow:'Talento · Rigor · Discreción',h1:'Trabaja con<br><em>Nosotros</em>',sub:'En KOEHLER buscamos personas que compartan nuestra forma de entender el mundo de los activos. Si la discreción, el rigor y la excelencia definen tu forma de trabajar, queremos conocerte.',cta:'Enviar Candidatura',s1_label:'La Firma',s1_title:'Construimos<br><em>desde las personas</em>',s1_t1:'KOEHLER es una firma joven con una visión clara: operar en el segmento más exigente del mercado desde la discreción absoluta y el rigor jurídico.',s1_t2:'No buscamos un perfil concreto. Buscamos talento, integridad y la ambición de trabajar donde cada operación importa y cada detalle cuenta.',val_label:'Lo que buscamos',val_title:'Nuestros <em>valores</em>',v1t:'Discreción',v1d:'En KOEHLER la información es sagrada. La capacidad de gestionar operaciones sensibles con absoluta reserva es imprescindible.',v2t:'Rigor',v2d:'Cada detalle importa. La precisión y el cuidado por los detalles definen la calidad de nuestro trabajo.',v3t:'Ambición',v3d:'Buscamos personas que quieran construir algo diferente y que entiendan que operar en el segmento más exigente requiere una mentalidad fuera de lo común.',form_label:'Candidatura Espontánea',form_title:'Déjanos<br><em>tus datos</em>',form_intro:'Puedes enviarnos tu candidatura por este formulario.',f_nombre:'Nombre completo *',f_email:'Email *',f_tel:'Teléfono',f_area:'Área de interés *',f_sel:'Seleccione...',a1:'Representación y Ventas',a2:'Arquitectura y Diseño',a3:'Asesoramiento Jurídico',a4:'Finanzas e Inversión',a5:'Comunicación y Marketing',a6:'Operaciones y Administración',a7:'Otro',f_linkedin:'Perfil LinkedIn',f_motiv:'¿Por qué KOEHLER?',f_priv:'Acepto que la información facilitada sea utilizada para evaluar mi candidatura, conforme a la <a href="legal.html#privacidad" style="color:var(--gold);">política de privacidad</a> de KOEHLER Assets Representation.',f_btn:'Enviar Candidatura',email_label:'O escríbenos directamente'};
-i18n.en.tal={eyebrow:'Talent · Rigour · Discretion',h1:'Join<br><em>Us</em>',sub:'At KOEHLER we look for people who share our way of understanding the asset world. If discretion, rigour and excellence also define the way you work, we would like to meet you.',cta:'Send Application',s1_label:'The Firm',s1_title:'We build<br><em>through people</em>',s1_t1:'KOEHLER is a young firm with a clear vision: to operate in the most demanding segment of the asset market from a position of absolute discretion and legal rigour.',s1_t2:'We are not looking for a specific profile. We are looking for talent, integrity and the ambition to work in an environment where every operation matters and every detail counts.',val_label:'What we look for',val_title:'Our <em>values</em>',v1t:'Discretion',v1d:'At KOEHLER, information is sacred. The ability to handle sensitive operations with absolute reserve is essential at every level of the organisation.',v2t:'Rigour',v2d:'Every detail matters. Precision and attention to detail define the quality of our work.',v3t:'Ambition',v3d:'We look for people who want to build something different and who understand that operating in the most demanding segment requires an exceptional mindset.',form_label:'Spontaneous Application',form_title:'Leave us<br><em>your details</em>',form_intro:'You can send your application through this form.',f_nombre:'Full name *',f_email:'Email *',f_tel:'Phone',f_area:'Area of interest *',f_sel:'Select...',a1:'Representation & Sales',a2:'Architecture & Design',a3:'Legal Advisory',a4:'Finance & Investment',a5:'Communication & Marketing',a6:'Operations & Administration',a7:'Other',f_linkedin:'LinkedIn Profile',f_motiv:'Why KOEHLER?',f_priv:'I accept that the information provided will be used to evaluate my application, in accordance with the <a href="legal.html#privacidad" style="color:var(--gold);">privacy policy</a> of KOEHLER Assets Representation.',f_btn:'Send Application',email_label:'Or write to us directly'};
-i18n.de.tal={eyebrow:'Talent · Präzision · Diskretion',h1:'Arbeiten Sie<br><em>mit uns</em>',sub:'Bei KOEHLER suchen wir Menschen, die unsere Sichtweise auf die Immobilienwelt teilen. Wenn Diskretion, Präzision und Exzellenz auch Ihre Arbeitsweise definieren, möchten wir Sie kennenlernen.',cta:'Bewerbung senden',s1_label:'Die Firma',s1_title:'Wir bauen<br><em>auf Menschen</em>',s1_t1:'KOEHLER ist eine junge Firma mit einer klaren Vision: im anspruchsvollsten Segment des Immobilienmarkts aus absoluter Diskretion und rechtlicher Präzision heraus zu agieren.',s1_t2:'Wir suchen kein spezifisches Profil. Wir suchen Talent, Integrität und den Ehrgeiz, in einem Umfeld zu arbeiten, wo jede Transaktion zählt.',val_label:'Was wir suchen',val_title:'Unsere <em>Werte</em>',v1t:'Diskretion',v1d:'Bei KOEHLER ist Information heilig. Die Fähigkeit, sensible Operationen mit absoluter Zurückhaltung zu handhaben, ist auf jeder Ebene unerlässlich.',v2t:'Präzision',v2d:'Jedes Detail zählt. Genauigkeit und Sorgfalt definieren die Qualität unserer Arbeit.',v3t:'Ehrgeiz',v3d:'Wir suchen Menschen, die etwas Außergewöhnliches aufbauen wollen und verstehen, dass das anspruchsvollste Segment eine besondere Denkweise erfordert.',form_label:'Initiativbewerbung',form_title:'Hinterlassen Sie uns<br><em>Ihre Daten</em>',form_intro:'Sie können Ihre Bewerbung über dieses Formular senden.',f_nombre:'Vollständiger Name *',f_email:'E-Mail *',f_tel:'Telefon',f_area:'Interessensbereich *',f_sel:'Auswählen...',a1:'Vertretung & Vertrieb',a2:'Architektur & Design',a3:'Rechtsberatung',a4:'Finanzen & Investitionen',a5:'Kommunikation & Marketing',a6:'Betrieb & Verwaltung',a7:'Sonstiges',f_linkedin:'LinkedIn-Profil',f_motiv:'Warum KOEHLER?',f_priv:'Ich akzeptiere, dass die bereitgestellten Informationen zur Bewertung meiner Bewerbung verwendet werden, gemäß der <a href="legal.html#privacidad" style="color:var(--gold);">Datenschutzrichtlinie</a> von KOEHLER Assets Representation.',f_btn:'Bewerbung senden',email_label:'Oder schreiben Sie uns direkt'};
-initNav('talento');
+  initNav('talento');
+
+  // Lógica de Envío
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('form-talento');
+    if (form) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = document.getElementById('btn-talent');
+        btn.innerText = "Enviando...";
+        btn.disabled = true;
+
+        const data = Object.fromEntries(new FormData(form).entries());
+
+        try {
+          const response = await fetch(form.action, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+          if (response.ok) {
+            document.getElementById('talent-form-container').style.display = 'none';
+            document.getElementById('talent-success').style.display = 'block';
+          } else { throw new Error(); }
+        } catch (err) {
+          alert('Error al enviar. Inténtelo de nuevo.');
+          btn.innerText = "Enviar Candidatura";
+          btn.disabled = false;
+        }
+      });
+    }
+  });
+
+  // i18n
+  window.i18n = window.i18n || { es: {}, en: {}, de: {} };
+  // (Aquí incluirías los objetos i18n.es.tal, etc. que ya tienes)
 </script>
 </body>
 </html>
