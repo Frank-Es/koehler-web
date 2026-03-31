@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>KOEHLER Assets Representation — Madrid</title>
+  <title>Venda su Activo — KOEHLER Assets Representation</title>
   <link rel="icon" type="image/png" href="https://res.cloudinary.com/dbc8nfyer/image/upload/v1774867988/KOEHLER_lxfl7u.png" />
   <link rel="apple-touch-icon" href="https://res.cloudinary.com/dbc8nfyer/image/upload/v1774867988/KOEHLER_lxfl7u.png" />
   <meta name="theme-color" content="#0D0D0D" />
-  <link rel="stylesheet" href="style.css"/>
-</head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Venda su Activo — KOEHLER Assets Representation</title>
   <link rel="stylesheet" href="style.css"/>
   <style>
     .venta-options{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:56px;}
@@ -180,22 +175,29 @@
       </div>
     </div>
 
-    <script>
-      document.getElementById('form-venta').addEventListener('submit', async function(e) {
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const ventaForm = document.getElementById('form-venta');
+    if (ventaForm) {
+      ventaForm.addEventListener('submit', async function(e) {
         e.preventDefault();
-        const form = e.target;
+        
         const btn = document.getElementById('btn-venta');
         const container = document.getElementById('venta-form-container');
         const success = document.getElementById('venta-success');
-
-        const originalText = btn.innerText;
+        
         btn.innerText = "Procesando...";
         btn.disabled = true;
 
+        // Convertimos FormData a un objeto simple para Make
+        const formData = new FormData(ventaForm);
+        const data = Object.fromEntries(formData.entries());
+
         try {
-          const response = await fetch(form.action, {
+          const response = await fetch(ventaForm.action, {
             method: 'POST',
-            body: new FormData(form)
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
           });
 
           if (response.ok) {
@@ -203,15 +205,18 @@
             success.style.display = 'block';
             success.scrollIntoView({ behavior: 'smooth', block: 'center' });
           } else {
-            throw new Error();
+            throw new Error('Server error');
           }
         } catch (err) {
-          alert('Error en el envío. Por favor, contacte directamente con nosotros.');
-          btn.innerText = originalText;
+          console.error("Error envío:", err);
+          alert('Error en el envío. Por favor, inténtelo de nuevo o contacte por email.');
+          btn.innerText = "Solicitar Sesión de Diagnóstico";
           btn.disabled = false;
         }
       });
-    </script>
+    }
+  });
+</script>
   </section>
 </div>
 <div id="footer-placeholder"></div>
