@@ -154,73 +154,120 @@
   </section>
 
   <!-- FORMULARIO -->
-  <section id="formulario-fin" class="bg-grey">
-    <div class="section-inner" style="max-width:760px;">
-      <span class="section-label" data-i18n="fin.form_label">Financie su Proyecto</span>
-      <h2 class="section-title" data-i18n="fin.form_title">Cuéntenos<br><em>su proyecto</em></h2>
-      <div class="divider"></div>
-      <p class="section-text" style="margin-bottom:48px;" data-i18n="fin.form_intro">Compártanos los detalles de su proyecto y analizaremos la estructura de financiación más adecuada para su caso. Toda la información se trata bajo estricto protocolo de confidencialidad.</p>
+  <section id="contacto-financiacion" class="bg-grey">
+  <div class="section-inner" style="max-width:760px;">
+    <span class="section-label" data-i18n="fin.form_label">Soluciones de Capital</span>
+    <h2 class="section-title" data-i18n="fin.form_title">Estructuración de<br><em>su financiación</em></h2>
+    <div class="divider"></div>
+    
+    <div id="fin-success" style="display:none; text-align: center; padding: 40px 0; border: 1px solid var(--gold); background: rgba(212, 175, 55, 0.05); border-radius: 4px; margin-bottom: 20px;">
+      <h3 style="color: var(--gold); margin-bottom: 16px;">Solicitud en Análisis</h3>
+      <p class="section-text">Hemos recibido sus datos. Un especialista en estructuración de capital revisará su caso y le contactará bajo estricta confidencialidad.</p>
+    </div>
 
-      <form action="https://formspree.io/f/xaqlqkzp" method="POST" class="form-wrap" style="max-width:100%">
+    <div id="fin-form-container">
+      <p class="section-text" style="margin-bottom:48px;" data-i18n="fin.form_intro">Analizamos su perfil financiero para ofrecerle la estructura de deuda o capital que mejor se adapte a su operación inmobiliaria.</p>
+
+      <form id="form-financiacion" action="https://hook.eu1.make.com/e6uancdwwc9a17mkav974tblo1x6a1jd" method="POST" class="form-wrap">
+        <input type="hidden" name="origen" value="Financiación">
+        
         <div class="form-grid">
           <div class="form-group">
-            <label for="nombre" data-i18n="fin.f_nombre">Nombre completo *</label>
-            <input type="text" id="nombre" name="nombre" required placeholder="Su nombre completo" />
+            <label data-i18n="fin.f_nombre">Nombre completo *</label>
+            <input type="text" name="nombre" required placeholder="Su nombre">
           </div>
           <div class="form-group">
-            <label for="empresa" data-i18n="fin.f_empresa">Empresa / Promotora</label>
-            <input type="text" id="empresa" name="empresa" placeholder="Razón social" />
+            <label data-i18n="fin.f_email">Email *</label>
+            <input type="email" name="email" required placeholder="su@email.com">
           </div>
           <div class="form-group">
-            <label for="email" data-i18n="fin.f_email">Email *</label>
-            <input type="email" id="email" name="email" required placeholder="su@email.com" />
+            <label data-i18n="fin.f_tel">Teléfono *</label>
+            <input type="tel" name="telefono" required placeholder="+34...">
           </div>
           <div class="form-group">
-            <label for="telefono" data-i18n="fin.f_tel">Teléfono *</label>
-            <input type="tel" id="telefono" name="telefono" required placeholder="+34 600 000 000" />
-          </div>
-          <div class="form-group">
-            <label for="tipo_fin" data-i18n="fin.f_tipo">Tipo de financiación *</label>
-            <select id="tipo_fin" name="tipo_financiacion" required>
-              <option value="" data-i18n="fin.f_sel">Seleccione...</option>
-              <option data-i18n="fin.ft1">Lending inmobiliario (Club 1512)</option>
-              <option data-i18n="fin.ft2">Financiación institucional</option>
-              <option data-i18n="fin.ft3">No estoy seguro, quiero asesoramiento</option>
+            <label data-i18n="fin.f_tipo">Tipo de Financiación *</label>
+            <select name="asunto" required>
+              <option value="">Seleccione...</option>
+              <option value="Hipotecaria Senior">Hipotecaria Senior (Compra)</option>
+              <option value="Financiación Corporativa">Financiación Corporativa / Puentes</option>
+              <option value="Equity / Capital">Equity / Entrada de socios</option>
+              <option value="Refinanciación">Refinanciación de Deuda</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="importe" data-i18n="fin.f_importe">Importe solicitado *</label>
-            <select id="importe" name="importe" required>
-              <option value="" data-i18n="fin.f_sel">Seleccione...</option>
-              <option>Hasta 500.000 €</option>
-              <option>500.000 € – 2.000.000 €</option>
-              <option>2.000.000 € – 10.000.000 €</option>
-              <option>10.000.000 € – 50.000.000 €</option>
-              <option data-i18n="fin.fi_mas">Más de 50.000.000 €</option>
+            <label data-i18n="fin.f_monto">Importe solicitado (aprox)</label>
+            <select name="presupuesto">
+              <option value="< 500k">Hasta 500.000 €</option>
+              <option value="500k - 2M">500.000 € – 2.000.000 €</option>
+              <option value="2M - 10M">2.000.000 € – 10.000.000 €</option>
+              <option value="+10M">Más de 10.000.000 €</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label data-i18n="fin.f_perfil">Perfil del Solicitante</label>
+            <select name="perfil_cliente">
+              <option value="Persona Física">Persona Física / Particular</option>
+              <option value="Sociedad / Empresa">Sociedad / Empresa</option>
+              <option value="Family Office">Family Office / Inversor</option>
             </select>
           </div>
           <div class="form-group full">
-            <label for="proyecto" data-i18n="fin.f_proy">Descripción del proyecto *</label>
-            <textarea id="proyecto" name="proyecto" required placeholder="Tipo de proyecto, activo como garantía, ubicación, plazo estimado, estado actual del desarrollo..."></textarea>
+            <label data-i18n="fin.f_msg">Breve descripción de la operación</label>
+            <textarea name="mensaje" placeholder="Indique el activo a financiar, ubicación y situación actual..."></textarea>
           </div>
           <div class="form-group full">
             <div class="form-check">
-              <input type="checkbox" id="privacidad" name="privacidad" required />
-              <label for="privacidad" data-i18n="fin.f_priv">Acepto que la información facilitada sea utilizada para analizar mi solicitud de financiación. Toda la información será tratada bajo estricto protocolo de confidencialidad por KOEHLER Assets Representation.</label>
+              <input type="checkbox" id="fin-priv" name="privacidad" required />
+              <label for="fin-priv">Acepto el tratamiento de mis datos financieros.</label>
             </div>
           </div>
         </div>
         <div class="form-submit">
-          <button type="submit" class="btn btn-dark" data-i18n="fin.f_submit">Enviar Solicitud de Financiación</button>
+          <button type="submit" id="btn-fin" class="btn btn-dark">Solicitar Estudio de Viabilidad</button>
         </div>
       </form>
     </div>
-  </section>
-
+  </div>
+</section>
 </div>
 <div id="footer-placeholder"></div>
-<script src="components.js"></script>
 <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const finForm = document.getElementById('form-financiacion');
+    if (finForm) {
+      finForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = document.getElementById('btn-fin');
+        const container = document.getElementById('fin-form-container');
+        const success = document.getElementById('fin-success');
+
+        btn.innerText = "Enviando solicitud...";
+        btn.disabled = true;
+
+        const formData = new FormData(finForm);
+        const data = Object.fromEntries(formData.entries());
+
+        try {
+          const response = await fetch(finForm.action, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+
+          if (response.ok) {
+            container.style.display = 'none';
+            success.style.display = 'block';
+            success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          } else { throw new Error(); }
+        } catch (err) {
+          alert('Error al enviar. Por favor, revise los campos.');
+          btn.innerText = "Solicitar Estudio de Viabilidad";
+          btn.disabled = false;
+        }
+      });
+    }
+  });
+</script>
 i18n.es.fin = {
   eyebrow:'Lending Inmobiliario · Financiación Institucional', hero_title:'Financiación<br><em>Estratégica</em>',
   hero_sub:'Dos vías de financiación para proyectos inmobiliarios de alto valor. A través del Club 1512 o con capital institucional para operaciones de mayor envergadura.',
