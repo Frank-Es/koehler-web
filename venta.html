@@ -124,32 +124,94 @@
       <span class="section-label" data-i18n="ven.form_label">Iniciar el Proceso</span>
       <h2 class="section-title" data-i18n="ven.form_title">Hablemos de<br><em>su activo</em></h2>
       <div class="divider"></div>
-      <p class="section-text" style="margin-bottom:48px;" data-i18n="ven.form_intro">Cuéntenos brevemente su situación y nos pondremos en contacto con usted para una primera sesión de diagnóstico privada y sin compromiso.</p>
-      <form action="https://formspree.io/f/mvzvzyyg" method="POST" class="form-wrap" style="max-width:100%">
-        <div class="form-grid">
-          <div class="form-group"><label for="vn" data-i18n="ven.f_nombre">Nombre completo *</label><input type="text" id="vn" name="nombre" required placeholder="Su nombre completo"/></div>
-          <div class="form-group"><label for="ve" data-i18n="ven.f_email">Email *</label><input type="email" id="ve" name="email" required placeholder="su@email.com"/></div>
-          <div class="form-group"><label for="vt" data-i18n="ven.f_tel">Teléfono *</label><input type="tel" id="vt" name="telefono" required placeholder="+34 600 000 000"/></div>
-          <div class="form-group"><label for="vs" data-i18n="ven.f_serv">Servicio que necesita *</label>
-            <select id="vs" name="servicio" required>
-              <option value="" data-i18n="ven.f_sel">Seleccione...</option>
-              <option data-i18n="ven.fs1">Gestión Integral de la Venta</option>
-              <option data-i18n="ven.fs2">Ya tengo comprador — Asesoramiento Documental</option>
-              <option data-i18n="ven.fs3">No estoy seguro, quiero información</option>
-            </select>
-          </div>
-          <div class="form-group full"><label for="va" data-i18n="ven.f_activo">Descripción del activo</label><input type="text" id="va" name="activo" placeholder="Tipo de activo, ubicación aproximada, valor estimado..."/></div>
-          <div class="form-group full"><label for="vm" data-i18n="ven.f_msg">Mensaje adicional</label><textarea id="vm" name="mensaje" placeholder="Cualquier detalle que considere relevante..."></textarea></div>
-          <div class="form-group full">
-            <div class="form-check">
-              <input type="checkbox" id="vp" name="privacidad" required/>
-              <label for="vp" data-i18n="ven.f_priv">Acepto que la información facilitada sea utilizada para contactar conmigo, conforme a la <a href="legal.html#privacidad" style="color:var(--gold);">política de privacidad</a> de KOEHLER Assets Representation.</label>
+      
+      <div id="venta-success" style="display:none; text-align: center; padding: 40px 0; border: 1px solid var(--gold); background: rgba(212, 175, 55, 0.05); border-radius: 4px; margin-bottom: 20px;">
+        <h3 style="color: var(--gold); margin-bottom: 16px;" data-i18n="ven.o1_tag">Solicitud Recibida</h3>
+        <p class="section-text">Gracias por contactar con KOEHLER. Su solicitud de diagnóstico está siendo procesada bajo estricto protocolo de confidencialidad.</p>
+      </div>
+
+      <div id="venta-form-container">
+        <p class="section-text" style="margin-bottom:48px;" data-i18n="ven.form_intro">Cuéntenos brevemente su situación y nos pondremos en contacto con usted para una primera sesión de diagnóstico privada y sin compromiso.</p>
+        
+        <form id="form-venta" action="https://hook.eu1.make.com/e6uancdwwc9a17mkav974tblo1x6a1jd" method="POST" class="form-wrap" style="max-width:100%">
+          <input type="hidden" name="origen" value="Venta de Activo">
+          
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="vn" data-i18n="ven.f_nombre">Nombre completo *</label>
+              <input type="text" id="vn" name="nombre" required placeholder="Su nombre completo"/>
+            </div>
+            <div class="form-group">
+              <label for="ve" data-i18n="ven.f_email">Email *</label>
+              <input type="email" id="ve" name="email" required placeholder="su@email.com"/>
+            </div>
+            <div class="form-group">
+              <label for="vt" data-i18n="ven.f_tel">Teléfono *</label>
+              <input type="tel" id="vt" name="telefono" required placeholder="+34 600 000 000"/>
+            </div>
+            <div class="form-group">
+              <label for="vs" data-i18n="ven.f_serv">Servicio que necesita *</label>
+              <select id="vs" name="asunto" required>
+                <option value="" data-i18n="ven.f_sel">Seleccione...</option>
+                <option value="Gestion Integral" data-i18n="ven.fs1">Gestión Integral de la Venta</option>
+                <option value="Asesoramiento Documental" data-i18n="ven.fs2">Ya tengo comprador — Asesoramiento Documental</option>
+                <option value="Informacion General" data-i18n="ven.fs3">No estoy seguro, quiero información</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label for="va" data-i18n="ven.f_activo">Descripción del activo</label>
+              <input type="text" id="va" name="detalle_activo" placeholder="Tipo de activo, ubicación aproximada, valor estimado..."/>
+            </div>
+            <div class="form-group full">
+              <label for="vm" data-i18n="ven.f_msg">Mensaje adicional</label>
+              <textarea id="vm" name="mensaje" placeholder="Cualquier detalle que considere relevante..."></textarea>
+            </div>
+            <div class="form-group full">
+              <div class="form-check">
+                <input type="checkbox" id="vp" name="privacidad" required/>
+                <label for="vp" data-i18n="ven.f_priv">Acepto el tratamiento de mis datos.</label>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="form-submit"><button type="submit" class="btn btn-dark" data-i18n="ven.f_btn">Solicitar Sesión de Diagnóstico</button></div>
-      </form>
+          <div class="form-submit">
+            <button type="submit" id="btn-venta" class="btn btn-dark" data-i18n="ven.f_btn">Solicitar Sesión de Diagnóstico</button>
+          </div>
+        </form>
+      </div>
     </div>
+
+    <script>
+      document.getElementById('form-venta').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const form = e.target;
+        const btn = document.getElementById('btn-venta');
+        const container = document.getElementById('venta-form-container');
+        const success = document.getElementById('venta-success');
+
+        const originalText = btn.innerText;
+        btn.innerText = "Procesando...";
+        btn.disabled = true;
+
+        try {
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form)
+          });
+
+          if (response.ok) {
+            container.style.display = 'none';
+            success.style.display = 'block';
+            success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          } else {
+            throw new Error();
+          }
+        } catch (err) {
+          alert('Error en el envío. Por favor, contacte directamente con nosotros.');
+          btn.innerText = originalText;
+          btn.disabled = false;
+        }
+      });
+    </script>
   </section>
 </div>
 <div id="footer-placeholder"></div>
