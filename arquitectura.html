@@ -23,8 +23,8 @@
   <style>
     /* Ajustes específicos para Arquitectura */
     /* Fix espacio debajo de imagen: display:block elimina inline whitespace */
-    .img-block { line-height: 0; }
-    .img-block img { width: 100%; height: auto; object-fit: cover; border-radius: 2px; display: block; }
+    .img-block { line-height: 0; overflow: hidden; }
+    .img-block img { width: 115%; height: auto; object-fit: cover; border-radius: 2px; display: block; margin-left: -7.5%; }
     .service-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; margin-top: 48px; }
     .service-card { background: var(--white); padding: 40px; border: 1px solid var(--grey-mid); transition: transform 0.3s ease; }
     .service-card:hover { transform: translateY(-5px); border-color: var(--gold); }
@@ -83,40 +83,47 @@
     </div>
   </section>
 
+  <!-- SERVICIOS -->
   <section id="servicios" class="bg-grey">
     <div class="section-inner">
-      <span class="section-label" data-i18n="arq.srv_label">Servicios</span>
-      <h2 class="section-title" data-i18n="arq.srv_title">Qué <em>ofrecemos</em></h2>
+      <span class="section-label">Servicios</span>
+      <h2 class="section-title">Qué <em>ofrecemos</em></h2>
+
       <div class="service-cards">
+
         <div class="service-card">
           <div class="service-card-num">01</div>
-          <div class="service-card-title" data-i18n="arq.s1t">Reforma Integral</div>
-          <p class="service-card-text" data-i18n="arq.s1d">Gestión completa del proyecto: desde el análisis técnico inicial y la dirección de obra hasta la entrega final.</p>
+          <div class="service-card-title">Reforma Integral</div>
+          <p class="service-card-text">Gestión completa del proyecto de reforma: desde el análisis técnico inicial, la dirección de obra y la coordinación de industriales, hasta la entrega final. Trabajamos con los mejores proveedores para garantizar calidad, plazos y presupuesto.</p>
         </div>
+
         <div class="service-card">
           <div class="service-card-num">02</div>
-          <div class="service-card-title" data-i18n="arq.s2t">Diseño de Interiores</div>
-          <p class="service-card-text" data-i18n="arq.s2d">Proyectos a medida que combinan funcionalidad y estética de mercado para elevar la percepción del activo.</p>
+          <div class="service-card-title">Diseño de Interiores</div>
+          <p class="service-card-text">Proyectos de interiorismo a medida que combinan funcionalidad, estética y valor de mercado. Selección de materiales, mobiliario, iluminación y acabados que elevan la percepción del activo ante el comprador más exigente.</p>
         </div>
+
         <div class="service-card">
           <div class="service-card-num">03</div>
-          <div class="service-card-title" data-i18n="arq.s3t">Home Staging</div>
-          <p class="service-card-text" data-i18n="arq.s3d">Puesta en escena profesional para acelerar la decisión de compra sin necesidad de reformas estructurales.</p>
+          <div class="service-card-title">Home Staging</div>
+          <p class="service-card-text">Puesta en escena profesional del activo para su presentación al mercado. Optimizamos cada espacio visualmente sin necesidad de reforma, creando una experiencia de visita que conecta emocionalmente con el comprador y acelera la decisión de compra.</p>
         </div>
+
         <div class="service-card">
           <div class="service-card-num">04</div>
-          <div class="service-card-title" data-i18n="arq.s4t">Consultoría de Valor</div>
-          <p class="service-card-text" data-i18n="arq.s4d">Análisis técnico de rentabilidad para invertir exactamente donde obtendrá el mayor retorno en la venta.</p>
+          <div class="service-card-title">Consultoría de Valor</div>
+          <p class="service-card-text">Análisis técnico de qué intervenciones son rentables para el activo en cuestión. Le indicamos exactamente dónde invertir para obtener el mayor retorno en la venta, evitando gastos innecesarios que no se recuperan en el precio final.</p>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Fix: eliminado height fijo, grid responsivo con clase -->
-  <section style="padding:0; overflow:hidden;">
-    <div class="dual-img-grid" style="aspect-ratio: 2 / 1;">
-      <img src="https://res.cloudinary.com/dbc8nfyer/image/upload/v1774817401/dormitorio_2_im6kqy.jpg" alt="Interiorismo"/>
-      <img src="https://res.cloudinary.com/dbc8nfyer/image/upload/v1774816101/Sal%C3%B3n_dtzyfy.jpg" alt="Arquitectura"/>
+  <!-- IMAGEN PLACEHOLDER -->
+  <section style="padding: 0;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; height: 480px;">
+      <img src="https://res.cloudinary.com/dbc8nfyer/image/upload/v1774817401/dormitorio_2_im6kqy.jpg" alt="Interiorismo" style="width:100%;height:100%;object-fit:cover;display:block;"/>
+      <img src="https://res.cloudinary.com/dbc8nfyer/image/upload/v1774816101/Sal%C3%B3n_dtzyfy.jpg" alt="Arquitectura" style="width:100%;height:100%;object-fit:cover;display:block;"/>
     </div>
   </section>
 
