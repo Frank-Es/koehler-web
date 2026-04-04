@@ -1,170 +1,147 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CKMLMC7ELR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-CKMLMC7ELR');
-</script>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Legal — KOEHLER Assets Representation</title>
-  
-  <link rel="icon" type="image/png" href="https://res.cloudinary.com/dbc8nfyer/image/upload/v1774867988/KOEHLER_lxfl7u.png" />
-  <link rel="apple-touch-icon" href="https://res.cloudinary.com/dbc8nfyer/image/upload/v1774867988/KOEHLER_lxfl7u.png" />
-  <meta name="theme-color" content="#0D0D0D" />
-
   <link rel="stylesheet" href="style.css"/>
   <style>
-    .legal-hero { height: 35vh; min-height: 250px; background: var(--black); }
-    .legal-tabs { display: flex; gap: 0; border-bottom: 1px solid var(--grey-mid); margin-bottom: 64px; overflow-x: auto; scrollbar-width: none; }
-    .legal-tabs::-webkit-scrollbar { display: none; }
-    
-    .legal-tab { 
-      font-family: 'Montserrat', sans-serif; 
-      font-weight: 400; 
-      font-size: 10px; 
-      letter-spacing: .2em; 
-      text-transform: uppercase; 
-      padding: 20px 32px; 
-      cursor: pointer; 
-      border: none;
-      border-bottom: 2px solid transparent; 
-      background: none; 
-      color: var(--grey-text); 
-      transition: all 0.3s ease;
-      white-space: nowrap;
-    }
-    .legal-tab:hover { color: var(--black); }
-    .legal-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
-    
-    .legal-section { display: none; animation: fadeIn 0.5s ease forwards; }
-    .legal-section.active { display: block; }
-    
-    .legal-content h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 24px; color: var(--black); margin: 48px 0 16px; border-bottom: 1px solid var(--grey-light); padding-bottom: 8px; }
-    .legal-content h3:first-child { margin-top: 0; }
-    .legal-content p { font-family: 'Montserrat', sans-serif; font-weight: 300; font-size: 13px; line-height: 1.8; color: var(--grey-text); margin-bottom: 20px; }
-    .legal-content strong { font-weight: 500; color: var(--black); }
-    
-    .legal-list { list-style: none; padding: 0; margin-bottom: 24px; }
-    .legal-list li { display: flex; gap: 12px; font-family: 'Montserrat', sans-serif; font-weight: 300; font-size: 13px; line-height: 1.8; color: var(--grey-text); margin-bottom: 12px; }
-    .legal-list li::before { content: '—'; color: var(--gold); flex-shrink: 0; }
-    
-    .legal-updated { font-family: 'Montserrat', sans-serif; font-size: 9px; letter-spacing: .1em; color: var(--grey-mid); margin-bottom: 40px; display: block; text-transform: uppercase; }
-
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-    
-    @media(max-width: 768px) {
-      .legal-tabs { justify-content: flex-start; }
-      .legal-tab { padding: 15px 20px; font-size: 9px; }
-    }
+    .legal-hero{height:32vh;min-height:220px;}
+    .legal-tabs{display:flex;gap:0;border-bottom:1px solid var(--grey-mid);margin-bottom:64px;overflow-x:auto;}
+    .legal-tab{font-family:'Montserrat',sans-serif;font-weight:400;font-size:10px;letter-spacing:.2em;text-transform:uppercase;padding:16px 28px;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap;background:none;border-top:none;border-left:none;border-right:none;color:var(--grey-text);transition:color .2s,border-color .2s;}
+    .legal-tab:hover{color:var(--black);}
+    .legal-tab.active{color:var(--gold);border-bottom-color:var(--gold);}
+    .legal-section{display:none;}
+    .legal-section.active{display:block;}
+    .legal-content h3{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:26px;color:var(--black);margin:40px 0 12px;}
+    .legal-content h3:first-child{margin-top:0;}
+    .legal-content p{font-family:'Montserrat',sans-serif;font-weight:300;font-size:12px;line-height:2;color:#555550;margin-bottom:16px;}
+    .legal-content strong{font-weight:500;color:var(--black);}
+    .legal-content ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:16px;}
+    .legal-content ul li{display:flex;gap:12px;font-family:'Montserrat',sans-serif;font-weight:300;font-size:12px;line-height:1.8;color:#555550;}
+    .legal-content ul li::before{content:'—';color:var(--gold);flex-shrink:0;}
+    .legal-updated{font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.15em;color:var(--grey-text);margin-bottom:40px;display:block;}
   </style>
 </head>
 <body>
-
 <div id="nav-placeholder"></div>
-
 <div class="page-wrapper">
 
   <section class="hero legal-hero">
-    <img src="https://res.cloudinary.com/dbc8nfyer/image/upload/v1774805357/IMG_6890_i5jrge.heic" alt="KOEHLER Legal" class="hero-img" style="opacity:0.2;"/>
+    <img src="https://res.cloudinary.com/dbc8nfyer/image/upload/v1774805357/IMG_6890_i5jrge.heic" alt="" class="hero-img" style="opacity:0.15;"/>
     <div class="hero-content">
-      <span class="hero-eyebrow">MARINA DE ROJAS INVESTMENTS S.R.L.</span>
-      <h1 style="font-size:clamp(30px, 5vw, 48px);" data-i18n="leg.h1">Información <em>Legal</em></h1>
+      <span class="hero-eyebrow">KOEHLER Assets Representation</span>
+      <h1 style="font-size:clamp(32px,4vw,56px);" data-i18n="leg.h1">Información <em>Legal</em></h1>
     </div>
   </section>
 
   <section>
-    <div class="section-inner" style="max-width:800px; padding-top: 80px;">
-      
+    <div class="section-inner" style="max-width:860px;">
       <div class="legal-tabs">
-        <button class="legal-tab active" onclick="showTab(event, 'aviso-legal')" data-i18n="leg.tab1">Aviso Legal</button>
-        <button class="legal-tab" onclick="showTab(event, 'privacidad')" data-i18n="leg.tab2">Política de Privacidad</button>
-        <button class="legal-tab" onclick="showTab(event, 'cookies')" data-i18n="leg.tab3">Política de Cookies</button>
+        <button class="legal-tab active" onclick="showTab('aviso-legal')" data-i18n="leg.tab1">Aviso Legal</button>
+        <button class="legal-tab" onclick="showTab('privacidad')" data-i18n="leg.tab2">Política de Privacidad</button>
+        <button class="legal-tab" onclick="showTab('cookies')" data-i18n="leg.tab3">Política de Cookies</button>
       </div>
 
+      <!-- AVISO LEGAL -->
       <div id="aviso-legal" class="legal-section active">
         <div class="legal-content">
-          <span class="legal-updated" data-i18n="leg.ck_updated">Última actualización: 2026</span>
-          <h3 data-i18n="leg.av_title">Condiciones de Uso</h3>
+          <h3 data-i18n="leg.av_title">Aviso Legal y Condiciones de Uso</h3>
           <h3 data-i18n="leg.av1_h">1. Información General</h3>
-          <p data-i18n="leg.av1_p">Titular de este sitio web:</p>
-          <p>
-            <strong data-i18n="leg.av_razon">Razón Social:</strong> MARINA DE ROJAS INVESTMENTS S.R.L.<br/>
-            <strong data-i18n="leg.av_rnc">RNC:</strong> 1-32-38419-9<br/>
-            <strong data-i18n="leg.av_dom">Domicilio:</strong> Santo Domingo, República Dominicana.<br/>
-            <strong data-i18n="leg.av_email">Email:</strong> info@koehlerassets.com
-          </p>
-          <h3 data-i18n="leg.av2_h">2. Objeto</h3>
-          <p data-i18n="leg.av2_p">Este sitio tiene carácter informativo sobre los servicios de MARINA DE ROJAS INVESTMENTS S.R.L.</p>
-          <h3 data-i18n="leg.av3_h">3. Propiedad Intelectual</h3>
-          <p data-i18n="leg.av3_p">Todos los contenidos de koehlerassets.com están protegidos. ©️ Todos los derechos reservados.</p>
+          <p data-i18n="leg.av1_p">En cumplimiento de los principios de transparencia, se informa a los usuarios que el titular de este sitio web es:</p>
+          <p><strong data-i18n="leg.av_razon">Razón Social:</strong> MARINA DE ROJAS INVESTMENTS S.R.L.<br/>
+          <strong data-i18n="leg.av_rnc">Identificación Fiscal (RNC):</strong> 1-32-38419-9<br/>
+          <strong data-i18n="leg.av_dom">Domicilio:</strong> Av. Rómulo Betancourt 1304, Edificio Profesional BELLA VISTA CENTER 2, suite 507, Ensanche Bella Vista, Santo Domingo, República Dominicana.<br/>
+          <strong data-i18n="leg.av_email">Email:</strong> info@koehlerassets.com<br/>
+          <strong data-i18n="leg.av_domain">Dominio:</strong> koehlerassets.com</p>
+          <h3 data-i18n="leg.av2_h">2. Objeto de la Web</h3>
+          <p data-i18n="leg.av2_p">Este sitio web tiene un carácter meramente informativo. Su objetivo es dar a conocer los servicios y la actividad de MARINA DE ROJAS INVESTMENTS S.R.L. El acceso y navegación por este sitio no establece ningún tipo de relación comercial o contractual entre el usuario y la empresa.</p>
+          <h3 data-i18n="leg.av3_h">3. Propiedad Intelectual y Derechos Reservados</h3>
+          <p data-i18n="leg.av3_p">El código fuente, los diseños gráficos, las imágenes, las fotografías, los sonidos, las animaciones, el software, los textos, así como la información y los contenidos de koehlerassets.com están protegidos por la legislación internacional y nacional sobre los derechos de propiedad intelectual e industrial. <strong>©️ Todos los derechos reservados</strong>. No se permite la reproducción total o parcial, el tratamiento informático, la distribución, difusión, ni modificación del contenido de este sitio sin el permiso previo y por escrito de su titular.</p>
+          <h3 data-i18n="leg.av4_h">4. Exclusión de Responsabilidad</h3>
+          <p data-i18n="leg.av4_p">El titular no se hace responsable de los daños y perjuicios derivados de interferencias, omisiones, interrupciones, virus informáticos o desconexiones en el funcionamiento operativo de este sistema, motivados por causas ajenas a la empresa.</p>
+          <h3 data-i18n="leg.av5_h">5. Legislación y Jurisdicción</h3>
+          <p data-i18n="leg.av5_p">Cualquier controversia relacionada con este sitio web se regirá por la legislación de la <strong>República Dominicana</strong>, sometiéndose las partes a la jurisdicción de los Juzgados y Tribunales de Santo Domingo.</p>
         </div>
       </div>
 
+      <!-- PRIVACIDAD -->
       <div id="privacidad" class="legal-section">
         <div class="legal-content">
-          <h3 data-i18n="leg.pr_title">Protección de Datos</h3>
-          <h3 data-i18n="leg.pr1_h">1. Responsable</h3>
-          <p data-i18n="leg.pr1_p">MARINA DE ROJAS INVESTMENTS S.R.L., RNC 1-32-38419-9.</p>
-          <h3 data-i18n="leg.pr2_h">2. Finalidad</h3>
-          <p data-i18n="leg.pr2_p">Según la Ley No. 172-13, sus datos se usarán para:</p>
-          <ul class="legal-list">
-            <li data-i18n="leg.pr2_l1">Responder sus solicitudes de información.</li>
-            <li data-i18n="leg.pr2_l2">Mantener la comunicación profesional.</li>
-          </ul>
-          <h3 data-i18n="leg.pr5_h">3. Sus Derechos</h3>
-          <p data-i18n="leg.pr5_p">Puede ejercer sus derechos ARCO escribiendo a: <a href="mailto:info@koehlerassets.com" style="color:var(--gold); text-decoration: none;">info@koehlerassets.com</a></p>
+          <h3 data-i18n="leg.pr_title">Política de Privacidad y Protección de Datos</h3>
+          <h3 data-i18n="leg.pr1_h">1. Responsable del Tratamiento</h3>
+          <p data-i18n="leg.pr1_p">El responsable de los datos personales recogidos a través de este sitio web es <strong>MARINA DE ROJAS INVESTMENTS S.R.L.</strong>, con RNC 1-32-38419-9 y domicilio en Santo Domingo, República Dominicana.</p>
+          <h3 data-i18n="leg.pr2_h">2. Finalidad del Tratamiento de Datos</h3>
+          <p data-i18n="leg.pr2_p">De conformidad con la <strong>Ley No. 172-13 sobre Protección de Datos de Carácter Personal</strong>, le informamos que los datos que usted proporcione voluntariamente a través de nuestros formularios de contacto serán tratados exclusivamente para:</p>
+          <ul><li data-i18n="leg.pr2_l1">Atender y responder sus consultas o solicitudes de información.</li><li data-i18n="leg.pr2_l2">Mantener la comunicación profesional necesaria derivada de su mensaje.</li></ul>
+          <h3 data-i18n="leg.pr3_h">3. Consentimiento y Legitimación</h3>
+          <p data-i18n="leg.pr3_p">El tratamiento de sus datos personales se basa exclusivamente en el <strong>consentimiento</strong> que usted otorga al enviarnos su consulta a través del formulario. Usted puede retirar este consentimiento en cualquier momento.</p>
+          <h3 data-i18n="leg.pr4_h">4. Destinatarios de los Datos</h3>
+          <p data-i18n="leg.pr4_p"><strong>MARINA DE ROJAS INVESTMENTS S.R.L.</strong> garantiza que sus datos personales no serán vendidos, cedidos ni compartidos con terceros, salvo que exista una obligación legal o sea estrictamente necesario para cumplir con su solicitud.</p>
+          <h3 data-i18n="leg.pr5_h">5. Derechos del Usuario (ARCO)</h3>
+          <p data-i18n="leg.pr5_p">Usted tiene derecho a ejercer sus derechos de <strong>Acceso, Rectificación, Cancelación y Oposición</strong> (derechos ARCO) sobre sus datos personales. Para ello, puede enviar una solicitud por escrito al correo electrónico: <a href="mailto:info@koehlerassets.com" style="color:var(--gold);">info@koehlerassets.com</a></p>
+          <h3 data-i18n="leg.pr6_h">6. Seguridad</h3>
+          <p data-i18n="leg.pr6_p">Hemos adoptado las medidas técnicas y organizativas necesarias para garantizar la seguridad de sus datos y evitar su alteración, pérdida o acceso no autorizado.</p>
         </div>
       </div>
 
+      <!-- COOKIES -->
       <div id="cookies" class="legal-section">
         <div class="legal-content">
+          <span class="legal-updated" data-i18n="leg.ck_updated">Última actualización: 29 de marzo de 2026</span>
           <h3 data-i18n="leg.ck_title">Política de Cookies</h3>
-          <p data-i18n="leg.ck1_p">Las cookies son archivos que mejoran su experiencia de navegación.</p>
-          <h3 data-i18n="leg.ck2_h">2. Tipos de Cookies</h3>
-          <ul class="legal-list">
-            <li><strong data-i18n="leg.ck2_l1t">Técnicas:</strong> <span data-i18n="leg.ck2_l1d">Necesarias para el funcionamiento del sitio.</span></li>
-            <li><strong data-i18n="leg.ck2_l2t">Funcionalidad:</strong> <span data-i18n="leg.ck2_l2d">Recuerdan sus preferencias de idioma.</span></li>
+          <p data-i18n="leg.ck_intro">Esta Política de Cookies explica qué son las Cookies y cómo las utilizamos. Le recomendamos que lea esta política para comprender qué tipo de cookies utilizamos, qué información recopilamos mediante Cookies y cómo se utiliza dicha información.</p>
+          <h3 data-i18n="leg.ck1_h">1. ¿Qué son las Cookies?</h3>
+          <p data-i18n="leg.ck1_p">Las Cookies son pequeños archivos que se colocan en su ordenador, dispositivo móvil o cualquier otro dispositivo cuando visita un sitio web. Contienen detalles de su historial de navegación en ese sitio web, entre otros usos. Las cookies no contienen típicamente ninguna información que identifique personalmente a un usuario.</p>
+          <h3 data-i18n="leg.ck2_h">2. Tipos de Cookies que Utilizamos</h3>
+          <p data-i18n="leg.ck2_intro">Las Cookies pueden ser "Persistentes" o "de Sesión". Las Cookies persistentes permanecen en su dispositivo cuando se desconecta, mientras que las Cookies de sesión se eliminan en cuanto cierra su navegador web. Utilizamos los siguientes tipos:</p>
+          <ul>
+            <li><strong data-i18n="leg.ck2_l1t">Cookies Técnicas (Necesarias):</strong> <span data-i18n="leg.ck2_l1d">Son esenciales para que pueda utilizar las funciones del sitio web. Ayudan a autenticar usuarios y a prevenir el uso fraudulento.</span></li>
+            <li><strong data-i18n="leg.ck2_l2t">Cookies de Funcionalidad (Persistentes):</strong> <span data-i18n="leg.ck2_l2d">Permiten recordar las elecciones que realiza cuando utiliza el sitio web, como sus preferencias de idioma. Su finalidad es proporcionarle una experiencia más personal.</span></li>
           </ul>
+          <h3 data-i18n="leg.ck3_h">3. Sus Opciones respecto a las Cookies</h3>
+          <p data-i18n="leg.ck3_p">Si prefiere evitar el uso de Cookies, primero debe deshabilitar su uso en su navegador y luego eliminar las Cookies guardadas asociadas con este sitio web. Puede utilizar esta opción para evitar el uso de Cookies en cualquier momento. Puede gestionar las cookies desde la configuración de su navegador:</p>
+          <ul>
+            <li><a href="https://support.google.com/accounts/answer/32050" target="_blank" style="color:var(--gold);">Google Chrome</a></li>
+            <li><a href="https://support.microsoft.com/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" style="color:var(--gold);">Microsoft Edge</a></li>
+            <li><a href="https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored" target="_blank" style="color:var(--gold);">Mozilla Firefox</a></li>
+            <li><a href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac" target="_blank" style="color:var(--gold);">Safari</a></li>
+          </ul>
+          <h3 data-i18n="leg.ck4_h">4. Cambios en esta Política de Cookies</h3>
+          <p data-i18n="leg.ck4_p">Es posible que actualicemos esta Política de Cookies periódicamente. La fecha de "Última actualización" en la parte superior indica cuándo fue revisada por última vez.</p>
+          <h3 data-i18n="leg.ck5_h">5. Contacto</h3>
+          <p data-i18n="leg.ck5_p">Si tiene alguna pregunta sobre esta Política de Cookies, puede contactarnos por correo electrónico: <a href="mailto:info@koehlerassets.com" style="color:var(--gold);">info@koehlerassets.com</a></p>
         </div>
       </div>
 
     </div>
   </section>
 </div>
-
 <div id="footer-placeholder"></div>
-
 <script src="components.js"></script>
 <script>
-  function showTab(event, id) {
-    document.querySelectorAll('.legal-section').forEach(s => s.classList.remove('active'));
-    document.querySelectorAll('.legal-tab').forEach(t => t.classList.remove('active'));
-    
-    document.getElementById(id).classList.add('active');
-    event.currentTarget.classList.add('active');
-    
-    // Actualizar hash sin saltar
-    history.replaceState(null, null, '#' + id);
+function showTab(id){
+  document.querySelectorAll('.legal-section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.legal-tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  event.target.classList.add('active');
+  history.replaceState(null,'','#'+id);
+}
+// Open tab from URL hash
+window.addEventListener('DOMContentLoaded',()=>{
+  const hash=window.location.hash.replace('#','');
+  if(hash&&document.getElementById(hash)){
+    document.querySelectorAll('.legal-section').forEach(s=>s.classList.remove('active'));
+    document.querySelectorAll('.legal-tab').forEach(t=>t.classList.remove('active'));
+    document.getElementById(hash).classList.add('active');
+    document.querySelectorAll('.legal-tab').forEach(t=>{
+      if(t.getAttribute('onclick')&&t.getAttribute('onclick').includes(hash)) t.classList.add('active');
+    });
   }
-
-  // Lógica de carga inicial por Hash
-  window.addEventListener('DOMContentLoaded', () => {
-    const hash = window.location.hash.replace('#', '');
-    if (hash && document.getElementById(hash)) {
-      const targetTab = Array.from(document.querySelectorAll('.legal-tab'))
-                             .find(t => t.getAttribute('onclick').includes(hash));
-      if (targetTab) targetTab.click();
-    }
-  });
-
-  // i18n ya definido en tu código previo...
-  // initNav('');
+});
+i18n.es.leg={h1:'Información <em>Legal</em>',tab1:'Aviso Legal',tab2:'Política de Privacidad',tab3:'Política de Cookies',av_title:'Aviso Legal y Condiciones de Uso',av1_h:'1. Información General',av1_p:'En cumplimiento de los principios de transparencia, se informa a los usuarios que el titular de este sitio web es:',av_razon:'Razón Social:',av_rnc:'Identificación Fiscal (RNC):',av_dom:'Domicilio:',av_email:'Email:',av_domain:'Dominio:',av2_h:'2. Objeto de la Web',av2_p:'Este sitio web tiene un carácter meramente informativo. Su objetivo es dar a conocer los servicios y la actividad de MARINA DE ROJAS INVESTMENTS S.R.L. El acceso y navegación por este sitio no establece ningún tipo de relación comercial o contractual entre el usuario y la empresa.',av3_h:'3. Propiedad Intelectual y Derechos Reservados',av3_p:'El código fuente, los diseños gráficos, las imágenes y los contenidos de koehlerassets.com están protegidos por la legislación internacional sobre derechos de propiedad intelectual e industrial. <strong>©️ Todos los derechos reservados</strong>.',av4_h:'4. Exclusión de Responsabilidad',av4_p:'El titular no se hace responsable de los daños derivados de interferencias, virus informáticos o desconexiones en el funcionamiento operativo del sistema motivados por causas ajenas a la empresa.',av5_h:'5. Legislación y Jurisdicción',av5_p:'Cualquier controversia relacionada con este sitio web se regirá por la legislación de la <strong>República Dominicana</strong>, sometiéndose las partes a la jurisdicción de los Juzgados y Tribunales de Santo Domingo.',pr_title:'Política de Privacidad y Protección de Datos',pr1_h:'1. Responsable del Tratamiento',pr1_p:'El responsable de los datos personales recogidos es <strong>MARINA DE ROJAS INVESTMENTS S.R.L.</strong>, con RNC 1-32-38419-9 y domicilio en Santo Domingo, República Dominicana.',pr2_h:'2. Finalidad del Tratamiento',pr2_p:'De conformidad con la <strong>Ley No. 172-13</strong>, los datos facilitados serán tratados exclusivamente para:',pr2_l1:'Atender y responder sus consultas o solicitudes de información.',pr2_l2:'Mantener la comunicación profesional necesaria derivada de su mensaje.',pr3_h:'3. Consentimiento y Legitimación',pr3_p:'El tratamiento se basa en el <strong>consentimiento</strong> que usted otorga al enviarnos su consulta. Puede retirarlo en cualquier momento.',pr4_h:'4. Destinatarios de los Datos',pr4_p:'<strong>MARINA DE ROJAS INVESTMENTS S.R.L.</strong> garantiza que sus datos no serán vendidos, cedidos ni compartidos con terceros, salvo obligación legal.',pr5_h:'5. Derechos del Usuario (ARCO)',pr5_p:'Puede ejercer sus derechos de <strong>Acceso, Rectificación, Cancelación y Oposición</strong> escribiendo a: <a href="mailto:info@koehlerassets.com" style="color:var(--gold);">info@koehlerassets.com</a>',pr6_h:'6. Seguridad',pr6_p:'Hemos adoptado las medidas necesarias para garantizar la seguridad de sus datos y evitar su alteración, pérdida o acceso no autorizado.',ck_updated:'Última actualización: 29 de marzo de 2026',ck_title:'Política de Cookies',ck_intro:'Esta Política explica qué son las Cookies y cómo las utilizamos en koehlerassets.com.',ck1_h:'1. ¿Qué son las Cookies?',ck1_p:'Las Cookies son pequeños archivos colocados en su dispositivo cuando visita un sitio web, que contienen detalles de su historial de navegación.',ck2_h:'2. Tipos de Cookies que Utilizamos',ck2_intro:'Utilizamos Cookies de Sesión y Persistentes para los siguientes fines:',ck2_l1t:'Cookies Técnicas (Necesarias):',ck2_l1d:'Esenciales para utilizar las funciones del sitio web. Sin ellas, no funcionaría correctamente.',ck2_l2t:'Cookies de Funcionalidad (Persistentes):',ck2_l2d:'Permiten recordar sus elecciones, como la preferencia de idioma, para una experiencia más personalizada.',ck3_h:'3. Sus Opciones',ck3_p:'Puede deshabilitar las cookies desde la configuración de su navegador:',ck4_h:'4. Cambios en esta Política',ck4_p:'Podemos actualizar esta Política periódicamente. La fecha de actualización en la parte superior indica la última revisión.',ck5_h:'5. Contacto',ck5_p:'Para cualquier pregunta sobre esta Política: <a href="mailto:info@koehlerassets.com" style="color:var(--gold);">info@koehlerassets.com</a>'};
+i18n.en.leg={h1:'Legal <em>Information</em>',tab1:'Legal Notice',tab2:'Privacy Policy',tab3:'Cookie Policy',av_title:'Legal Notice and Terms of Use',av1_h:'1. General Information',av1_p:'In compliance with transparency principles, users are informed that the owner of this website is:',av_razon:'Company Name:',av_rnc:'Tax ID (RNC):',av_dom:'Address:',av_email:'Email:',av_domain:'Domain:',av2_h:'2. Purpose of the Website',av2_p:'This website is purely informational. Its purpose is to present the services and activities of MARINA DE ROJAS INVESTMENTS S.R.L. Accessing and browsing this site does not establish any commercial or contractual relationship between the user and the company.',av3_h:'3. Intellectual Property and Reserved Rights',av3_p:'The source code, graphic designs, images, photographs, software, texts and contents of koehlerassets.com are protected by international and national intellectual and industrial property legislation. <strong>©️ All rights reserved</strong>.',av4_h:'4. Disclaimer',av4_p:'The owner is not responsible for damages arising from interference, computer viruses or disconnections in the operational functioning of this system caused by factors outside the company\'s control.',av5_h:'5. Governing Law and Jurisdiction',av5_p:'Any dispute relating to this website shall be governed by the legislation of the <strong>Dominican Republic</strong>, with the parties submitting to the jurisdiction of the Courts of Santo Domingo.',pr_title:'Privacy and Data Protection Policy',pr1_h:'1. Data Controller',pr1_p:'The controller of personal data collected through this website is <strong>MARINA DE ROJAS INVESTMENTS S.R.L.</strong>, with RNC 1-32-38419-9, domiciled in Santo Domingo, Dominican Republic.',pr2_h:'2. Purpose of Data Processing',pr2_p:'In accordance with <strong>Law No. 172-13 on Personal Data Protection</strong>, data voluntarily provided through our contact forms will be used exclusively to:',pr2_l1:'Address and respond to your enquiries or information requests.',pr2_l2:'Maintain the professional communication required by your message.',pr3_h:'3. Consent and Legal Basis',pr3_p:'The processing of your personal data is based exclusively on the <strong>consent</strong> you provide when submitting your enquiry. You may withdraw this consent at any time.',pr4_h:'4. Data Recipients',pr4_p:'<strong>MARINA DE ROJAS INVESTMENTS S.R.L.</strong> guarantees that your personal data will not be sold, transferred or shared with third parties, unless required by law or strictly necessary to fulfil your request.',pr5_h:'5. User Rights (ARCO)',pr5_p:'You have the right to exercise your rights of <strong>Access, Rectification, Cancellation and Opposition</strong> (ARCO rights). To do so, please send a written request to: <a href="mailto:info@koehlerassets.com" style="color:var(--gold);">info@koehlerassets.com</a>',pr6_h:'6. Security',pr6_p:'We have implemented the necessary technical and organisational measures to ensure the security of your data and prevent its alteration, loss or unauthorised access.',ck_updated:'Last updated: 29 March 2026',ck_title:'Cookie Policy',ck_intro:'This Cookie Policy explains what Cookies are and how we use them on koehlerassets.com.',ck1_h:'1. What are Cookies?',ck1_p:'Cookies are small files placed on your device when you visit a website, containing details of your browsing history on that website among other uses.',ck2_h:'2. Types of Cookies We Use',ck2_intro:'We use Session and Persistent Cookies for the following purposes:',ck2_l1t:'Necessary / Essential Cookies:',ck2_l1d:'Essential to provide you with services available through the website. Without them, the website would not function correctly.',ck2_l2t:'Functionality Cookies (Persistent):',ck2_l2d:'Allow us to remember choices you make, such as language preference, to provide a more personalised experience.',ck3_h:'3. Your Cookie Choices',ck3_p:'You can manage cookies through your browser settings:',ck4_h:'4. Changes to this Policy',ck4_p:'We may update this Cookie Policy from time to time. The "Last updated" date at the top indicates when it was last revised.',ck5_h:'5. Contact',ck5_p:'For questions about this Cookie Policy: <a href="mailto:info@koehlerassets.com" style="color:var(--gold);">info@koehlerassets.com</a>'};
+i18n.de.leg={h1:'Rechtliche <em>Informationen</em>',tab1:'Impressum',tab2:'Datenschutz',tab3:'Cookie-Richtlinie',av_title:'Impressum und Nutzungsbedingungen',av1_h:'1. Allgemeine Informationen',av1_p:'Gemäß den Transparenzgrundsätzen werden die Nutzer darüber informiert, dass der Inhaber dieser Website ist:',av_razon:'Firmenname:',av_rnc:'Steuerliche ID (RNC):',av_dom:'Anschrift:',av_email:'E-Mail:',av_domain:'Domain:',av2_h:'2. Zweck der Website',av2_p:'Diese Website ist rein informativ. Ihr Ziel ist es, die Dienstleistungen und Tätigkeiten von MARINA DE ROJAS INVESTMENTS S.R.L. vorzustellen. Der Zugang zu dieser Website begründet kein kommerzielles oder vertragliches Verhältnis.',av3_h:'3. Geistiges Eigentum und Vorbehaltsrechte',av3_p:'Quellcode, grafische Designs, Bilder, Fotos, Software, Texte und Inhalte von koehlerassets.com sind durch internationale und nationale Rechtsvorschriften zum geistigen und gewerblichen Eigentum geschützt. <strong>©️ Alle Rechte vorbehalten</strong>.',av4_h:'4. Haftungsausschluss',av4_p:'Der Inhaber haftet nicht für Schäden, die durch Interferenzen, Computerviren oder Verbindungsunterbrechungen entstehen, die auf außerhalb des Unternehmens liegende Ursachen zurückzuführen sind.',av5_h:'5. Geltendes Recht und Zuständigkeit',av5_p:'Jeder Rechtsstreit im Zusammenhang mit dieser Website unterliegt dem Recht der <strong>Dominikanischen Republik</strong> und fällt in die Zuständigkeit der Gerichte von Santo Domingo.',pr_title:'Datenschutzerklärung',pr1_h:'1. Verantwortliche Stelle',pr1_p:'Verantwortlich für die über diese Website erhobenen personenbezogenen Daten ist <strong>MARINA DE ROJAS INVESTMENTS S.R.L.</strong> mit RNC 1-32-38419-9, Santo Domingo, Dominikanische Republik.',pr2_h:'2. Zweck der Datenverarbeitung',pr2_p:'Gemäß <strong>Gesetz Nr. 172-13 über den Schutz personenbezogener Daten</strong> werden die von Ihnen über unsere Kontaktformulare freiwillig bereitgestellten Daten ausschließlich verwendet für:',pr2_l1:'Bearbeitung und Beantwortung Ihrer Anfragen oder Informationsanfragen.',pr2_l2:'Aufrechterhaltung der notwendigen professionellen Kommunikation aus Ihrer Nachricht.',pr3_h:'3. Einwilligung und Rechtsgrundlage',pr3_p:'Die Verarbeitung Ihrer personenbezogenen Daten basiert ausschließlich auf der <strong>Einwilligung</strong>, die Sie durch das Absenden Ihrer Anfrage erteilen. Sie können diese Einwilligung jederzeit widerrufen.',pr4_h:'4. Datenempfänger',pr4_p:'<strong>MARINA DE ROJAS INVESTMENTS S.R.L.</strong> garantiert, dass Ihre personenbezogenen Daten nicht verkauft, abgetreten oder an Dritte weitergegeben werden, es sei denn, dies ist gesetzlich vorgeschrieben.',pr5_h:'5. Nutzerrechte (ARCO)',pr5_p:'Sie haben das Recht, Ihre Rechte auf <strong>Auskunft, Berichtigung, Löschung und Widerspruch</strong> geltend zu machen. Bitte schreiben Sie an: <a href="mailto:info@koehlerassets.com" style="color:var(--gold);">info@koehlerassets.com</a>',pr6_h:'6. Sicherheit',pr6_p:'Wir haben die notwendigen technischen und organisatorischen Maßnahmen ergriffen, um die Sicherheit Ihrer Daten zu gewährleisten.',ck_updated:'Zuletzt aktualisiert: 29. März 2026',ck_title:'Cookie-Richtlinie',ck_intro:'Diese Cookie-Richtlinie erklärt, was Cookies sind und wie wir sie auf koehlerassets.com verwenden.',ck1_h:'1. Was sind Cookies?',ck1_p:'Cookies sind kleine Dateien, die beim Besuch einer Website auf Ihrem Gerät platziert werden und Details Ihres Browserverlaufs enthalten.',ck2_h:'2. Arten von Cookies, die wir verwenden',ck2_intro:'Wir verwenden Sitzungs- und persistente Cookies für folgende Zwecke:',ck2_l1t:'Notwendige Cookies:',ck2_l1d:'Unentbehrlich für die Bereitstellung der Website-Dienste. Ohne sie würde die Website nicht korrekt funktionieren.',ck2_l2t:'Funktionalitäts-Cookies (persistent):',ck2_l2d:'Ermöglichen das Merken Ihrer Einstellungen, z.B. Sprachpräferenz, für eine personalisiertere Erfahrung.',ck3_h:'3. Ihre Cookie-Optionen',ck3_p:'Sie können Cookies über die Einstellungen Ihres Browsers verwalten:',ck4_h:'4. Änderungen dieser Richtlinie',ck4_p:'Wir können diese Cookie-Richtlinie von Zeit zu Zeit aktualisieren. Das Datum der letzten Aktualisierung steht oben.',ck5_h:'5. Kontakt',ck5_p:'Bei Fragen zu dieser Cookie-Richtlinie: <a href="mailto:info@koehlerassets.com" style="color:var(--gold);">info@koehlerassets.com</a>'};
+initNav('');
 </script>
 </body>
 </html>
